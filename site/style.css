@@ -59,7 +59,7 @@ section{
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    padding: 4px;
+    padding-left: 35px;
 }
 .nav-link{
     color: white !important;
@@ -88,9 +88,7 @@ section{
 /* --------------- */
 
 /* parte da linha que aparece e desaparece */
-#testando{
-    
-}
+
 .title-lines{
     max-width: 0px;
     color: transparent;
