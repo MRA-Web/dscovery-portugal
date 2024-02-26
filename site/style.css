@@ -13,14 +13,13 @@ header{
     width: 100%;
     position: fixed;
     border-radius: 5px; 
+    
 }
 body{
     background-color: #ffffffc5 !important;
-    
 } 
 section{
     padding: 5px 10%;
-
 }
 .site{
     display: flex;
@@ -58,7 +57,8 @@ section{
     margin-top: 12px;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
+    margin-left: auto;
+    padding: 4px;
 }
 .nav-link{
     color: white !important;
@@ -87,6 +87,9 @@ section{
 /* --------------- */
 
 /* parte da linha que aparece e desaparece */
+#testando{
+    
+}
 .title-lines{
     max-width: 0px;
     color: transparent;
@@ -383,7 +386,7 @@ section{
   
 }
 .hr-niss{
-    width: 205%;
+    width: 100%;
     margin-top: 5px; /* 20 pixels de margem superior */
     margin-bottom: 5px; /* 20 pixels de margem inferior */
     
@@ -401,6 +404,7 @@ margin: 0.5rem 0 1.5rem;
     font-size: 18px;
     
 }
+
 .about-secure-niss p{
    margin: 0.5rem 0 1.5rem;
       line-height: 1.7;
@@ -413,6 +417,7 @@ margin: 0.5rem 0 1.5rem;
 @media(max-width:1050px){
     section{
      padding: 50px 8%;
+     margin-top: 150px;
     }
     .home{
      grid-template-columns: 1fr;
@@ -427,7 +432,10 @@ margin: 0.5rem 0 1.5rem;
      order: 2;   
     }
     .niss{
-     grid-template-columns: 1fr;
+     /* grid-template-columns: 1fr; */
+     display: flex;
+     flex-direction: column;
+     
      text-align: center;
      margin-top: 20px;
     }
