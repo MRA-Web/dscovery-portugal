@@ -13,13 +13,14 @@ header{
     width: 100%;
     position: fixed;
     border-radius: 5px; 
-    
 }
 body{
     background-color: #ffffffc5 !important;
+    /* altura do header */
 } 
 section{
     padding: 5px 10%;
+    overflow: hidden;
 }
 .site{
     display: flex;
@@ -305,6 +306,7 @@ section{
     }
 }
 .home{
+    position: relative;
     min-height: 90vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -335,11 +337,15 @@ section{
   color: #fff;
   border-radius: 0.5rem;
   transition: transform 1s;
-}
-.btn:hover{
-  /* transform: scale(1.2) translateY(10px); */
-  transition: 1s;
-}
+  position: relative;
+  z-index: 1; 
+
+}.btn:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+    
+    }
+  
 .nif{
   display: grid;   
   grid-template-columns: repeat(2, 2fr);
