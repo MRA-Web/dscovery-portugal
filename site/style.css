@@ -17,7 +17,7 @@ header{
     
 
 }
-.site{
+body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -26,8 +26,7 @@ header{
     flex-grow: 1;
 }
 
-/* inicio da nav-bar */
-
+/* nav-bar desktop */
 .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -80,10 +79,7 @@ header{
     padding: 5px;
 }
 
-/* --------------- */
-
-/* parte da linha que aparece e desaparece */
-
+/* linhas dos titulos expandindo */
 .title-lines{
     max-width: 0px;
     color: transparent;
@@ -95,52 +91,20 @@ header{
 
     transition: color 0.4s ease, max-width 0.4s ease !important;
 }
-#home:hover #home-line{
+.nav-link:hover .title-lines{
     color: #ffffff !important;
     max-width: 200px !important;
 }
-#services:hover #services-line{
-    color: #ffffff !important;
-    max-width: 200px !important;
-}
-#contacts:hover #contacts-line{
-    color: #ffffff !important;
-    max-width: 200px !important;
-}
-#about-us:hover #home-line{
-    color: #ffffff !important;
-    max-width: 200px !important;
-}
-#about-us:hover #about-us-line{
-    color: #ffffff !important;
-    max-width: 200px !important;
-}
-/* ------------------------------------------ */
 
-
-
-
+/* sub-menu de services */
 #services:hover + #services-content{
     max-height: 200px;
 }
 #services-content:hover{
     max-height: 200px;
 }
-#contacts:hover + #contacts-content{
-    max-height: 200px;
-}
-#contacts-content:hover{
-    max-height: 200px;
-}
-#about-us:hover + #about-us-content{
-    max-height: 200px;
-}
-#about-us-content:hover{
-    max-height: 200px;
-}
 
-/* inicio da parte de línguas */
-
+/* idiomas desktop */
 .language-selector {
     position: relative;
     display: inline-block;
@@ -208,6 +172,9 @@ header{
 .icons-language{
     width: 20px;
 }
+/* ----------------------- */
+
+
 .mobile-menu-icon{
     display: none;
 }
