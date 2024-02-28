@@ -13,6 +13,7 @@ header{
     width: 100%;
     position: fixed;
     border-radius: 5px; 
+    z-index: 1000;
 }
 body{
     background-color: #ffffffc5 !important;
