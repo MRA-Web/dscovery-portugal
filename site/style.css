@@ -296,13 +296,13 @@ section{
     background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
     color: #fff;
     border-radius: 0.5rem;
-    transition: transform 1s;
+    transition: transform 0.4s;
     position: relative;
     z-index: 1; 
 }
 .button-body:hover {
     transform: scale(1.2);
-    transition: transform 1s;
+    transition: transform 0.4s;
 }
 /* ------------------ */
 
