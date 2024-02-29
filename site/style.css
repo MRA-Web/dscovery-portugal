@@ -473,12 +473,12 @@ footer{
 .footer-ct{
     display: flex;
     color: white;
-    
 }
 .footer-ct ul{
     width: 50%;
     margin-top: 30px;
     list-style: none;
+
 }
 .footer-ct .ul-1{
     margin-top: 30px;
@@ -494,15 +494,19 @@ footer{
 }
 .footer-ct li{
     margin: 10px 0;
-    
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 .footer-ct a{
     color: white;
 }
+.footer-ct a:hover .title-lines{
+    max-width: 200px;
+}
 .footer-icons-social{
     display: inline-flex;
     zoom: 150% ;
-
 }
 .footer-link-social{
     display: flex;
