@@ -534,18 +534,18 @@ footer .logo{
     margin-bottom: -24px;
     margin-left: -15px;
 }
-footer .footer-copyright{
+.footer-copyright{
     margin-top: 70px;
     zoom: 70%;
 }
-footer .footer-copyright hr{
+.footer-copyright hr{
     color: white;
     width:15%;
     margin: auto;
     margin-bottom: 10px;
     
 }
-footer .footer-copyright h4{
+.footer-copyright h4{
     font-weight: 600;
     color: white;
 }
