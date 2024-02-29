@@ -14,8 +14,6 @@ header{
     position: fixed;
     border-radius: 5px; 
     z-index: 1000;
-    
-
 }
 
 /* nav-bar desktop */
@@ -44,8 +42,9 @@ header{
     margin-top: 12px;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    padding-left: 35px;
+    margin-left: 17px;
+    margin-right: 17px;
+    align-items: center;
 }
 .nav-link{
     color: white !important;
@@ -54,47 +53,66 @@ header{
 .item-content{
     list-style-type: none;
     position: absolute;
+    /* background-color: #ddd; */
     background-color: rgba(9,54,121,1);
-    border-radius: 3px;
+    border-radius: 15px;
     text-align: center;
     width: fit-content;
     max-width: fit-content;
+    margin-top: 35px;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+    
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
-    margin-top: 30px;
-    position: right;
+}
+.item-content li{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: fit-content;
 }
 .item-content a{
     color: #fff;
     font-size: 16px;
     padding: 5px;
+    width: fit-content;
 }
-
-/* linhas dos titulos expandindo */
 .title-lines{
     max-width: 0px;
-    color: transparent;
-    margin: auto;
+    margin-right: auto; margin-left: auto;
     border-top: 2px solid;
-    border-bottom: transparent; border-left: transparent; border-right: transparent;
+    border-bottom: none; border-left: none; border-right: none;
     display: flex;
     color: #fff;
 
-    transition: color 0.4s ease, max-width 0.4s ease !important;
+    transition: max-width 0.4s;
 }
-.nav-link:hover .title-lines{
-    color: #ffffff !important;
+.nav-item:hover .title-lines{
     max-width: 200px !important;
 }
+.nav-item:hover .item-content{
+    max-height: 200px;
+}
+.sub-lines{
+    max-width: 0px;
+    margin-right: auto; margin-left: auto;
+    border-top: 2px solid;
+    border-bottom: none; border-left: none; border-right: none;
+    display: flex;
+    color: #fff;
+    margin-bottom: -25px;
 
-/* sub-menu de services */
-#services:hover + #services-content{
-    max-height: 200px;
+    transition: max-width 0.4s;
 }
-#services-content:hover{
-    max-height: 200px;
+.item-content li:hover .sub-lines{
+    max-width: 100px;
 }
+
+/* linhas dos titulos expandindo */
 
 /* idiomas desktop */
 .language-selector {
