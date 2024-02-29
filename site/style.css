@@ -432,108 +432,108 @@ margin: 0.5rem 0 1.5rem;
         margin: 0 auto;
     }
 }
-    /* FOOTER CONTENT */
-    footer{
-        margin-top: 120px;
-        text-align: center;
-        background: rgb(0,5,36);
-        background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
-        margin-bottom: -20px;
-        border-radius: 5px;
-        box-shadow: 0px 3px 10px rgb(0, 0, 0);
-        width: 100%;
-        
+/* FOOTER CONTENT */
+footer{
+    margin-top: 120px;
+    text-align: center;
+    background: rgb(0,5,36);
+    background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
+    margin-bottom: -20px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+    width: 100%;
+    
+}
+.footer-ct{
+    display: flex;
+    color: white;
+    
+}
+.footer-ct ul{
+    width: 50%;
+    margin-top: 30px;
+    list-style: none;
+}
+.footer-ct .ul-1{
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.footer-ct ul > p{
+    margin-bottom: 9px;
+    font-weight: 500;
+}
+.footer-ct h2{
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.footer-ct li{
+    margin: 10px 0;
+    
+}
+.footer-ct a{
+    color: white;
+}
+.footer-icons-social{
+    display: inline-flex;
+    zoom: 150% ;
+
     }
+footer .footer-ct .footer-icons-social .footer-link-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 2.0rem;
+    width: 2.0rem;
+    border-radius: 50%;
+}
+#instagram{
+    margin-right: 12px;
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807) ;
+}
+#facebook{
+    margin-right: 12px;
+    background-color: #4267b3;
+}
+#whatsapp{
+    margin-right: 12px;
+    background-color: #25d366;
+}
+footer .logo{
+    display: inline-block; /* Garante que o link respeite as dimensões especificadas */
+    margin-bottom: -24px;
+    margin-left: -15px;
+}
+footer .footer-copyright{
+    margin-top: 70px;
+    zoom: 70%;
+}
+footer .footer-copyright hr{
+    color: white;
+    width:15%;
+    margin: auto;
+    margin-bottom: 10px;
+    
+}
+footer .footer-copyright h4{
+    font-weight: 600;
+    color: white;
+}
+@media screen and (max-width: 1050px) {
+    
     footer .footer-ct{
-        display: flex;
-        color: white;
-        
+    flex-direction: column;
+    gap: 2.5rem;
     }
     footer .footer-ct ul{
-        width: 50%;
-        margin-top: 30px;
-        list-style: none;
-    }
-    footer .footer-ct .ul-1{
-        margin-top: 30px;
-        padding-left: 20px;
-    }
-    footer .footer-ct ul > p{
-        margin-bottom: 9px;
-        font-weight: 500;
-    }
-    footer .footer-ct h2{
-        margin-bottom: 25px;
-        font-weight: 600;
-    }
-    footer .footer-ct li{
-        margin: 10px 0;
-        
-    }
-    footer .footer-ct a{
-        color: white;
-    }
-    footer .footer-ct .footer-icons-social{
-        display: inline-flex;
-        zoom: 150% ;
-
-        }
-    footer .footer-ct .footer-icons-social .footer-link-social{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        height: 2.0rem;
-        width: 2.0rem;
-        border-radius: 50%;
-    }
-    #instagram{
-        margin-right: 12px;
-        background: linear-gradient(#7f37c9, #ff2992, #ff9807) ;
-    }
-    #facebook{
-        margin-right: 12px;
-        background-color: #4267b3;
-    }
-    #whatsapp{
-        margin-right: 12px;
-        background-color: #25d366;
-    }
-    footer .logo{
-        display: inline-block; /* Garante que o link respeite as dimensões especificadas */
-        margin-bottom: -24px;
-        margin-left: -15px;
+    margin: auto;
+    width: auto;
     }
     footer .footer-copyright{
-        margin-top: 70px;
-        zoom: 70%;
-    }
-    footer .footer-copyright hr{
-        color: white;
-        width:15%;
-        margin: auto;
-        margin-bottom: 10px;
-       
-    }
-    footer .footer-copyright h4{
-        font-weight: 600;
-        color: white;
-    }
-    @media screen and (max-width: 1050px) {
-      
-        footer .footer-ct{
+        display: flex;
         flex-direction: column;
-        gap: 2.5rem;
-       }
-       footer .footer-ct ul{
-        margin: auto;
-        width: auto;
-       }
-        footer .footer-copyright{
-            display: flex;
-            flex-direction: column;
-        }
-       footer .footer-copyright .hr{
-        width: 50%;
-       }
     }
+    footer .footer-copyright .hr{
+    width: 50%;
+    }
+}
