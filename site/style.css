@@ -12,7 +12,6 @@ header{
     height: 90px;
     width: 100%;
     position: fixed;
-    border-radius: 5px; 
     z-index: 1000;
 }
 
@@ -188,9 +187,14 @@ header{
     display: none;
 }
 .mobile-menu{
-    display: none;
+    display: block;
     align-items: center;
     box-shadow: 0px 3px 10px rgb(0, 0, 0);
+    margin-top: -65px;
+    
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s;
 }
 
 @media screen and (max-width: 1050px) {
@@ -210,6 +214,8 @@ header{
         display: flex;
         flex-direction: row;
         margin-top: 3px;
+        margin-right: 50%;
+        margin-left: 45%;
     }
     .mobile-menu .language-selector{
       display: block; 
@@ -228,16 +234,15 @@ header{
     }
     .mobile-menu-icon .ling-opcoes a{
         color: white !important;
-        
     }
     .mobile-menu ul{
         display: flex;
         flex-direction: column;
         padding-bottom: 1rem;
-        margin-top: -65px;
         align-items: center;
     }
     .mobile-menu{
+
         background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
     }
     .mobile-menu .nav-item{
@@ -252,13 +257,13 @@ header{
     }
     .ling-opcoes{
         align-items: center;
-        margin-left: 5px;
-        padding: 5px !important;    
-        background-color: #ffffff00;
+        margin-left: 5px; margin-right: 5px;
+        padding: 5px;
+        background: none;
         color: rgb(255, 255, 255);
         font-size: 0px;
         cursor: pointer;
-        border-radius: 25px !important;
+        border-radius: 100%;
         width: auto;
         margin-bottom: 3.5px;
         margin-top: 8px;
@@ -273,7 +278,8 @@ header{
         margin-top: 12px;
     }
     .open{
-        display: block;
+        max-height: 450px;
+        transition: all 0.6s;
     }
 }
 body{
