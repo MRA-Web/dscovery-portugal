@@ -166,7 +166,6 @@ header{
 }
 /* ----------------------- */
 
-
 .mobile-menu-icon{
     display: none;
 }
@@ -267,6 +266,7 @@ section{
     padding: 5px 10%;
     overflow: hidden;
 }
+
 /* .home{
 
     
@@ -305,7 +305,6 @@ section{
     transition: transform 1s;
 }
 /* ------------------ */
-
 
 .nif{
   display: grid;   
@@ -369,7 +368,6 @@ margin: 0.5rem 0 1.5rem;
     font-size: 18px;
     
 }
-
 .about-secure-niss p{
    margin: 0.5rem 0 1.5rem;
       line-height: 1.7;
@@ -378,7 +376,6 @@ margin: 0.5rem 0 1.5rem;
 }   
 
 /* responsividade do body em andamento */
-
 @media screen and (min-width: 768px) {
     .home {
         display: grid;
@@ -421,47 +418,46 @@ margin: 0.5rem 0 1.5rem;
     }
 }
 
+/* CONTACT PAGE CONTENT */
+.contact-content{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+.contact-content form{
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.contact-img-content{
+    margin-left: -230px;
+    zoom: 130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    /* CONTACT PAGE CONTENT */
-    .contact-content{
-        min-height: 90vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 30px;
-    }
-    .contact-content form{
-        border-radius: 10%;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    }
-    .contact-img-content{
-        margin-left: -230px;
-        zoom: 130%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-   
-    .form-header{
-        margin-bottom: 50px;
-        
-    }
-    .form-header h1{
-        font-family: trattatello, fantasy;
-        font-size: 50px;
-        font-weight: lighter;
-        color: #090979;
-    }
-    .form-header h1::after {
-        content: '';
-        display: block;
-        width: 5rem;
-        height: 0.3rem;
-        background-color:#557dff;
-        margin: 0 auto;
-        position: absolute;
-        border-radius: 10px;
-    }
+.form-header{
+    margin-bottom: 50px;
+    
+}
+.form-header h1{
+    font-family: trattatello, fantasy;
+    font-size: 50px;
+    font-weight: lighter;
+    color: #090979;
+}
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color:#557dff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
 
 /* FOOTER CONTENT */
 footer{
