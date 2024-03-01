@@ -487,7 +487,9 @@ margin: 0.5rem 0 1.5rem;
     border-radius: 10px;
 }
 .contact-send-button{
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contact-send-button a{
     color: white;
@@ -521,7 +523,9 @@ margin: 0.5rem 0 1.5rem;
 .input-box textarea:focus-visible{
     outline: 1px solid #4267b3;
 }
+.other-contact-text{
 
+}
 /* FOOTER CONTENT */
 footer{
     text-align: center;
