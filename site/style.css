@@ -173,7 +173,7 @@ footer{
     transition: border-top-left-radius 0.4s, border-top-right-radius 0.4s, max-height 0.5s ease;
 }
 .language-selector-content:hover{
-    max-height: 200px;
+    max-height: 400px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
@@ -182,7 +182,7 @@ footer{
     border-bottom-right-radius: 0px;
 }
 .idioma-atual-desktop:hover + .language-selector-content {
-    max-height: 200px;
+    max-height: 400px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
@@ -199,7 +199,7 @@ footer{
     background-color: #ddd;
 }
 .opcao-idioma:hover .language-selector-content {
-    max-height: 200px;
+    max-height: 400px;
 }
 .icons-language{
     width: 20px;
