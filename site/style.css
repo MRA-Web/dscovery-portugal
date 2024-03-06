@@ -9,8 +9,10 @@ body{
     background-color: #ffffffc5 !important;
     /* altura do header */
 }
-
-
+main{
+    margin-top: 180px;
+    margin-bottom: 180px;
+}
 header{ 
     background: rgb(0,5,36);
     background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
@@ -21,7 +23,6 @@ header{
     z-index: 1000;
     top: 0;
 }
-
 footer{
     margin-top: 50px;
     text-align: center;
@@ -347,11 +348,13 @@ section {
     color: white;
     border-radius: 0.5rem;
     background: linear-gradient(90deg, rgba(0, 5, 36, 1) 0%, #093679 50%, rgba(0, 180, 255, 1) 100%);
+
+    transition: all 0.4s;
 }
 
 .button-body:hover {
     transform: scale(1.2) translateY(10px);
-    transition: .4s;
+    transition: all 0.4S;
 }
 
 /* SEÇÃO DO NIF */
@@ -404,9 +407,49 @@ section {
 }
 
 /* RESPONSIVIDADE DO BODY */
- @media screen {
-    
- }     
+
+ @media screen and (1560px){
+    root:{
+    h1: 3.5rem;
+    h2: 2rem;
+    }
+ }
+ @media screen and (max-width: 1140px){
+    section{
+    padding: 50px 8%;}
+    }
+
+ @media screen and (max-width: 720px){
+   section{
+   padding: 50px 8%;}
+   .top{
+    grid-template-columns: 1fr;
+    text-align: center;
+   }
+   .top-img{
+    order: 2;
+    width: 225px;
+    height: auto;
+   }
+   .niss{
+    grid-template-columns: 1fr;
+    text-align: center;
+   }
+   .nif{
+    grid-template-columns: 1fr;
+    text-align: center;
+   }
+   .niss-img{
+    order: 2;
+   }
+   .nif-img{
+    order: 2;
+   }
+   section{
+    padding: 100px 7%;
+   }
+ }
+     
 
      /* CONTACT PAGE CONTENT */
 .contact-content{
