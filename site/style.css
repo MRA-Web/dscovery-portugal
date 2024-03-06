@@ -9,8 +9,10 @@ body{
     background-color: #ffffffc5 !important;
     /* altura do header */
 }
-
-
+main{
+    margin-top: 180px;
+    margin-bottom: 180px;
+}
 header{ 
     background: rgb(0,5,36);
     background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
@@ -21,7 +23,6 @@ header{
     z-index: 1000;
     top: 0;
 }
-
 footer{
     margin-top: 50px;
     text-align: center;
@@ -346,11 +347,13 @@ section {
     color: white;
     border-radius: 0.5rem;
     background: linear-gradient(90deg, rgba(0, 5, 36, 1) 0%, #093679 50%, rgba(0, 180, 255, 1) 100%);
+
+    transition: all 0.4s;
 }
 
 .button-body:hover {
     transform: scale(1.2) translateY(10px);
-    transition: .4s;
+    transition: all 0.4S;
 }
 
 /* SEÇÃO DO NIF */
