@@ -150,7 +150,6 @@ footer{
     border: none;
     cursor: pointer;
     border-radius: 20px;
-    width: auto;
     align-items: center;
     
     transition: border-bottom-left-radius 0.4s, border-bottom-right-radius 0.4s;
