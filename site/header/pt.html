@@ -1,0 +1,115 @@
+<!-- header em português by luizzmg -->
+
+<nav class="nav-bar"> <!-- barra de navegação desktop -->
+    
+  <!-- logo do site que leva à página inicial -->
+  <div><a href="/site/pt.html">
+    <img class="logo" src="/site/assets/images/DiscoveryLogo.png">
+  </a></div>
+    
+  <!-- navegação entre as principais partes do site (para desktop) -->
+  <div class="nav-list">
+    
+    <div class="nav-item"> <!-- home -->
+      <a class="nav-link" href="/site/pt.html">
+        Início
+        <hr class="title-lines">
+      </a>
+    </div>
+    
+    <div class="nav-item"> <!-- services -->
+      
+      <a class="nav-link" href="#">
+        Serviços
+        <hr class="title-lines">
+      </a>
+      
+      <ul class="item-content">
+        <li><a href="/site/nif/pt.html">Obtenha seu NIF<br><hr class="sub-lines"></a></li>
+        <li><a href="/site/niss/pt.html">Obtenha seu NISS<br><hr class="sub-lines"></a></li>
+        <li><a href="#">item 3<br><hr class="sub-lines"></a></li>
+      </ul>
+      
+    </div>
+    
+    <div class="nav-item"> <!-- contact us -->
+      <a class="nav-link" href="/site/contact-us/pt.html">
+        Contacte-nos
+        <hr class="title-lines">
+      </a>
+    </div>
+    
+    <div class="nav-item"> <!-- about-us -->
+      <a class="nav-link" href="/site/about-us/pt.html">
+        Sobre nós
+        <hr class="title-lines">
+      </a>
+    </div>
+    
+  </div>
+  
+  <!-- seleção de idiomas desktop -->
+  <div class="language-selector">
+    
+    <!-- botão da linguagem atual -->
+    <!-- ao passar o mouse em cima, exibe as opções de mudança de idioma -->
+    <button class="idioma-atual-desktop">
+      <!-- português --><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT
+    </button>
+    
+    <ul class="language-selector-content">
+      <!--alemão--><li><a href="de.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE</a></li>
+      <!--english--><li><a href="index.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN</a></li>
+      <!--espanhol--><li><a href="es.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/spain.png"> ES</a></li>
+      <!--francês--><li><a href="fr.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR</a></li>
+      <!--italiano--><li><a href="it.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT</a></li>
+    </ul>
+    
+  </div>
+  
+  <!-- botão que exibe menu mobile (aqueles "três tracinhos")-->
+  <div class="mobile-menu-icon">
+    <button onclick="menuShow()">
+      <img class="icon" src="/site/assets/mobile-icons/menu_white_36dp.svg" alt="">
+    </button>
+  </div>
+  
+</nav>
+
+<!-- menu que aparece ao clicar nos "três tracinhos" -->
+<div class="mobile-menu">
+  <ul>
+    
+    <li class="nav-item"><a class="nav-link" href="/site/pt.html"> <!-- home -->
+      Início
+    </a></li>
+    <li class="nav-item"><a class="nav-link" href="#"> <!-- services -->
+      Obter NIF
+    </a></li>
+    <li class="nav-item"><a class="nav-link" href="#"> <!-- services -->
+      Obter NISS
+    </a></li>
+    <li class="nav-item"><a class="nav-link" href="/site/contact-us/pt.html"> <!-- contact us -->
+      Contacte-nos
+    </a></li>
+    <li class="nav-item"><a class="nav-link" href="/site/about-us/pt.html"> <!-- about us -->
+      Sobre nós
+    </a></li>
+    <li class="nav-item nav-link"> <!-- language -->
+      Iidoma:
+    </li>
+    
+    <!-- opções de idiomas (versão de celular) -->
+    <li class="language-selector-mobile">
+
+      <button class="ling-opcoes" id="ling-atual"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"></button>
+      <a href="de.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/germany.png"></button></a>
+      <a href="/contact-us/"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"></button></a>
+      <a href="es.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/spain.png"></button></a>
+      <a href="fr.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/france.png"></button></a>
+      <a href="it.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/italy.png"></button></a>
+
+    </li>
+
+  </ul>
+</div>
