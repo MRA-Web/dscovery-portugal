@@ -32,6 +32,7 @@ footer{
     border-radius: 5px;
     box-shadow: 0px 3px 10px rgb(0, 0, 0);
     width: 100%;
+    
 }
 
 
@@ -318,28 +319,38 @@ main{
     margin: 0 auto;
     min-height: 90vh;
 }
+
 .content-main{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 1.5rem;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 150px;
 }
-.text-main h1{
+.text-main-1 h1{
     font-family: trattatello, fantasy;
     font-size: 50px;
     color: rgb(7, 43, 97);
-
 }
-.text-main h2{
+.text-main-1 h2{
     font-size: 25px;
     color: black;
     margin: 1rem 0 2rem;
-
 }
-
-.first-image{
+.image-main-1{
     zoom: 25%;
 }
+
+/* NIF PART */
+.image-main-2{
+    zoom: 20%;
+}
+
+/* NISS PART */
+.image-main-3{
+    zoom:25%;
+}
+/* LINK 'A' "BUTTON" STYLE */
 .hover-button{
     display: inline-block;
     padding: 10px 20px;
@@ -348,31 +359,59 @@ main{
     background: linear-gradient(90deg, rgba(0, 5, 36, 1) 0%, #093679 50%, rgba(0, 180, 255, 1) 100%);
     transition: all 0.4s;
 }
-
-
 .hover-button:hover {
     transform: scale(1.2);
     transition: all 0.4S;
 }
+
+/* RESPONSIVE BODY */
+
 @media screen and (max-width: 1050px) {
     .content-main {
        display: flex;
        flex-direction: column;
        margin-top: 150px;
     }
+    .text-main-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .text-main-1 h1{
+       text-align: center;
+    }
+    .text-main-1 h2{
+        text-align: center;
+    }
+    .image-main-1{
+        zoom: 15%;
+    }
+    .text-main-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-main-2 p{
+        text-align: center;
+    }
+    .text-main-3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-main-3 p{
+        text-align: center;
+    }
+    .image-main-2{
+        display: none;
+    }
+    .image-main-3{
+        display: none;
+    }
 }
     /* FOOTER CONTENT */
 
-footer{
-    text-align: center;
-    background: rgb(0,5,36);
-    background: linear-gradient(90deg, rgba(0,5,36,1) 0%, #093679 50%, rgba(0,180,255,1) 100%);
-    margin-bottom: -20px;
-    border-radius: 5px;
-    box-shadow: 0px 3px 10px rgb(0, 0, 0);
-    width: 100%;
-    
-}
 .footer-ct{
     display: flex;
     color: white;
@@ -453,20 +492,20 @@ footer .logo{
     color: white;
 }
 @media screen and (max-width: 1050px) {
-
+    footer{
+        margin-top: 100px;
+    }
     footer .footer-ct{
     flex-direction: column;
     gap: 2.5rem;
     }
-
     footer .footer-ct ul{
     margin: auto;
     width: auto;
     }
-
     footer .footer-copyright{
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
     }
     footer .footer-copyright .hr{
     width: 50%;
