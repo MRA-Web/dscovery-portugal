@@ -10,7 +10,7 @@ body{
     /* altura do header */
 }
 main{
-    margin-top: 180px !important;
+    margin-top: 180px ;
     margin-bottom: 180px;
 }
 header{ 
