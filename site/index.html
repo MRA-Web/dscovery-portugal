@@ -12,130 +12,14 @@
   </head>
   
   
-  <body>
+  <body onload="jogar_texto('/site/header/en.html', 'header'); jogar_texto('/site/footer/en.html', 'footer');">
     
-    <!-- header by luizzmg -->
-    <header>
-      
-      <nav class="nav-bar"> <!-- barra de navegação desktop -->
-          
-        <!-- logo do site que leva à página inicial -->
-        <div><a href="/site/">
-          <img class="logo" src="/site/assets/images/DiscoveryLogo.png">
-        </a></div>
-          
-        <!-- navegação entre as principais partes do site (para desktop) -->
-        <div class="nav-list">
-          
-          <div class="nav-item"> <!-- home -->
-            <a class="nav-link" href="/site/">
-              Home
-              <hr class="title-lines">
-            </a>
-          </div>
-          
-          <div class="nav-item"> <!-- services -->
-            
-            <a class="nav-link" href="#">
-              Services
-              <hr class="title-lines">
-            </a>
-            
-            <ul class="item-content">
-              <li><a href="/site/nif/">Get your NIF<br><hr class="sub-lines"></a></li>
-              <li><a href="/site/niss/">Get your NISS<br><hr class="sub-lines"></a></li>
-              <li><a href="#">item 3<br><hr class="sub-lines"></a></li>
-            </ul>
-            
-          </div>
-          
-          <div class="nav-item"> <!-- contact us -->
-            <a class="nav-link" href="/site/contact-us/">
-              Contact us
-              <hr class="title-lines">
-            </a>
-          </div>
-          
-          <div class="nav-item"> <!-- about-us -->
-            <a class="nav-link" href="/site/about-us/">
-              About us
-              <hr class="title-lines">
-            </a>
-          </div>
-          
-        </div>
-        
-        
-        <!-- seleção de idiomas desktop -->
-        <div class="language-selector">
-          
-          <!-- botão da linguagem atual -->
-          <!-- ao passar o mouse em cima, exibe as opções de mudança de idioma -->
-          <button class="idioma-atual-desktop">
-            <!-- english --><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN
-          </button>
-          
-          <ul class="language-selector-content">
-            <!--alemão--><li><a href="de.html" class="opcao-idioma"><img class="icons-language" src ="assets/images/countries/germany.png"> DE</a></li>
-            <!--espanhol--><li><a href="es.html" class="opcao-idioma"><img class="icons-language" src ="assets/images/countries/spain.png"> ES</a></li>
-            <!--francês--><li><a href="fr.html" class="opcao-idioma"><img class="icons-language" src ="assets/images/countries/france.png"> FR</a></li>
-            <!--italiano--><li><a href="it.html" class="opcao-idioma"><img class="icons-language" src ="assets/images/countries/italy.png"> IT</a></li>
-            <!--português--><li><a href="pt.html" class="opcao-idioma"><img class="icons-language" src ="assets/images/countries/portugal.png"> PT</a></li>
-          </ul>
-          
-        </div>
-        
-        <!-- botão que exibe menu mobile (aqueles "três tracinhos")-->
-        <div class="mobile-menu-icon">
-          <button onclick="menuShow()">
-            <img class="icon" src="/site/assets/mobile-icons/menu_white_36dp.svg" alt="">
-          </button>
-        </div>
-        
-      </nav>
-    
-      <!-- menu que aparece ao clicar nos "três tracinhos" -->
-      <div class="mobile-menu">
-        <ul>
-          
-          <li class="nav-item"><a class="nav-link" href="/"> <!-- home -->
-            Home
-          </a></li>
-          <li class="nav-item"><a class="nav-link" href="#"> <!-- services -->
-            Services
-          </a></li>
-          <li class="nav-item"><a class="nav-link" href="contact-us/index.html"> <!-- contact us -->
-            Contact us
-          </a></li>
-          <li class="nav-item"><a class="nav-link" href="#"> <!-- about us -->
-            About us
-          </a></li>
-          <li class="nav-item nav-link"> <!-- language -->
-            Language:
-          </li>
-          
-          <!-- opções de idiomas (versão de celular) -->
-          <li class="language-selector-mobile">
-
-            <button class="ling-opcoes" id="ling-atual"><img class="icons-language" src ="assets/images/countries/united-kingdom.png">
-            <a href="de.html"><button class = "ling-opcoes"><img class="icons-language" src ="assets/images/countries/germany.png"></button></a>
-            <a href="es.html"><button class = "ling-opcoes"><img class="icons-language" src ="assets/images/countries/spain.png"></button></a>
-            <a href="fr.html"><button class = "ling-opcoes"><img class="icons-language" src ="assets/images/countries/france.png"></button></a>
-            <a href="it.html"><button class = "ling-opcoes"><img class="icons-language" src ="assets/images/countries/italy.png"></button></a>
-            <a href="pt.html"><button class = "ling-opcoes"><img class="icons-language" src ="assets/images/countries/portugal.png"></button></a>
-
-          </li>
-
-        </ul>
-      </div>
-
-    </header>
+    <header id="header"></header>
 
     <!----body da página principal---->
     <main>
 
-    <!-- LOGO E MENSAGEM PRINCIPAL -->
-
+      <!-- LOGO E MENSAGEM PRINCIPAL -->
       <div class="content-main">
         <div class="text-main-1">
           <h1> 
@@ -180,7 +64,6 @@
       </div>
 
       <!-- CONTEUDO NISS -->
-      
       <div class="content-main">
         <div class="text-main-3">
           <h2>Get your NISS Portugal Online with us!</h2>
@@ -201,73 +84,8 @@
       
     </main>
 
-    <!-- FOOTER by RodrigoKingAlbuquerque --> 
-    <footer>
-        <div class="footer-ct" >
-
-        <!-- UL 1 -->
-        <ul class="ul-1">
-          
-          <a href="index.html"><img class="logo" src="/site/assets/images/DiscoveryLogo.png" alt="Discovery Portugal"></a>
-          
-          <p>
-            Discover Portugal in the best way,<br>
-            with us!
-          </p>
-
-          <div class="footer-icons-social">
-
-            <a href="#" class="footer-link-social" id="instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" class="footer-link-social" id="facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="#" class="footer-link-social" id="whatsapp">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-
-          </div>
-
-        </ul>
-
-        <!-- UL 2 -->
-        <ul>
-          <h2>Link</h2>
-
-          <li> <a href="#">Home<hr class="title-lines"></a> </li>
-          <li> <a href="#">Services<hr class="title-lines"></a> </li>
-          <li> <a href="#">Contacts<hr class="title-lines"></a> </li>
-        </ul>
-
-        <!--UL 3-->
-        <ul>
-          <h2>Enterprise</h2>
-
-          <li><a href="#">Our compromise<hr class="title-lines"></a></li>
-          <li><a href="#">About Us<hr class="title-lines"></a></li>
-          <li><a href="#">Terms and Conditions<hr class="title-lines"></a></li>
-        </ul>
-
-        <!-- UL 4 -->
-        <ul>
-          <h2>Contact Us</h2>
-
-          <p>+81875462589</p>
-          <p>email@gmail.com</p>
-          <p>Portugal</p>
-        </ul>
-
-      </div>
-
-      <div class="footer-copyright">
-        <!------------------------------------------------->
-        <h4>Copyright © 2023 MRA | All Rights Reserved.</h4>
-        <!------------------------------------------------->
-        <hr>
-      </div>
-
-    </footer>
+    <footer id="footer"></footer>
   
   </body>
+  
 </html>

@@ -1,0 +1,44 @@
+Portuguese:
+Início
+Serviços
+Obtenha o seu NIF
+Obtenha o seu NISS
+Contacte-nos
+Sobre nós
+Idioma:
+
+Spanish:
+Inicio
+Servicios
+Obtén tu NIF
+Obtén tu NISS
+Contáctanos
+Acerca de nosotros
+Idioma:
+
+French:
+Accueil
+Services
+Obtenez votre NIF
+Obtenez votre NISS
+Contactez-nous
+À propos
+Langue :
+
+Italian:
+Home
+Servizi
+Ottieni il tuo NIF
+Ottieni il tuo NISS
+Contattaci
+Chi siamo
+Lingua:
+
+German:
+Startseite
+Dienstleistungen
+Holen Sie sich Ihre NIF
+Holen Sie sich Ihre NISS
+Kontaktiere uns
+Über uns
+Sprache:
