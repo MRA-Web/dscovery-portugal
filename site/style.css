@@ -35,7 +35,8 @@ footer{
     
 }
 #contact-us{
-    align
+    align-items: center;
+    justify-content: center;
 }
 .body-contact {
     background-color: #c9d6ff;
@@ -383,9 +384,6 @@ footer{
     border-radius: 20px;
     width: 84px;
     text-align: left;
-    
-    
-    
     max-height: 0;
     overflow: hidden;
     transition: border-top-left-radius 0.4s, border-top-right-radius 0.4s, max-height 0.5s ease;
