@@ -1,0 +1,130 @@
+<!-- header em francês -->
+
+<nav class="nav-bar"> <!-- barra de navegação desktop -->
+    
+    <!-- logo do site que leva à página inicial -->
+    <div><a href="/site/fr.html"><h1>
+      <img class="logo" src="/site/assets/images/DiscoveryLogo.png">
+    </h1></a></div>
+      
+    <!-- navegação entre as principais partes do site (para desktop) -->
+    <div class="nav-list">
+      
+      <div class="nav-item"> <!-- home -->
+        <a class="nav-link" href="/site/fr.html">
+            Accueil
+          <hr class="title-lines">
+        </a>
+      </div>
+      
+      <div class="nav-item"> <!-- services -->
+        
+        <a class="nav-link" href="#">
+            Services
+          <hr class="title-lines">
+        </a>
+        
+        <ul class="item-content">
+          <li>
+            <a href="/site/nif/">Obtenez votre NIF<br>
+              <hr class="sub-lines"><br>
+              <p>teste de texto adicional 1 agora ampliado para ver como fica o texto ocupando mais espaço no sub titulo pra ver se</p>
+            </a>
+          </li>
+          <li>
+            <a href="/site/niss/">Obtenez votre NISS<br>
+              <hr class="sub-lines"><br>
+              <p>teste de texto adicional 2 agora ampliado para ver como fica o texto ocupando mais espaço no sub titulo pra ver se</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">Item 3<br>
+              <hr class="sub-lines"><br>
+              <p>teste de texto adicional 3 agora ampliado para ver como fica o texto ocupando mais espaço no sub titulo pra ver se</p>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+      
+      <div class="nav-item"> <!-- contact us -->
+        <a class="nav-link" href="/site/contact-us/fr.html">
+            Contactez-nous
+          <hr class="title-lines">
+        </a>
+      </div>
+      
+      <div class="nav-item"> <!-- about-us -->
+        <a class="nav-link" href="/site/about-us/fr.html">
+            À propos de nous
+          <hr class="title-lines">
+        </a>
+      </div>
+      
+    </div>
+    
+    <!-- seleção de idiomas desktop -->
+    <div class="language-selector">
+      
+      <!-- botão da linguagem atual -->
+      <!-- ao passar o mouse em cima, exibe as opções de mudança de idioma -->
+      <button class="idioma-atual-desktop">
+        <!-- francês --><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR
+      </button>
+      
+      <ul class="language-selector-content">
+        <!-- inglês    --><li><a href="index.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN</a></li>
+        <!-- português --><li><a href="pt.html"    class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT</a></li>
+        <!-- italiano  --><li><a href="it.html"    class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT</a></li>
+        <!-- alemão    --><li><a href="de.html"    class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE</a></li>
+      </ul>
+      
+    </div>
+    
+    <!-- botão que exibe menu mobile (aqueles "três tracinhos")-->
+    <div class="mobile-menu-icon">
+      <button onclick="menuShow()">
+        <img class="icon" src="/site/assets/mobile-icons/menu_white_36dp.svg" alt="">
+      </button>
+    </div>
+    
+  </nav>
+  
+  <!-- menu que aparece ao clicar nos "três tracinhos" -->
+  <div class="mobile-menu">
+    <ul>
+      
+      <li class="nav-item"><a class="nav-link" href="/site/fr.html"> <!-- home -->
+        Accueil
+      </a></li>
+      <li class="nav-item"><a class="nav-link" href="/site/nif/fr.html"> <!-- services -->
+        Obtenez votre NIF
+      </a></li>
+      <li class="nav-item"><a class="nav-link" href="/site/niss/fr.html"> <!-- services -->
+        Obtenez votre NISS
+      </a></li>
+      <li class="nav-item"><a class="nav-link" href="/site/contact-us/fr.html"> <!-- contact us -->
+        Contactez-nous
+      </a></li>
+      <li class="nav-item"><a class="nav-link" href="/site/about-us/fr.html"> <!-- about us -->
+        À propos de nous
+      </a></li>
+      <li class="nav-item nav-link"> <!-- language -->
+        Langue :
+      </li>
+      
+      <!-- opções de idiomas (versão de celular) -->
+      <li class="language-selector-mobile">
+  
+        <!-- inglês    --><a href="index.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"></button></a>
+        <!-- português --><a href="pt.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"></button></a>
+        <!-- espanhol  --><a href="es.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/spain.png"></button></a>
+        <!-- francês   --><button class = "ling-opcoes" id="ling-atual"><img class="icons-language" src ="/site/assets/images/countries/france.png"></button>
+        <!-- italiano  --><a href="it.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/italy.png"></button></a>
+        <!-- alemão    --><a href="de.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/germany.png"></button></a>
+  
+      </li>
+  
+    </ul>
+  </div>
+  
