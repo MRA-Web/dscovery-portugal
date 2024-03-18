@@ -69,7 +69,6 @@ main{
 }
 
 /* RESPONSIVE BODY */
-
 @media screen and (max-width: 1050px) {
     .content-main {
         display: flex;
