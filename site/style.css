@@ -517,9 +517,7 @@ footer{
         transition: all 0.6s;
     }
 
-    /* SEÇÃO DO TOPO DISCOVERY */
-}
-
+/* SEÇÃO DO TOPO DISCOVERY */
 body {
     background-color: #ffffffc5 !important;
     
@@ -533,7 +531,6 @@ main{
     margin: 0 auto;
     min-height: 90vh;
 }
-
 .content-main{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
