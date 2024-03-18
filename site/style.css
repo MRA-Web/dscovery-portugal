@@ -5,19 +5,9 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none !important; 
 }
-body{
-    background-color: #ffffffc5 !important;
-    /* altura do header */
-}
-
-/* SEÇÃO DO TOPO DISCOVERY */
-body {
-    background-color: #ffffffc5 !important;
-    
-}
+body{background-color: #ffffffc5 !important;}
 
 /* MAIN CONTENT */
-
 main{
     max-width: 1440px;
     padding: 0 10%;
@@ -41,19 +31,15 @@ main{
     color: black;
     margin: 1rem 0 2rem;
 }
-.image-main-1{
-    zoom: 25%;
-}
+
+.image-main-1 { zoom: 25%;}
 
 /* NIF PART */
-.image-main-2{
-    zoom: 20%;
-}
+.image-main-2 { zoom: 20%;}
 
 /* NISS PART */
-.image-main-3{
-    zoom:25%;
-}
+.image-main-3 { zoom:25%;}
+
 /* LINK 'A' "BUTTON" STYLE */
 .hover-button{
     display: inline-block;
@@ -80,37 +66,21 @@ main{
         flex-direction: column;
         align-items: center;
     }
-    .text-main-1 h1{
-        text-align: center;
-    }
-    .text-main-1 h2{
-        text-align: center;
-    }
-    .image-main-1{
-        zoom: 15%;
-    }
     .text-main-2{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .text-main-2 p{
-        text-align: center;
     }
     .text-main-3{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .text-main-3 p{
-        text-align: center;
-    }
-    .image-main-2{
-        display: none;
-    }
-    .image-main-3{
-        display: none;
-    }
+    .text-main-1 h1 { text-align: center; }
+    .text-main-1 h2 { text-align: center; }
+    .text-main-2 p  { text-align: center; }
+    .text-main-3 p  { text-align: center; }
+    .image-main-2   { display: none; }
+    .image-main-3   { display: none; }
+    .image-main-1   { zoom: 15%; }
 }
-
-/* teste */
