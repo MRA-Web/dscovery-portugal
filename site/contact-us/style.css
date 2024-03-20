@@ -1,9 +1,15 @@
-.body-contact {
-  background-color: #c9d6ff;
-  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+
+
+
+
+
+
+/* .body-contact {
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 .container {
   background-color: #fff;
@@ -170,25 +176,38 @@
 .container.active .toogle-right {
   transform: translateX(200%);
 }
+    
+@media screen and (max-width: 900px) {
+    .body-contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    }
+    .toogle{
+        display: none;
+    }
+    .container{
+        width: 500px;
+        min-height: 550px;
+        margin-top: 800px;
+        align-items: center;;
+    }
+    .container form{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        height: 100%;
+    }
+
+}
 
 @media screen and (max-width: 1050px) {
-  main {
-    margin-top: -250px;
-  }
-  .contact {
-    width: 100%;
-  }
-  .toogle-container {
-    display: none;
-  }
-  .form-container {
-    align-items: center;
-    justify-content: center;
-  }
-  .toogle-right {
-    display: none;
-  }
-  .toogle-panel {
-    display: none;
-  }
+.body-contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
 }
+} */
