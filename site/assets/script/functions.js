@@ -22,3 +22,22 @@ function jogar_texto(doc_origem, id_destino) {
 function teste(){
     console.log("apenas um teste");
 }
+
+function submeter() {
+    // Selecionar os elementos com classe A e classe B
+    const elementosClasseA = document.querySelectorAll('.contact');
+    const elementosClasseB = document.querySelectorAll('.classeB');
+
+    // Diminuir o tamanho da classe A para 0%
+    elementosClasseA.forEach(elemento => {
+        elemento.style.width = '0%';
+    });
+
+    // Aumentar o tamanho da classe B para 100%
+    elementosClasseB.forEach(elemento => {
+        elemento.style.width = '100%';
+    });
+}
+
+// Chamar a função para ajustar os tamanhos das classes
+ajustarTamanhoClasses();

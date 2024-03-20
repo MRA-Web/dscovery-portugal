@@ -35,8 +35,15 @@
     font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-top: -250px;
+    margin-top: 15px;
     cursor: pointer;
+  }
+
+  #enviador:hover .toggle-panel{
+    
+    width: 100%;
+
+    transition: all 0.4s;
   }
   .container form {
     background-color: #fff;
@@ -72,16 +79,18 @@
     line-height: 1.5em; 
     overflow-y: auto;
   }
-  .form-container {
+  #contact {
     position: absolute;
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
-  }
-  .contact {
     left: 0;
     width: 50%;
     z-index: 2;
+  }
+  .toggle-panel:hover > #contact{
+    width: 10% !important;
+    background-color: #131c6c;
   }
   .container.active .contact {
     transform: translateX(100%);
@@ -110,43 +119,28 @@
       z-index: 5;
   }
   } */
-  .toogle-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.6s ease-in-out;
-    z-index: 100;
-    border-radius: 150px 0 0 100px;
-  }
+
   .container.active .toogle-container {
     transform: translate(-100%);
     border-radius: 0px 150 100 0px;
   }
-  .toogle {
-    background-color: #512da8;
-    height: 100%;
-    background: linear-gradient(to right, #4c63e1, #131c6c);
-    color: #fff;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: all 0.6s ease-in-out;
-  }
-  .toogle p {
+
+  .toogle-panel p {
     font-size: 13px;
   }
   .container.active .toogle {
     transform: translateX(50%);
   }
   .toogle-panel {
-    position: absolute;
-    width: 50%;
+    background-color: #512da8;
     height: 100%;
+    background: linear-gradient(to right, #4c63e1, #131c6c);
+    color: #fff;
+    /* position: relative; */
+    width: 50%;
+    right: 0;
+
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,6 +148,9 @@
     padding: 30 30px;
     text-align: center;
     top: 0;
+
+    border-top-left-radius: 150px; border-bottom-left-radius: 150px;
+
     transform: translateX(0);
     transition: all 1.6s ease-in-out;
   }
