@@ -35,7 +35,7 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-top: -250px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .container form {
@@ -70,7 +70,7 @@
   resize: none;
   max-height: 15em; 
   line-height: 1.5em; 
-  overflow-y: auto;
+  overflow-y: auto; 
 }
 .form-container {
   position: absolute;
