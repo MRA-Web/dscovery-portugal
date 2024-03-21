@@ -84,3 +84,10 @@ main{
     .image-main-3   { display    : none   ;}
     .image-main-1   { zoom       : 15%    ;}
 }
+
+.content-about-us {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
