@@ -27,25 +27,34 @@
     <div id="contact">
 
       <form>
+
         <h1>Contact-us</h1>
-        <span>Name</span>
-        <input type="text" placeholder="Name">
-        <span>Phone Number</span>
-        <input type="tel" placeholder="(xx) xxxx-xxxx">
-        <span>E-mail</span>
-        <input type="email" placeholder="E-mail">
-        <span>Subject</span>
-        <input type="text" placeholder="Text">
-        <span>Mensage</span>
-        <textarea placeholder="type here">
-        </textarea>
-      </form> 
+
+      <label for="name">Name</label>
+      <input type="text" placeholder="Name" id="name">
+
+      <label for="tel">Number</label>
+      <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel">
+
+      <label for="email">E-mail</label>
+      <input type="email" placeholder="E-mail" id="email">
+
+      <label for="subject">Subject</label>
+      <input type="text" placeholder="Text" id="subject">
+
+      <label for="mensage">Mensage</label>
+      <textarea placeholder="type here" id="mensage">
+      </textarea>
+
+    </form>
+
 
     </div>
     
     <div class="toogle-panel">
-      <h1>Send your mensage</h1>
-      <p>Please send your message by clicking the button below. We look forward to hearing from you!</p>
+
+      <div class="toogle-mensage"><h1>Send your mensage</h1></div>
+      <p>We look forward to hearing from you!</p>
       <button id="enviador"> Send </button>
     </div>
     
