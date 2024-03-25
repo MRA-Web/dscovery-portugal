@@ -56,12 +56,13 @@ main{
   transition: all 0.4s;
 }
 .container form {
-  background-color: #ffffff00;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 20px;
+  margin-right: 20px;
   height: 100%;
 }
 form h1{
@@ -168,7 +169,7 @@ textarea::-ms-scrollbar-thumb {
   transform: translate(-100%);
   border-radius: 0px 150 100 0px;
 }
-.toogle-panel h1{ 
+.toogle-message h1{ 
   font-family: trattatello, fantasy;
   font-weight: 50;
   font-size: 37px;
@@ -205,15 +206,8 @@ textarea::-ms-scrollbar-thumb {
   transform: translateX(0);
   transition: all 1.6s ease-in-out;
 }
-.toogle-left {
-  transform: translateX(-200%);
-}
-.container.active .toogle-left {
-  transform: translateX(0);
-}
-.toogle-right {
-  right: 0;
-  transform: translateX(0);
+.toogle-panel {
+  z-index: 0;
 }
 .container.active .toogle-right {
   transform: translateX(200%);
@@ -226,17 +220,15 @@ textarea::-ms-scrollbar-thumb {
   #contact {
     width: 100%;
   }
-  .toogle-container {
-    display: none;
-  }
   .form-container {
     align-items: center;
     justify-content: center;
   }
-  .toogle-right {
+  .toggle-message{
     display: none;
   }
-  .toogle-panel {
-    display: none;
+  .container form {
+    margin-right: 0;
+    padding: 0 40px;
   }
 }
