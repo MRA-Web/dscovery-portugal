@@ -200,14 +200,12 @@ textarea::-ms-scrollbar-thumb {
   padding: 30 30px;
   text-align: center;
   top: 0;
+  z-index: 0;
 
   border-top-left-radius: 150px; border-bottom-left-radius: 150px;
 
   transform: translateX(0);
   transition: all 1.6s ease-in-out;
-}
-.toogle-panel {
-  z-index: 0;
 }
 .container.active .toogle-right {
   transform: translateX(200%);
