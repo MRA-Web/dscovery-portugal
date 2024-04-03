@@ -169,12 +169,11 @@ textarea::-ms-scrollbar-thumb {
   transform: translate(-100%);
   border-radius: 0px 150 100 0px;
 }
-.toogle-message h1{ 
+.toogle-panel h1{ 
   font-family: trattatello, fantasy;
   font-weight: 50;
   font-size: 37px;
 }
-
 .toogle-panel p {
   font-size: 14px;
 }
@@ -214,9 +213,6 @@ textarea::-ms-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1050px) {
-  main {
-    
-  }
   #contact {
     width: 100%;
   }
