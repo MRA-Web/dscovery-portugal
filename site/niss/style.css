@@ -1,0 +1,21 @@
+main{
+    margin-top: 200px;
+}
+
+#debaixo{
+    width: 600px;
+}
+
+#comecar{
+    font-size:xx-large;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, rgba(0, 5, 36, 1) 0%, #093679 50%, rgba(0, 180, 255, 1) 100%);
+    transition: all 0.4s;
+}
+#comecar:hover {
+    transform: scale(1.2);
+    transition: all 0.4S;
+}
