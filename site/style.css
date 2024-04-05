@@ -23,13 +23,20 @@ main{
 }
 .text-main-1 h1{
     font-family: trattatello, fantasy;
+    font-weight: 500;
     font-size: 50px;
     color: rgb(7, 43, 97);
 }
 .text-main-1 h2{
+    font-weight: 600;
     font-size: 25px;
-    color: black;
+    color: rgb(9, 26, 57);
     margin: 1rem 0 2rem;
+}
+.text-main-1 h3{
+    color: rgb(0, 0, 0);
+    margin: 1rem 0 2rem;
+    font-weight: 500;
 }
 
 .image-main-1 { zoom: 25%;}
@@ -78,6 +85,7 @@ main{
     }
     .text-main-1 h1 { text-align : center ;}
     .text-main-1 h2 { text-align : center ;}
+    .text-main-1 p { text-align : center ;}
     .text-main-2 p  { text-align : center ;}
     .text-main-3 p  { text-align : center ;}
     .image-main-2   { display    : none   ;}
