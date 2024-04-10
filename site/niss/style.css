@@ -1,13 +1,13 @@
 main{
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 #debaixo{
-    width: 600px;
+    width: 100%;
 }
 
 #comecar{
-    font-size:xx-large;
+    font-size: 150%;
     display: inline-block;
     padding: 10px 20px;
     color: white;
@@ -19,3 +19,51 @@ main{
     transform: scale(1.2);
     transition: all 0.4S;
 }
+
+.prim-letra{
+    font-weight: 900 !important;
+    font-size:150%;
+    color: rgb(55, 55, 119);
+}
+
+.explicacao{
+    width: 50%;
+}
+
+.img-side{
+    width: 300px;
+    height: 300px;
+    margin-top: -30px;
+}
+#cima{
+    display: flex;
+    justify-content: space-around;
+}
+.esquerda{
+    justify-content: center;
+}
+.esquerda h1{
+    font-family: trattatello, fantasy;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(7, 43, 97);
+    margin-bottom: 10px;
+    
+}
+.esquerda h2{
+    margin-bottom: 90px;
+}
+.esquerda h3{
+    padding-right: 100px;
+}
+.direita{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
+
+hr{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
