@@ -27,10 +27,12 @@ main{
     font-size: 50px;
     color: rgb(7, 43, 97);
 }
-.text-main-1 h2{
+.text-main-1 h4{
     font-weight: 600;
     font-size: 25px;
-    color: rgb(9, 26, 57);
+    color: rgb(5, 28, 77);
+
+    /* e vou mexer sim */
     margin: 1rem 0 2rem;
 }
 .text-main-1 h3{
@@ -45,7 +47,7 @@ main{
 .image-main-2 { zoom: 20%;}
 
 /* NISS PART */
-.image-main-3 { zoom:25%;}
+.image-main-3 { zoom: 49%;}
 
 /* LINK 'A' "BUTTON" STYLE */
 .hover-button{
