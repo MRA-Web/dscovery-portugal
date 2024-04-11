@@ -21,22 +21,14 @@ main{
     align-items: center;
     margin-top: 120px;
 }
-
+.content-main p{
+    font-size: 19px;
+}
 .text-main-1 h1{
     font-family: trattatello, fantasy;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 55px;
     color: rgb(7, 43, 97);
-}
-.text-main-2 h2{
-    font-size: 25px;
-    color: rgb(9, 51, 113);
-    
-}
-.text-main-3 h2{
-    font-size: 25px;
-    color: rgb(9, 51, 113);
-    
 }
 .text-main-1 h4{
     font-weight: 600;
@@ -52,8 +44,31 @@ main{
     font-weight: 500;
 }
 
+.text-main-2 h2{
+    font-family: trattatello, fantasy;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(9, 51, 113);
+    margin-left: 15px;
+    
+}
+.text-main-3 h2{
+    font-family: trattatello, fantasy;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(9, 51, 113);
+    margin-left: 15px;
+}
+
+
 .image-main-1 { 
+    
     zoom: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    margin: 100px;
 }
 
 /* NIF PART */
