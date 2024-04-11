@@ -19,13 +19,24 @@ main{
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 1.5rem;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 120px;
 }
+
 .text-main-1 h1{
     font-family: trattatello, fantasy;
     font-weight: 500;
     font-size: 50px;
     color: rgb(7, 43, 97);
+}
+.text-main-2 h2{
+    font-size: 25px;
+    color: rgb(9, 51, 113);
+    
+}
+.text-main-3 h2{
+    font-size: 25px;
+    color: rgb(9, 51, 113);
+    
 }
 .text-main-1 h4{
     font-weight: 600;
@@ -41,13 +52,31 @@ main{
     font-weight: 500;
 }
 
-.image-main-1 { zoom: 25%;}
+.image-main-1 { 
+    zoom: 55%;
+}
 
 /* NIF PART */
-.image-main-2 { zoom: 20%;}
+.image-main-2 {
+    background-color: rgba(92, 92, 216, 0.105) !important;
+    zoom: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    margin: 100px;
+    }
 
 /* NISS PART */
-.image-main-3 { zoom: 49%;}
+.image-main-3 { 
+    background-color: rgba(92, 92, 216, 0.105) !important;
+    zoom: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    margin: 100px;
+}
 
 /* LINK 'A' "BUTTON" STYLE */
 .hover-button{
@@ -62,7 +91,19 @@ main{
     transform: scale(1.2);
     transition: all 0.4S;
 }
-
+.vertical-row {
+    position: relative;
+  }
+  
+  .vertical-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px; /* largura da linha vertical */
+    height: 100%; /* altura da linha vertical */
+    background-color: rgb(0, 37, 78); /* cor da linha vertical */
+  }
 /* RESPONSIVE BODY */
 @media screen and (max-width: 1050px) {
     .content-main {
