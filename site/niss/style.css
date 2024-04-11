@@ -1,17 +1,18 @@
 main{
     margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    /* align-items: center; */
 }
 
-#debaixo{
-    width: 100%;
-}
 
 #comecar{
-    font-size: 150%;
+    font-size: 100%;
     display: inline-block;
     padding: 10px 20px;
     color: white;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     background: linear-gradient(90deg, rgba(0, 5, 36, 1) 0%, #093679 50%, rgba(0, 180, 255, 1) 100%);
     transition: all 0.4s;
     
@@ -21,51 +22,85 @@ main{
     transition: all 0.4S;
 }
 
+.explicacao{
+    width: 50%;
+}
+#debaixo{
+    width: 100%;
+}
+
+.img-side{
+    width: 320px;
+    height: 320px;
+    margin-top: -30px;
+}
+#cima{
+    display: flex;
+    justify-content: space-between;
+}
+.esquerda{
+    justify-content: center !important;
+    align-items: center;
+    width: 60%;
+}
+.esquerda h1{
+    font-family: trattatello, fantasy;
+    font-weight: lighter;
+    font-size: 40px;
+    color: rgb(7, 43, 97);
+    margin-bottom: 10px;
+    /* margin-top: 0px; */
+    
+}
+.esquerda h2{
+    margin-bottom: 10px;
+}
+.esquerda h3{
+    padding-right: 100px;
+}
+.direita{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+#mini-expl{
+    margin-top: 10px;
+    /* text-align: center; */
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+    color: rgb(52, 52, 58);
+}
+
 .prim-letra{
     font-weight: 900 !important;
     font-size:150%;
     color: rgb(55, 55, 119);
 }
 
-.explicacao{
-    width: 50%;
-}
-
-.img-side{
-    width: 300px;
-    height: 300px;
-    margin-top: -30px;
-}
-#cima{
-    display: flex;
-    justify-content: space-around;
-}
-.esquerda{
-    justify-content: center;
-}
-.esquerda h1{
-    font-family: trattatello, fantasy;
-    font-weight: 500;
-    font-size: 50px;
-    color: rgb(7, 43, 97);
-    margin-bottom: 10px;
-    margin-top: 30px;
-    
-}
-.esquerda h2{
-    margin-bottom: 30px;
-}
-.esquerda h3{
-    padding-right: 100px;
-}
-.direita{
-    width: 50%;
-    display: flex;
-    justify-content: right;
-}
-
-hr{
+main hr{
     margin-top: 40px;
     margin-bottom: 60px;
 }
 
+@media screen and (max-width: 1050px) {
+
+    .direita{
+        display: none;
+    }
+    #cima{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #cima h3{
+        padding: 0;
+    }
+    .esquerda{
+        width: 100%;
+    }
+    #mini-expl{
+        font-size: 60%;
+    }
+}
