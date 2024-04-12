@@ -5,8 +5,6 @@ main{
     justify-content: center !important;
     /* align-items: center; */
 }
-
-
 #comecar{
     font-size: 100%;
     display: inline-block;
@@ -21,14 +19,9 @@ main{
     transform: scale(1.2);
     transition: all 0.4S;
 }
-
-.explicacao{
-    width: 50%;
-}
 #debaixo{
     width: 100%;
 }
-
 .img-side{
     width: 320px;
     height: 320px;
@@ -72,18 +65,15 @@ main{
     margin-bottom: 30px;
     color: rgb(52, 52, 58);
 }
-
-.prim-letra{
+.letras-grandes-sigla{
     font-weight: 900 !important;
     font-size:150%;
     color: rgb(55, 55, 119);
 }
-
 main hr{
     margin-top: 40px;
     margin-bottom: 60px;
 }
-
 @media screen and (max-width: 1050px) {
 
     .direita{

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discovery Portugal</title>
+    <link rel="shortcut icon" href="/site/assets/images/DiscoveryLogoIcon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/site/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/site/assets/script/functions.js"></script>
+
+    <title>Formulário Multietapas</title>
+          <style>
+              /* Oculta todas as seções por padrão */
+              .etapa {
+                  display: none;
+              }
+              /* Mostra apenas a primeira etapa */
+              #etapa1 {
+                  display: block;
+              }
+              /* Botão de navegação */
+              .btn-navegacao {
+                  margin-top: 10px;
+              }
+          </style>
+          <script>
+              // Função para avançar para a próxima etapa
+              function avancar(etapaAtual) {
+                  document.getElementById('etapa' + etapaAtual).style.display = 'none';
+                  document.getElementById('etapa' + (etapaAtual + 1)).style.display = 'block';
+              }
+      
+              // Função para voltar para a etapa anterior
+              function voltar(etapaAtual) {
+                  document.getElementById('etapa' + etapaAtual).style.display = 'none';
+                  document.getElementById('etapa' + (etapaAtual - 1)).style.display = 'block';
+              }
+      
+              // Função para enviar o formulário (outras validações podem ser feitas aqui)
+              function enviarForm() {
+                  alert('Formulário enviado com sucesso!');
+                  // Lógica de envio pode ser adicionada aqui
+                  return false; // Impede o envio real durante os testes
+              }
+          </script>
+  </head>
+  
+  
+  <body onload="jogar_texto('/site/header/pt.html', 'header'); jogar_texto('/site/footer/pt.html', 'footer');">
+    
+    <header id="header"></header>
+
+    <!----body da página principal---->
+    <main>
+      <!DOCTYPE html>
+      <html>
+      <body>
+          <form id="formMultiEtapas" onsubmit="return enviarForm();">
+              <!-- Primeira etapa -->
+              <div id="etapa1" class="etapa">
+                  <h2>Etapa 1: Seleção de uma opção</h2>
+                  <label for="opcao">Escolha uma opção:</label>
+                  <select id="opcao" name="opcao">
+                      <option value="opcao1">Opção 1</option>
+                      <option value="opcao2">Opção 2</option>
+                      <option value="opcao3">Opção 3</option>
+                  </select><br><br>
+                  <button type="button" class="btn-navegacao" onclick="avancar(1)">Próximo</button>
+              </div>
+      
+              <!-- Segunda etapa -->
+              <div id="etapa2" class="etapa">
+                  <h2>Etapa 2: Entrada de texto</h2>
+                  <label for="texto">Digite algo:</label>
+                  <input type="text" id="texto" name="texto" required><br><br>
+                  <button type="button" class="btn-navegacao" onclick="voltar(2)">Voltar</button>
+                  <button type="button" class="btn-navegacao" onclick="avancar(2)">Próximo</button>
+              </div>
+      
+              <!-- Terceira etapa -->
+              <div id="etapa3" class="etapa">
+                  <h2>Etapa 3: Entrada de data</h2>
+                  <label for="data">Selecione uma data:</label>
+                  <input type="date" id="data" name="data" required><br><br>
+                  <button type="button" class="btn-navegacao" onclick="voltar(3)">Voltar</button>
+                  <button type="button" class="btn-navegacao" onclick="avancar(3)">Próximo</button>
+              </div>
+      
+              <!-- Quarta etapa -->
+              <div id="etapa4" class="etapa">
+                  <h2>Etapa 4: Entrada de senha</h2>
+                  <label for="senha">Digite sua senha:</label>
+                  <input type="password" id="senha" name="senha" required><br><br>
+                  <button type="button" class="btn-navegacao" onclick="voltar(4)">Voltar</button>
+                  <button type="button" class="btn-navegacao" onclick="avancar(4)">Próximo</button>
+              </div>
+      
+              <!-- Quinta etapa -->
+              <div id="etapa5" class="etapa">
+                  <h2>Etapa 5: Confirmação</h2>
+                  <p>Revise suas informações e clique em "Enviar" para concluir:</p>
+                  <ul>
+                      <li>Opção escolhida: <span id="resumoOpcao"></span></li>
+                      <li>Texto digitado: <span id="resumoTexto"></span></li>
+                      <li>Data selecionada: <span id="resumoData"></span></li>
+                      <li>Senha (oculta): <span>****</span></li>
+                  </ul>
+                  <button type="button" class="btn-navegacao" onclick="voltar(5)">Voltar</button>
+                  <button type="submit">Enviar</button>
+              </div>
+          </form>
+      
+          <script>
+              // Atualiza os resumos na última etapa
+              function atualizarResumos() {
+                  document.getElementById('resumoOpcao').textContent = document.getElementById('opcao').value;
+                  document.getElementById('resumoTexto').textContent = document.getElementById('texto').value;
+                  document.getElementById('resumoData').textContent = document.getElementById('data').value;
+              }
+      
+              // Atualiza os resumos antes de avançar para a etapa 5
+              document.getElementById('etapa5').addEventListener('click', atualizarResumos);
+          </script>
+      </body>
+      </html>
+      
+    </main>
+
+    <footer id="footer"></footer>
+  
+  </body>
+  
+</html>
