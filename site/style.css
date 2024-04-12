@@ -119,6 +119,12 @@ main{
     height: 100%; /* altura da linha vertical */
     background-color: rgb(0, 37, 78); /* cor da linha vertical */
   }
+
+main hr{
+    margin-top: 80px;
+    width: 95%;
+    
+}
 /* RESPONSIVE BODY */
 @media screen and (max-width: 1050px) {
     .content-main {
