@@ -10,7 +10,7 @@ body{background-color: #ffffffc5 !important;}
 /* MAIN CONTENT */
 main{
     max-width: 1440px;
-    padding: 0 10%;
+    padding: 0 5%;
     margin: 0 auto;
     min-height: 90vh;
 }
@@ -20,6 +20,8 @@ main{
     grid-gap: 1.5rem;
     align-items: center;
     margin-top: 120px;
+    background-color: aliceblue;
+    border-radius: 10px;
 }
 .content-main p{
     font-size: 19px;
@@ -43,7 +45,38 @@ main{
     margin: 1rem 0 2rem;
     font-weight: 500;
 }
+.mini-texts{
+    display: flex;
 
+}
+.mini-text-1,
+.mini-text-2{
+    background-color: rgba(255, 255, 255, 0.105) !important; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+}
+.question-icon{
+   color: black !important;
+}
+.mini-text-1 h3,
+.mini-text-2 h3{
+     display: flex;
+    text-align: left;
+    color: rgb(9, 51, 113);
+}
+.mini-text-1 p{
+     text-align: center;
+}
+
+.mini-text-2 p{
+     text-align: center;
+}
+
+.mini-text-1,
+.mini-text-2{
+    margin-right: 20px;
+}
 .text-main-2 h2{
     font-family: trattatello, fantasy;
     font-weight: 500;
@@ -68,7 +101,7 @@ main{
     justify-content: center;
     align-items: center;
     border-radius: 20%;
-    margin: 100px;
+   margin-top: 100px;
 }
 
 /* NIF PART */
