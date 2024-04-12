@@ -1,6 +1,3 @@
-main{
-    margin-top: 200px;
-}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 *{
     margin: 0;
@@ -22,31 +19,88 @@ main{
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 1.5rem;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 120px;
 }
-.text-nif h1{
-    font-family: trattatello, fantasy;
-    font-weight: lighter;
-    font-size: 40px;
-    color: rgb(7, 43, 97);
-}
-.nif-img{
-   height: 10px;
-   width: auto;
+.content-main p{
+    font-size: 19px;
 
 }
-.text-nif h2{
-    font-size: 22px;
-    color: black;
+
+.text-main-1 h1{
+    font-family: trattatello, fantasy;
+    font-weight: 500;
+    font-size: 100px;
+    color: rgb(7, 43, 97);
+    background-color: aliceblue;
+}
+.text-main-1 h4{
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(5, 28, 77);
+
+    /* e vou mexer sim */
     margin: 1rem 0 2rem;
 }
-.text-nif p{
-    font-size: 16px;
-    margin-right: 13px;
-    color: black;
-    display: inline-block;
-    margin-bottom: 10px;
-    display: inline-block;
+.text-main-1 h3{
+    color: rgb(0, 0, 0);
+    margin: 1rem 0 2rem;
+    font-weight: 500;
+    display: inline;
+}
+
+.text-main-2 h2{
+    font-family: trattatello, fantasy;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(9, 51, 113);
+    margin-left: 15px;
+    
+}
+.vertical-row h4{
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(5, 28, 77);
+    margin: 1rem 0 2rem;
+}
+.text-main-3 h2{
+    font-family: trattatello, fantasy;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(9, 51, 113);
+    margin-left: 15px;
+}
+
+
+.image-main-1 { 
+    
+    zoom: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    margin: 100px;
+}
+
+/* NIF PART */
+.image-main-2 {
+    background-color: rgba(92, 92, 216, 0.105) !important;
+    zoom: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    margin: 100px;
+    }
+
+/* NISS PART */
+.image-main-3 { 
+    background-color: rgba(92, 92, 216, 0.105) !important;
+    zoom: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    margin: 100px;
 }
 
 /* LINK 'A' "BUTTON" STYLE */
@@ -57,13 +111,24 @@ main{
     border-radius: 0.5rem;
     background: linear-gradient(90deg, rgba(0, 5, 36, 1) 0%, #093679 50%, rgba(0, 180, 255, 1) 100%);
     transition: all 0.4s;
-    margin-top: 10px;
 }
 .hover-button:hover {
     transform: scale(1.2);
     transition: all 0.4S;
 }
-
+.vertical-row {
+    position: relative;
+  }
+  
+  .vertical-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px; /* largura da linha vertical */
+    height: 100%; /* altura da linha vertical */
+    background-color: rgb(0, 37, 78); /* cor da linha vertical */
+  }
 /* RESPONSIVE BODY */
 @media screen and (max-width: 1050px) {
     .content-main {
@@ -71,10 +136,43 @@ main{
         flex-direction: column;
         margin-top: 150px;
     }
-    .text-nif {
-        align-items: center;}
-        
-    .text-nif h1 { text-align : center ;}
-    .text-nif h2 { text-align : center ;}
-    .text-nif p { text-align : center ;}
+    .text-main-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-main-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-main-3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-main-1 h1 { text-align : center ;}
+    .text-main-1 h3 { text-align : center ;}
+    .text-main-1 h4 { text-align : center ;}
+    .text-main-1 p { text-align : center ;}
+    .text-main-2 p  { text-align : center ;}
+    .text-main-2 h2{font-size: 45px;}
+    .text-main-3 p  { text-align : center ;}
+    .text-main-3 h2{font-size: 45px;}
+    .image-main-2   { display    : none   ;}
+    .image-main-3   { display    : none   ;}
+    .image-main-1   { zoom       : 38%    ;}
+}
+
+.content-about-us {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tittle h1{
+    font-weight: 600;
+    font-family: trattatello, fantasy;
+    font-size: 50px;
+    color: rgb(7, 43, 97);
 }
