@@ -22,32 +22,60 @@ main {
   grid-gap: 1.5rem;
   align-items: center;
   margin-top: 120px;
+  background-color: aliceblue;
 }
 .content-main p {
   font-size: 19px;
 }
 
+
 .text-main-1 h1 {
   font-family: trattatello, fantasy;
   font-weight: 500;
-  font-size: 100px;
+  font-size: 70px;
   color: rgb(7, 43, 97);
-  background-color: aliceblue;
 }
 .text-main-1 h4 {
   font-weight: 600;
   font-size: 25px;
   color: rgb(5, 28, 77);
-
-  /* e vou mexer sim */
   margin: 1rem 0 2rem;
 }
 .text-main-1 h3 {
   color: rgb(0, 0, 0);
   margin: 1rem 0 2rem;
   font-weight: 500;
-  display: inline;
 }
+.text-main-1{
+  background-color: aliceblue;
+}
+ .card { */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1em;
+  color: #787979;
+}  
 
 .text-main-2 h2 {
   font-family: trattatello, fantasy;
@@ -60,21 +88,10 @@ main {
   font-weight: 600;
   font-size: 25px;
   color: rgb(5, 28, 77);
-  margin-left: 30px;
-
-  /* e vou mexer sim */
+  margin-left: 70px;
   margin: 1rem 0 2rem;
 }
 
-.vertical-row {
-  font-weight: 600;
-  font-size: 25px !important;
-  color: rgb(5, 28, 77);
-  margin-left: 300px;
-
-  /* e vou mexer sim */
-  margin: 1rem 0 2rem;
-}
 
 .text-main-3 h2 {
   font-family: trattatello, fantasy;
@@ -133,19 +150,6 @@ main {
   transform: scale(1.2);
   transition: all 0.4s;
 }
-.vertical-row {
-  position: relative;
-}
-
-.vertical-row::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px; /* largura da linha vertical */
-  height: 100%; /* altura da linha vertical */
-  background-color: rgb(0, 37, 78); /* cor da linha vertical */
-}
 /* RESPONSIVE BODY */
 @media screen and (max-width: 1050px) {
   .content-main {
@@ -199,7 +203,7 @@ main {
     display: none;
   }
   .image-main-1 {
-    zoom: 38%;
+    display: none;
   }
 }
 
