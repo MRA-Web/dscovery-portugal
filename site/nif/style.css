@@ -22,24 +22,26 @@ main {
   grid-gap: 1.5rem;
   align-items: center;
   margin-top: 120px;
+  background-color: aliceblue;
 }
 .content-main p {
   font-size: 19px;
+}
+content-main-2{
+  background-color: antiquewhite;
+
 }
 
 .text-main-1 h1 {
   font-family: trattatello, fantasy;
   font-weight: 500;
-  font-size: 100px;
+  font-size: 70px;
   color: rgb(7, 43, 97);
-  background-color: aliceblue;
 }
 .text-main-1 h4 {
   font-weight: 600;
   font-size: 25px;
   color: rgb(5, 28, 77);
-
-  /* e vou mexer sim */
   margin: 1rem 0 2rem;
 }
 .text-main-1 h3 {
@@ -47,6 +49,9 @@ main {
   margin: 1rem 0 2rem;
   font-weight: 500;
   display: inline;
+}
+.text-main-1{
+  background-color: aliceblue;
 }
 
 .text-main-2 h2 {
@@ -60,21 +65,10 @@ main {
   font-weight: 600;
   font-size: 25px;
   color: rgb(5, 28, 77);
-  margin-left: 30px;
-
-  /* e vou mexer sim */
+  margin-left: 70px;
   margin: 1rem 0 2rem;
 }
 
-.vertical-row {
-  font-weight: 600;
-  font-size: 25px !important;
-  color: rgb(5, 28, 77);
-  margin-left: 300px;
-
-  /* e vou mexer sim */
-  margin: 1rem 0 2rem;
-}
 
 .text-main-3 h2 {
   font-family: trattatello, fantasy;
@@ -133,11 +127,11 @@ main {
   transform: scale(1.2);
   transition: all 0.4s;
 }
-.vertical-row {
+/* .vertical-row { */
   position: relative;
 }
 
-.vertical-row::before {
+/* .vertical-row::before { */
   content: "";
   position: absolute;
   top: 0;
