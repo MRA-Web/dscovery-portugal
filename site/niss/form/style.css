@@ -2,3 +2,25 @@ main{
     margin-top: 90px !important;
     padding-top: 100px !important ;
 }
+
+.ling{
+    border-radius: 0;
+    margin: 30px;
+    background-color: rgb(255, 255, 255);
+    appearance: inherit;
+    margin-bottom: 20px;
+}
+
+.nomezinho{
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 9px;
+    background-color: rgb(255, 255, 255);
+}
+
+.selecionado{
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 9px;
+    background-color: rgb(126, 0, 0);
+}

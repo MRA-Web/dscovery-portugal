@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário Multi-página</title>
+    <style>
+        .form-page {
+            display: none;
+        }
+        .form-page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form id="multi-page-form" action="#" method="post">
+        <div class="form-page active" id="page1">
+            <h2>Seleção de Card</h2>
+            <label for="card-select">Selecione um card:</label>
+            <select id="card-select" name="card">
+                <option value="card1">Card 1</option>
+                <option value="card2">Card 2</option>
+                <option value="card3">Card 3</option>
+                <option value="card4">Card 4</option>
+                <option value="card5">Card 5</option>
+                <option value="card6">Card 6</option>
+            </select>
+            <br>
+
+            
+            <input type="radio" class="ling" id="html" name="fav_language" value="HTML">
+            <label for="html" class="nomezinho" id="html-lb" onclick="teste('html-lb')">HTML</label><br>
+            
+            <input type="radio" class="ling" id="css" name="fav_language" value="CSS">
+            <label for="css" class="nomezinho" id="css-lb" onclick="teste('css-lb')">CSS</label><br>
+            
+            <input type="radio" class="ling" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript" class="nomezinho" id="javascript-lb" onclick="teste('javascript-lb')">JavaScript</label>
+            
+        </div>
+
+        <div class="form-page" id="page2">
+            <h2>Texto</h2>
+            <textarea id="text-area" name="text" rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="form-page" id="page3">
+            <h2>Opções</h2>
+            <label for="option1">Opção 1:</label>
+            <input type="text" id="option1" name="option1">
+            <label for="option2">Opção 2:</label>
+            <input type="text" id="option2" name="option2">
+            <label for="option3">Opção 3:</label>
+            <input type="text" id="option3" name="option3">
+        </div>
+
+        <button type="button" id="prevBtn" onclick="prevPage()">Voltar</button>
+        <button type="button" id="nextBtn" onclick="nextPage()">Avançar</button>
+        <div style="text-align:center;margin-top:20px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </form>
+
+    <script>
+        var currentTab = 0;
+        showTab(currentTab);
+
+        function showTab(n) {
+            var x = document.getElementsByClassName("form-page");
+            x[n].style.display = "block";
+
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Enviar";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Avançar";
+            }
+
+            fixStepIndicator(n)
+        }
+
+        function nextPage() {
+            var x = document.getElementsByClassName("form-page");
+
+            if (currentTab >= x.length - 1) {
+                document.getElementById("multi-page-form").submit();
+                return false;
+            }
+
+            x[currentTab].style.display = "none";
+            currentTab = currentTab + 1;
+            showTab(currentTab);
+        }
+
+        function prevPage() {
+            var x = document.getElementsByClassName("form-page");
+
+            if (currentTab <= 0) {
+                return false;
+            }
+
+            x[currentTab].style.display = "none";
+            currentTab = currentTab - 1;
+            showTab(currentTab);
+        }
+
+        function fixStepIndicator(n) {
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            x[n].className += " active";
+        }
+
+        function teste(nome){
+            console.log("vc escolheu uma");
+            
+            try {
+                let el = document.getElementsByClassName("selecionado");
+                el.innerHTML = "nomezinho";
+
+                for (var i = 0; i < el.length; i++) {
+                    el.item(i).className = "nomezinho";
+
+                    console.log("iteration");
+                }  
+
+                console.log("aqui foi");
+                // outros.className = "nomezinho";
+            } finally {
+                let el = document.getElementById(nome);
+                // el.classList.remove("nomeziho");
+                el.className = 'selecionado';
+            }
+
+            
+        }
+    </script>
+</body>
+</html>
