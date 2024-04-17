@@ -28,7 +28,6 @@ main {
   font-size: 19px;
 }
 
-
 .text-main-1 h1 {
   font-family: trattatello, fantasy;
   font-weight: 500;
@@ -49,13 +48,29 @@ main {
 .text-main-1{
   background-color: aliceblue;
 }
- .card { */
+ .card { 
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
   width: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+  margin-bottom: 25px;
+}
+.text-card h4 {
+  font-weight: 600;
+  font-size: 25px;
+  color: rgb(5, 28, 77);
+  margin-left: 70px;
+  margin: 1rem 0 2rem;
+}
+.text-card h2 {
+  font-family: trattatello, fantasy;
+  font-weight: 500;
+  font-size: 50px;
+  color: rgb(9, 51, 113);
+  margin-left: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .card img {
@@ -74,8 +89,7 @@ main {
 
 .card-content p {
   font-size: 1em;
-  color: #787979;
-}  
+  color: #787979; } 
 
 .text-main-2 h2 {
   font-family: trattatello, fantasy;
@@ -99,6 +113,7 @@ main {
   font-size: 50px;
   color: rgb(9, 51, 113);
   margin-left: 15px;
+  margin-bottom: 20px;
 }
 
 .image-main-1 {
