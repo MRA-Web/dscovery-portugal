@@ -104,38 +104,7 @@ height: 250px;
     color: white;
    
 }
-/* .mini-texts{
-    display: flex;
 
-}
-.mini-text-1,
-.mini-text-2{
-    background-color: rgba(255, 255, 255, 0.105) !important; 
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-}
-.question-icon{
-   color: black !important;
-}
-.mini-text-1 h3,
-.mini-text-2 h3{
-     display: flex;
-    text-align: left;
-    color: rgb(9, 51, 113);
-}
-.mini-text-1 p{
-     text-align: center;
-}
-
-.mini-text-2 p{
-     text-align: center;
-}
-
-.mini-text-1,
-.mini-text-2{
-    margin-right: 20px;
-} */
 .text-main-2 h2{
     font-family: trattatello, fantasy;
     font-weight: 500;
