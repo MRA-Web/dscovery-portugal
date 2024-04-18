@@ -12,7 +12,7 @@ body {
 /* MAIN CONTENT */
 main {
   max-width: 1440px;
-  padding: 0 10%;
+  padding: 0 5%;
   margin: 0 auto;
   min-height: 90vh;
 }
@@ -26,6 +26,10 @@ main {
 }
 .content-main p {
   font-size: 19px;
+}
+
+.text-main-2 {
+  padding: 20px;
 }
 
 .text-main-1 h1 {
@@ -45,16 +49,31 @@ main {
   margin: 1rem 0 2rem;
   font-weight: 500;
 }
-.text-main-1{
+.text-main-1 {
   background-color: aliceblue;
+  padding: 20px;
+  border-radius: 20px;
 }
- .card { 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.card-container h2 {
+  margin: 25px 0;
+}
+.card {
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
   width: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 25px;
+  /* margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 16%; */
+  margin: 30px 10%;
+  padding: 10px;
 }
 .text-card h4 {
   font-weight: 600;
@@ -89,7 +108,15 @@ main {
 
 .card-content p {
   font-size: 1em;
-  color: #787979; } 
+  color: #787979;
+}
+.text-card {
+  width: 100%;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color: aliceblue;
+}
 
 .text-main-2 h2 {
   font-family: trattatello, fantasy;
@@ -97,6 +124,7 @@ main {
   font-size: 50px;
   color: rgb(9, 51, 113);
   margin-left: 15px;
+  margin-top: 15px;
 }
 .text-main-2 h4 {
   font-weight: 600;
@@ -105,7 +133,6 @@ main {
   margin-left: 70px;
   margin: 1rem 0 2rem;
 }
-
 
 .text-main-3 h2 {
   font-family: trattatello, fantasy;
@@ -219,6 +246,16 @@ main {
   }
   .image-main-1 {
     display: none;
+  }
+  .card-container {
+    align-items: center;
+    justify-content: center;
+  }
+  .text-card {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    justify-content: center;
   }
 }
 
