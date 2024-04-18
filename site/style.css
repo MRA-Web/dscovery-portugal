@@ -46,8 +46,8 @@ main{
     margin: 1rem 0 2rem;
     font-weight: 500;
 }
-.card{
-    display: flex;
+.card-inicial{
+    display: flex ;
     justify-content: center;
     width: 350px;
     height: 300px;
@@ -57,27 +57,27 @@ main{
     box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
     transition: 0.5s;
 }
-.card:hover{
+.card-inicial:hover{
     height: 400px;
 }
-.card .box-img{
+.card-inicial .box-img{
     position: absolute;
     width: 250px;
     height: auto;
     top: 0px;
     transition: 0.5s;
 }
-.card:hover .box-img{
+.card-inicial:hover .box-img{
  top: -100px;
  scale: 0.75;
  
 }
-.card .box-img img{
+.card-inicial .box-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.card .content{
+.card-inicial .content{
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -91,11 +91,11 @@ main{
     transition: 0.5s;
    
 }
-.card:hover .content{
+.card-inicial:hover .content{
 top: 130px;
 height: 250px;
 }
-.card .read-more{
+.card-inicial .read-more{
     background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
     padding: 12px;
     margin-left: 50px;
