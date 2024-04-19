@@ -20,9 +20,7 @@ main{
     grid-gap: 1.5rem;
     align-items: center;
     margin-top: 120px;
-    background-color: aliceblue;
-    border-radius: 10px;
-   padding: 20px;
+
 }
 .content-main p{
     font-size: 19px;
@@ -46,8 +44,17 @@ main{
     margin: 1rem 0 2rem;
     font-weight: 500;
 }
+.card-inicial-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 50px;
+}
 .card-inicial{
-    display: flex ;
+    display: flex;
     justify-content: center;
     width: 350px;
     height: 300px;
@@ -56,6 +63,10 @@ main{
     border-radius: 20px;
     box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
     transition: 0.5s;
+ 
+}
+.card-inicial-3{
+   
 }
 .card-inicial:hover{
     height: 400px;
@@ -68,8 +79,8 @@ main{
     transition: 0.5s;
 }
 .card-inicial:hover .box-img{
- top: -100px;
- scale: 0.75;
+    top: -100px;
+    scale: 0.75;
  
 }
 .card-inicial .box-img img{
@@ -92,8 +103,8 @@ main{
    
 }
 .card-inicial:hover .content{
-top: 130px;
-height: 250px;
+    top: 130px;
+    height: 250px;
 }
 .card-inicial .read-more{
     background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
@@ -104,38 +115,7 @@ height: 250px;
     color: white;
    
 }
-/* .mini-texts{
-    display: flex;
 
-}
-.mini-text-1,
-.mini-text-2{
-    background-color: rgba(255, 255, 255, 0.105) !important; 
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-}
-.question-icon{
-   color: black !important;
-}
-.mini-text-1 h3,
-.mini-text-2 h3{
-     display: flex;
-    text-align: left;
-    color: rgb(9, 51, 113);
-}
-.mini-text-1 p{
-     text-align: center;
-}
-
-.mini-text-2 p{
-     text-align: center;
-}
-
-.mini-text-1,
-.mini-text-2{
-    margin-right: 20px;
-} */
 .text-main-2 h2{
     font-family: trattatello, fantasy;
     font-weight: 500;
@@ -152,16 +132,15 @@ height: 250px;
     margin-left: 15px;
 }
 
-
 .image-main-1 { 
-    
-    zoom: 55%;
+    zoom: 125%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20%;
-   margin-top: 100px;
+    
 }
+
+
 
 /* NIF PART */
 .image-main-2 {
@@ -214,7 +193,7 @@ height: 250px;
 
 main hr{
     margin-top: 80px;
-    width: 95%;
+    width: 100%;
     
 }
 /* RESPONSIVE BODY */
