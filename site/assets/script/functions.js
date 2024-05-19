@@ -41,3 +41,4 @@ function submeter() {
 
 // Chamar a função para ajustar os tamanhos das classes
 ajustarTamanhoClasses();
+
