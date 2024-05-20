@@ -399,16 +399,3 @@ main hr {
     }
 }
 
-.content-about-us {
-    margin-top: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.tittle h1 {
-    font-weight: 600;
-    font-family: trattatello, fantasy;
-    font-size: 50px;
-    color: rgb(7, 43, 97);
-}
