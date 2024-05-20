@@ -7,7 +7,7 @@
   <title>Discovery Portugal</title>
   <link rel="shortcut icon" href="/site/assets/images/DiscoveryLogoIcon.ico">
   <link rel="stylesheet" href="/site/nif/form/style.css">
-  <link rel="stylesheet" href="/site/style.css">
+  <link rel="stylesheet" href="/site/header/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,25 +19,19 @@
 
   <header>
 
-    <!-- imagem da logo que leva pra home -->
-    <h1 class="logo-home">
-      <a href="/site/">
-        <img src="/site/assets/images/DiscoveryLogo.png" alt="Discovery Portugal">
-      </a>
-    </h1>
+  <!-- header em inglês by luizzmg -->
 
-    <!-- seletor de idiomas -->
+  <link rel="stylesheet" href="/site/header/style.css">
+
+  <nav class="nav-bar-form"> <!-- barra de navegação desktop -->
+
+    <!-- logo do site que leva à página inicial -->
+    <div><a href="/site/">
+        <img class="logo" src="/site/assets/images/DiscoveryLogo.png">
+      </a></div>
 
 
-    <!-- etapas -->
-    <a class="circulo" href="#"><i class="fa-solid fa-file-invoice"></i> <span>texto</span></a>
-    <a class="circulo" href="#"><i class="fa-solid fa-user-pen"></i> <span>texto</span></a>
-    <a class="circulo" href="#"><i class="fa-solid fa-envelope"></i> <span>texto</span></a>
-    <a class="circulo" href="#"><i class="fa-solid fa-file"></i> <span>texto</span></a>
-
-    <p></p>
-    
-    
+    <!-- seleção de idiomas desktop -->
     <div class="language-selector">
       <!-- seletor de idiomas -->
       <button class="idioma-atual-desktop">
@@ -53,24 +47,62 @@
       </ul>
     </div>
 
-  </header>
+    <!-- botão que exibe menu mobile (aqueles "três tracinhos")-->
+    <div class="mobile-menu-icon">
+      <button onclick="menuShow()">
+        <img class="icon" src="/site/assets/mobile-icons/menu_white_36dp.svg" alt="">
+      </button>
+    </div>
 
-  <!-- <nav>
+  </nav>
+
+  <!-- menu que aparece ao clicar nos "três tracinhos" -->
+  <div class="mobile-menu">
     <ul>
-      <li>
-        <a href="#"><i class="fa-solid fa-file-invoice"></i></a>
+      <!-- opções de idiomas (versão de celular) -->
+      <li class="language-selector-mobile">
+
+        <!-- inglês ----><button class="ling-opcoes" id="ling-atual"><img class="icons-language"
+            src="/site/assets/images/countries/united-kingdom.png"></button>
+        <!-- português--><a href="pt.html"><button class="ling-opcoes"><img class="icons-language"
+              src="/site/assets/images/countries/portugal.png"></button></a>
+        <!-- espanhol --><a href="es.html"><button class="ling-opcoes"><img class="icons-language"
+              src="/site/assets/images/countries/spain.png"></button></a>
+        <!-- francês ---><a href="fr.html"><button class="ling-opcoes"><img class="icons-language"
+              src="/site/assets/images/countries/france.png"></button></a>
+        <!-- italiano---><a href="it.html"><button class="ling-opcoes"><img class="icons-language"
+              src="/site/assets/images/countries/italy.png"></button></a>
+        <!-- alemão-----><a href="de.html"><button class="ling-opcoes"><img class="icons-language"
+              src="/site/assets/images/countries/germany.png"></button></a>
+
       </li>
-      <li>
-        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa-solid fa-phone"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa-solid fa-file-invoice-dollar"></i></a>
-      </li>
+
     </ul>
-  </nav> -->
+  </div>
+</header>
+
+
+
+<nav>
+  <ul>
+    <li>
+      <a href="#"><i class="fa-solid fa-file-invoice"></i></a>
+    </li>
+    <li>
+      <a href="#"><i class="fa-solid fa-user-pen"></i></a>
+    </li>
+    <li>
+      <a href="#"><i class="fa-solid fa-phone"></i></a>
+    </li>
+    <li>
+      <a href="#"><i class="fa-solid fa-file-invoice-dollar"></i></a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
 
   <main>
 
