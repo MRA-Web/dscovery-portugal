@@ -79,9 +79,13 @@ main {
   margin-top: 30px;
   background-color: aliceblue;
   border-radius: 25px;
+  justify-content: center;
+  justify-self: center;
 }
 .card-container h2 {
   margin: 25px 0;
+  justify-content: center;
+  justify-self: center;
 }
 .card-title h2{
   font-family: trattatello, fantasy;
@@ -91,6 +95,7 @@ main {
  text-align: center;
   margin-bottom: 30px;
   justify-self: center;
+  justify-content: center;
 }
 .card {
   display: grid;
@@ -143,10 +148,14 @@ main {
 }
 .card-content {
   padding: 20px;
+  justify-content: center;
+  justify-self: center;
 }
 .card-content h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
+  justify-content: center;
+  justify-self: center;
 }
 .card-content p {
   font-size: 1em;
@@ -154,6 +163,8 @@ main {
   margin-top: 50px;
   transform: translateY(-100%);
   transition: transform 0.3s ease, margin-top 0.3s ease; 
+  justify-content: center;
+  justify-self: center;
 }
 .card:hover .card-content p {
   transform: translateY(0);
@@ -245,6 +256,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    justify-self: center;
   }
   .text-main-3 {
     display: flex;
@@ -283,6 +296,17 @@ main {
   }
   .image-main-3 {
     display: none;
+  }
+  .content-main-2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 1.5rem;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  .img-main{
+    zoom: 75%;
   }
 
   .card-container {
@@ -343,13 +367,14 @@ main {
     justify-self: center;
   }
   .card img {
-    width: 50%;
+    /* width: 50%; */
     justify-self: center;
     /* height: auto;
     margin: 30px 10; */
+    zoom: 15%;
   }
   .card-content {
-    padding: 20px;
+    padding: 15px;
   }
   .card-content h2 {
     font-size: 1.5em;
