@@ -25,12 +25,28 @@ main {
   border-radius: 20px;
   margin-top: 20px;
 }
+.content-main-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 20px;
+}
 .content-main p {
   font-size: 19px;
 }
 .side-img {
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  zoom: 50%;
+}
+.img-main{
+  border-radius: 15px;
+  zoom: 80%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: ;
 }
 .text-main-1 {
   background-color: aliceblue;
@@ -170,14 +186,7 @@ main {
   margin-bottom: 20px;
 }
 
-.image-main-1 {
-  zoom: 55%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20%;
-  margin: 100px;
-}
+
 
 /* NIF PART */
 .image-main-2 {
@@ -359,6 +368,7 @@ main {
   .side-img {
     margin-bottom: 20px;
     width: 70%;
+    display: none;
   }
 .content-about-us {
   margin-top: 150px;
