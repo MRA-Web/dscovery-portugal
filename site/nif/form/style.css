@@ -154,12 +154,11 @@ header{
     text-decoration: none;
     display: flex;
     
-    padding: 6px 4px;
+    padding: 6px 6px;
     border-radius: 6px;
 }
 .opcao-idioma .icons-language{
-    padding-right: 3px;
-    margin-left: 3px;
+    margin-right: 2px;
 }
 .opcao-idioma:hover {
     background-color: #ddd;
