@@ -1,0 +1,108 @@
+
+.content-about-us {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    font-weight: 600;
+    font-family: trattatello, fantasy;
+    font-size: 50px;
+    color: rgb(7, 43, 97);
+}
+
+.subtitle{
+    margin-top: 20px;
+    padding: 0 100px;
+    font-size: 14px;
+    text-align: center;
+}
+.subtitle-2 h2{
+    margin-top: 50px;
+    padding: 0 100px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    font-family: trattatello, fantasy;
+    color: rgb(7, 43, 97);
+}
+.big-letter{
+    font-weight: 400;
+    font-family: trattatello, fantasy;
+    font-size: 30px;
+    color: rgb(7, 43, 97);
+}
+
+
+.about-img1 img,
+.about-img2 img{
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%; 
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+
+}
+
+.about-img3 img{
+    display: block;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%; 
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+}
+
+.about-text-main,
+.about-text-main-2 {
+    margin-top: 25px;
+    padding: 0 100px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 1050px){
+    .title h1{
+        text-align: center;
+        font-size: 40px;
+    }
+    .subtitle{
+        margin-top: 20px;
+        padding: 0 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .subtitle-2 h2{
+        padding: 0 5px;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        
+    }
+    .about-img1 img,
+    .about-img2 img{
+        max-width: 90%; 
+    }
+    .about-img3 img{
+        max-width: 100%;
+    }
+    .about-text-main,
+    .about-text-main-2 {
+        margin-top: 25px;
+        padding: 0 20px;
+        font-size: 15px;
+        
+}
+
+
+
+}
