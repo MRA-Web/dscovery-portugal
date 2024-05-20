@@ -1,4 +1,11 @@
 main{
-    margin-top: 90px !important;
-    padding-top: 100px !important ;
+    height: 100vh;
+}
+.nav-bar-form{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+}
+.sidebar{
+ background-color: black;
 }
