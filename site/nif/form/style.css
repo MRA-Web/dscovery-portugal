@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(25, 124, 210);
+}
 main{
     height: 100vh;
 }
@@ -5,7 +16,31 @@ main{
     display: flex;
     justify-content: space-between;
     padding: 1.2rem 3rem;
+   
 }
 .sidebar{
  background-color: black;
+}
+
+.nav-aside{
+
+    
+}
+
+.nav-aside a{
+    position: relative;
+    color: rgb(85, 83, 93);
+    font: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+#fas{
+    position: relative;
+    width: 1110px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
 }
