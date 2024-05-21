@@ -23,6 +23,9 @@ main{
     width: 100%;
     display: flex;
     flex-direction: rows;
+    margin-top: 80px;
+    margin-bottom: 150px;
+
 }
 .debaixo-direita{
     text-align: center;
@@ -33,17 +36,12 @@ main{
 .cards{
     display: flex;
     flex-direction: row;
+    background-color: rgba(228, 243, 255, 0.744);
+    padding: 50px;
+    border-radius: 10px;
 }
 .cardzinho{
-    /* padding: 10px;
-    color: white;
-    background-color: #093679;
-    border-radius: 15px;
-    margin-right: 10px;
-    margin-left: 10px; */
-
     color: #000;
-
     border: solid 1px aliceblue;
     padding: 10px;
     height: 200px;
@@ -73,6 +71,9 @@ main{
 #cima{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 70px;
+    padding: 60px;
+    border-radius: 10px;
 }
 .esquerda{
     justify-content: center !important;
