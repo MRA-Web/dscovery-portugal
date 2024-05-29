@@ -14,9 +14,9 @@
 </head>
 
 
-<body onload="jogar_texto('/site/header/en.html', 'header'); jogar_texto('/site/footer/en.html', 'footer');">
+<body>
 
-  <header id="header"></header>
+  <?php include 'header.php'; ?>
 
   <!----body da página principal---->
   <main>
