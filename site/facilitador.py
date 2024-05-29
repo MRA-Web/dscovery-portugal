@@ -1,7 +1,7 @@
 import os
 
 
-for pagina in ["about-us", "contact-us", "nif", "niss"]:
+for pagina in ["footer"]:
 
   # Defina o diretório onde estão os arquivos
   diretorio = f'C:/Users/Luiz Miguel/Desktop/discovery-portugal/site/{pagina}'
@@ -18,19 +18,11 @@ for pagina in ["about-us", "contact-us", "nif", "niss"]:
         conteudo = arquivo.read()
       
       # Substitui a variável antiga pela nova
-      idioma = nome_arquivo[:-5]
+      # idioma = nome_arquivo[:-5]
 
       # Defina a variável que você quer modificar e o novo valor
-      variavel_antiga = f'''  <body onload="jogar_texto('/site/header/{idioma}.html', 'header'); jogar_texto('/site/footer/{idioma}.html', 'footer');">'''
-      variavel_nova = f'''
-
-  <script>
-    jogar_texto('/site/footer/{idioma}.html', 'footer');
-    jogar_texto('/site/header/{idioma}.html', 'header');
-  </script>
-
-  <body>
-  '''
+      variavel_antiga = f'''<link rel="stylesheet" href="/site/footer/style.css">'''
+      variavel_nova = f''''''
 
       conteudo_modificado = conteudo.replace(variavel_antiga, variavel_nova)
       
