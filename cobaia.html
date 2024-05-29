@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cobaia - Discovery Portugal</title>
+    <link rel="shortcut icon" href="DiscoveryLogoIcon.ico">
+    <link rel="stylesheet" href="style.css">
+  
+  </head>
+
+  <body class="site">
+    <header>
+
+      <nav class="nav-bar">
+
+        <div>
+          <a href="en.html"> <img class="logo" src="assets/images/DiscoveryLogo.png"></a>
+        </div>
+
+        <div class="nav-list">
+          <ul>
+
+            <li class="nav-item"><a class="nav-link" href="#">
+              Home
+            </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">
+              Services
+            </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">
+              Contacts
+            </a></li>
+
+          </ul>
+        </div>
+
+        <div class="language-selector">
+
+          <button><img class="icons-language" src ="assets/images/countries/united-kingdom.png"> EN</button>
+
+          <div class="language-selector-content">
+              <a href="es.html"><img class="icons-language" src ="assets/images/countries/spain.png"> ES<br></a> 
+              <a href="it.html"><img class="icons-language" src ="assets/images/countries/italy.png"> IT<br></a>
+              <a href="pt.html"><img class="icons-language" src ="assets/images/countries/portugal.png"> PT<br></a>
+          </div>
+
+        </div>
+
+        <div class="mobile-menu-icon">
+          <button onclick="menuShow()"><img class="icon" src="assets/mobile-icons/menu_white_36dp.svg" alt=""></button>
+        </div>
+
+       </nav>
+       
+       <div class="mobile-menu">
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+
+          <hr id = "sep-ling">
+
+          <li class="nav-item nav-link">Language:</li>
+
+        <div class=".language-selector-mobile">
+          <div class="nav-item">
+
+            <button class="ling-opcoes" id="ling-atual"><img class="icons-language" src ="assets/images/countries/united-kingdom.png">
+            <a href="es.html"><button class = "ling-opcoes"><img class="icons-language" src ="assets/images/countries/spain.png"></button></a>
+            <a href="it.html"><button class = "ling-opcoes"><img class="icons-language" src ="assets/images/countries/italy.png"></button></a>
+            <a href="pt.html"><button class = "ling-opcoes"><img class="icons-language" src ="assets/images/countries/portugal.png"></button></a>
+         
+          </div>
+        </div>
+        </ul>
+       </div>
+
+    </header>
+
+
+
+    <!----body by liliciaqueen---->
+
+    <p>testando git de novo</p>
+
+
+    <br>
+    <br>
+  
+      <section class="home" id="home">
+       <div class="home-text">
+  
+        <h1>DISCOVERY PORTUGAL</h1>
+        
+        <h2>
+        The Best Way
+        <br>
+        To Discover Portugal!
+        </h2>
+        <a href="#" class="btn"> 
+          Discover our services
+        </a>
+       </div>
+  
+       <div class="home-img">
+        <img src="assets/images/imagem-do-comeco.png">
+       </div>
+  
+      </section>
+
+
+      <!--essa parte é a do NIF pessoal, não quero ouvir choro-->
+
+
+      <section class="nif" id="nif">
+        <div class="nif-img">
+          <img src="assets/images/imagem-do-nif.png">
+        </div>
+      
+        <div class="nif-text">
+          <h1>Obtenha seu NIF Portugal Online conosco!</h1>
+          <p>O Discovery é uma solução digital que simplifica o processo de obtenção do Número de Identificação Fiscal (NIF) para residentes e não residentes em Portugal. 
+            Com este serviço, você pode solicitar seu NIF de forma rápida e segura, 
+            sem a necessidade de deslocamentos a repartições públicas. 
+            Basta preencher um formulário online e enviar os documentos necessários, 
+            e em breve você receberá seu NIF por email. 
+            Simplifique sua vida em Portugal com Discovery Portugal!</p>
+            <a href="#" class="btn"> 
+              Obtenha seu NIF
+              </a>
+        </div>
+      
+    
+      </section>
+
+      <!--e essa parte é a do NISS pessoal, também não quero ouvir choro-->
+
+      <section class="niss" id="niss">
+
+        <div class="niss-text">
+          <h1>Obtenha seu NISS Portugal Online conosco!</h1>
+          <p>O NISS Portugal Online é um serviço conveniente que facilita a obtenção do Número de Identificação de Segurança Social (NISS) em Portugal. 
+            Com este serviço online, residentes e não residentes em Portugal podem solicitar o seu NISS sem complicações. 
+            Basta preencher um formulário online e enviar os documentos necessários, 
+            e em breve você receberá seu NISS por email.</p>
+            <a href="#" class="btn"> 
+              Obtenha seu NISS
+              </a>
+        </div>
+
+        <div class="niss-img">
+          <img src="assets/images/imagem-do-niss.png">
+        </div>
+      
+  
+      </section>
+      
+  
+      <!----body by liliciaqueen---->
+
+
+  
+    <script src="assets/script/functions.js"></script>
+
+  </body>
+</html>
+ 
+
+
+
+<nav class="nav-bar"> <!-- barra de navegação desktop -->
+    
+  <!-- logo do site que leva à página inicial -->
+  <div><a href="/site/index.html">
+    <img class="logo" src="/site/assets/images/DiscoveryLogo.png">
+  </a></div>
+    
+  <!-- navegação entre as principais partes do site (para desktop) -->
+  <div class="nav-list">
+    
+    <div class="nav-item"> <!-- home -->
+      <a class="nav-link" href="/site/index.html">
+        {home}
+        <hr class="title-lines">
+      </a>
+    </div>
+    
+    <div class="nav-item"> <!-- services -->
+      
+      <a class="nav-link" href="#">
+        {services}
+        <hr class="title-lines">
+      </a>
+      
+      <ul class="item-content">
+        <li><a href="/site/nif/index.html">Obtenha seu NIF<br><hr class="sub-lines"></a></li>
+        <li><a href="/site/niss/index.html">Obtenha seu NISS<br><hr class="sub-lines"></a></li>
+        <li><a href="#">item 3<br><hr class="sub-lines"></a></li>
+      </ul>
+      
+    </div>
+    
+    <div class="nav-item"> <!-- contact us -->
+      <a class="nav-link" href="/site/contact-us/index.html">
+        {contact-us}
+        <hr class="title-lines">
+      </a>
+    </div>
+    
+    <div class="nav-item"> <!-- about-us -->
+      <a class="nav-link" href="/site/about-us/index.html">
+        {about us}
+        <hr class="title-lines">
+      </a>
+    </div>
+    
+  </div>
+  
+  <!-- seleção de idiomas desktop -->
+  <div class="language-selector">
+    
+    <!-- botão da linguagem atual -->
+    <!-- ao passar o mouse em cima, exibe as opções de mudança de idioma -->
+    <button class="idioma-atual-desktop">
+      <!-- português --><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT
+    </button>
+    
+    <ul class="language-selector-content">
+      <!--alemão--><li><a href="de.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE</a></li>
+      <!--english--><li><a href="index.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN</a></li>
+      <!--espanhol--><li><a href="es.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/spain.png"> ES</a></li>
+      <!--francês--><li><a href="fr.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR</a></li>
+      <!--italiano--><li><a href="it.html" class="opcao-idioma"><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT</a></li>
+    </ul>
+    
+  </div>
+  
+  <!-- botão que exibe menu mobile (aqueles "três tracinhos")-->
+  <div class="mobile-menu-icon">
+    <button onclick="menuShow()">
+      <img class="icon" src="/site/assets/mobile-icons/menu_white_36dp.svg" alt="">
+    </button>
+  </div>
+  
+</nav>
+
+<!-- menu que aparece ao clicar nos "três tracinhos" -->
+<div class="mobile-menu">
+  <ul>
+    
+    <li class="nav-item"><a class="nav-link" href="/site/pt.html"> <!-- home -->
+      Home
+    </a></li>
+    <li class="nav-item"><a class="nav-link" href="#"> <!-- services -->
+      Get your NIF
+    </a></li>
+    <li class="nav-item"><a class="nav-link" href="#"> <!-- services -->
+      Get your NISS
+    </a></li>
+    <li class="nav-item"><a class="nav-link" href="/site/contact-us/pt.html"> <!-- contact us -->
+      Contact us
+    </a></li>
+    <li class="nav-item"><a class="nav-link" href="/site/about-us/pt.html"> <!-- about us -->
+      About us
+    </a></li>
+    <li class="nav-item nav-link"> <!-- language -->
+      Language:
+    </li>
+    
+    <!-- opções de idiomas (versão de celular) -->
+    <li class="language-selector-mobile">
+
+      <button class="ling-opcoes" id="ling-atual"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"></button>
+      <a href="de.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/germany.png"></button></a>
+      <a href="/contact-us/"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"></button></a>
+      <a href="es.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/spain.png"></button></a>
+      <a href="fr.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/france.png"></button></a>
+      <a href="it.html"><button class = "ling-opcoes"><img class="icons-language" src ="/site/assets/images/countries/italy.png"></button></a>
+
+    </li>
+
+  </ul>
+</div>
+
+
+
+Home
+Get your NIF
+Get your NISS
+Contact us
+About us
+Language:
