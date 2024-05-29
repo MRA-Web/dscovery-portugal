@@ -13,15 +13,10 @@
   <script src="/site/assets/script/functions.js"></script>
 </head>
 
-<!-- onload="jogar_texto('/site/header/en.html', 'header'); -->
 
-<body onload="jogar_texto('/site/footer/en.html', 'footer');">
+<body onload="jogar_texto('/site/header/en.html', 'header'); jogar_texto('/site/footer/en.html', 'footer');">
 
-  <header id="header">
-
-    <?php include 'header/header.php'; ?>
-
-  </header>
+  <header id="header"></header>
 
   <!----body da página principal---->
   <main>
