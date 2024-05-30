@@ -1,10 +1,10 @@
 import os
 
 
-for pagina in ["footer"]:
+for pagina in [""]:
 
   # Defina o diretório onde estão os arquivos
-  diretorio = f'C:/Users/Luiz Miguel/Desktop/discovery-portugal/site/{pagina}'
+  diretorio = f'C:/Users/Luiz Miguel/Desktop/discovery-portugal/site/'
 
   # Percorre todos os arquivos no diretório
   for nome_arquivo in os.listdir(diretorio):
@@ -21,8 +21,9 @@ for pagina in ["footer"]:
       # idioma = nome_arquivo[:-5]
 
       # Defina a variável que você quer modificar e o novo valor
-      variavel_antiga = f'''<link rel="stylesheet" href="/site/footer/style.css">'''
-      variavel_nova = f''''''
+      variavel_antiga = f'''<link rel="stylesheet" href="/site/header/style.css">'''
+      variavel_nova = f'''<link rel="stylesheet" href="header/style.css">
+    <link rel="stylesheet" href="footer/style.css">'''
 
       conteudo_modificado = conteudo.replace(variavel_antiga, variavel_nova)
       
