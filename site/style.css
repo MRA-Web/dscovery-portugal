@@ -25,7 +25,7 @@ main {
     grid-gap: 1.5rem;
     align-items: center;
     margin-top: 100px;
-
+    
 }
 
 .content-main p {
@@ -172,6 +172,15 @@ main {
     margin-left: 15px;
 }
 
+.text-main-4 h2 {
+    font-family: trattatello, fantasy;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(9, 51, 113);
+    margin-left: 15px;
+}
+
+
 .image-main-1 img{
     zoom: 125%;
     display: flex;
@@ -201,6 +210,16 @@ main {
 
 .image-main-3 img {
     border-radius: 20px;
+}
+/* VISA PART*/
+.image-main-4{
+    zoom: 20%;
+    display: flex;
+    float: right;
+}
+
+.image-main-4 img {
+    border-radius: 50px;
 }
 
 /* LINK 'A' "BUTTON" STYLE */
@@ -343,8 +362,9 @@ main hr {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-right: 55px;
     }
-
+ 
     .text-main-2 {
         display: flex;
         flex-direction: column;
@@ -356,6 +376,12 @@ main hr {
         flex-direction: column;
         align-items: center;
     }
+    .text-main-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 
     .text-main-1 h1 {
         text-align: center;
@@ -389,6 +415,14 @@ main hr {
         font-size: 45px;
     }
 
+    .text-main-4 p{
+        text-align: center;
+    }
+
+    .text-main-4 h2{
+        font-size: 45px;
+    }
+
     .image-main-2 {
         display: none;
     }
@@ -397,10 +431,14 @@ main hr {
         display: none;
     }
 
+    .image-main-4{
+        display: none;
+    }
     .image-main-1 img {
         margin-top: 25px;
         width: 70%;
         justify-self: center;
     }
+    
 }
 

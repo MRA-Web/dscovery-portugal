@@ -25,7 +25,7 @@ main{
     flex-direction: rows;
     margin-top: 80px;
     margin-bottom: 150px;
-
+   
 }
 .debaixo-direita{
     text-align: center;
@@ -36,6 +36,7 @@ main{
 .cards{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .cardzinho{
     /* padding: 10px;
@@ -87,7 +88,8 @@ main{
     justify-content: space-between;
     margin-bottom: 70px;
     padding: 60px;
-    border-radius: 10px;
+    border-radius: 20px;
+    background-color: aliceblue;
 }
 .esquerda{
     justify-content: center !important;
@@ -168,4 +170,14 @@ main hr{
         width: 80%;
         margin: 0;
     }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .cardzinho{
+            margin-bottom: 80px;
+            width: 80%
+        }
+    }
+
 }
