@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Discovery Portugal</title>
@@ -12,67 +12,45 @@
     <link rel="stylesheet" href="/site/footer/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="/site/assets/script/functions.js"></script>
-  </head>
-  
-  
+</head>
 
+<script>
+  jogar_texto('/site/footer/de.html', 'footer');
+  jogar_texto('/site/header/de.html', 'header');
+</script>
 
-  <script>
-    jogar_texto('/site/footer/de.html', 'footer');
-    jogar_texto('/site/header/de.html', 'header');
-  </script>
+<body onload="jogar_texto('/site/header/de.html', 'header'); jogar_texto('/site/footer/de.html', 'footer');">
 
-  <body>
-  
-    
     <header id="header"></header>
 
-    <!----Kontaktformular --->
+    <main>
+        <div class="container">
+            <div id="contact">
+                <form>
+                    <h1>Kontaktieren Sie uns</h1>
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Name" id="name">
+                    <label for="tel">Nummer</label>
+                    <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel">
+                    <label for="email">E-Mail</label>
+                    <input type="email" placeholder="E-Mail" id="email">
+                    <label for="subject">Betreff</label>
+                    <input type="text" placeholder="Text" id="subject">
+                    <label for="message">Nachricht</label>
+                    <textarea placeholder="Hier tippen" id="message"></textarea>
+                    <button type="submit" id="enviar-mobile" class="mobile-submit">Senden</button>
+                </form>
+            </div>
+            <div class="toggle-panel">
+                <h1>Senden Sie Ihre Nachricht</h1>
+                <p>Wir freuen uns auf Ihre Nachricht!</p>
+                <button id="enviador">Senden</button>
+            </div>
+        </div>
+    </main>
 
-
-<main>
-
-  <div class="container">
-
-    <div id="contact">
-
-      <form>
-
-        <h1>Kontaktiere uns</h1>
-
-      <label for="name">Name</label>
-      <input type="text" placeholder="Name" id="name">
-
-      <label for="tel">Nummer</label>
-      <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel">
-
-      <label for="email">E-Mail</label>
-      <input type="email" placeholder="E-Mail" id="email">
-
-      <label for="subject">Betreff</label>
-      <input type="text" placeholder="Text" id="subject">
-
-      <label for="message">Nachricht</label>
-      <textarea placeholder="Hier schreiben" id="message">
-      </textarea>
-
-    </form>
-
-
-    </div>
-    
-    <div class="toogle-panel">
-      <h1>Sende deine Nachricht</h1>
-      <p>Wir freuen uns auf Ihre Nachricht!</p>
-      <button id="enviador"> Senden </button>
-    </div>
-    
-  </div>
-
-  </main>
-      
     <footer id="footer"></footer>
-  
-  </body>
-  
+
+</body>
+
 </html>
