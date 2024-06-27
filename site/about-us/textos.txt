@@ -1,0 +1,381 @@
+ENGLISH PAGE: 
+<main>
+    <div class="content-about-us">
+      <div class="title">
+        <h1>Discovery Portugal - About Us</h1>
+      </div>
+
+      <div class="subtitle">
+        <h2><b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal was created to develop 
+          a platform that makes a difference in people's lives, facilitating the process for those who 
+          wish to live or do business in Portugal. Founded by specialists in Portuguese legislation 
+          and bureaucracy, the company offers high-quality services to simplify the acquisition 
+          of Portuguese documents digitally.
+        </h2>
+        <h2>
+          Our mission is to provide an <b class="big-letter">e</b>fficient and <b class="big-letter">s</b>
+          traightforward experience for everyone who needs Portuguese documents, whether to live, work, 
+          or do business in the country. With personalized service in multiple languages, we help you 
+          navigate the bureaucracy quickly and stress-free.
+        </h2>
+      </div>
+
+      <div class="about-img1">
+        <img src="/site/assets/images/about_us_images/about_us_img1.jpg">
+      </div>
+
+      <div class="about-text-main">
+        <p>
+          We offer services such as obtaining the <b class="big-letter">S</b>ocial <b class="big-letter">S</b>
+          ecurity <b class="big-letter">N</b>umber (NISS), necessary for social security, the 
+          <b class="big-letter">T</b>ax <b class="big-letter">I</b>dentification <b class="big-letter">N</b>
+          umber (NIF), essential for tax and commercial purposes, and guidance for the 
+          <b class="big-letter">D</b>7 <b class="big-letter">V</b>isa, aimed at foreign 
+          nationals with passive income. We prioritize the security and confidentiality 
+          of our clients' data, using state-of-the-art technology.
+        </p>
+        <p>
+          The <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal team is composed of 
+          experienced professionals in legislation, customer service, and technology, dedicated to 
+          providing the best possible experience. Our commitment is to customer satisfaction, 
+          offering a reliable and efficient service that simplifies 
+          complex bureaucratic processes.
+        </p>
+      </div>
+
+      <div class="about-img2">
+        <img src="/site/assets/images/about_us_images/about_us_img2.jpg">
+      </div>
+
+      <div class="about-text-main-2">
+
+        <p>
+          Choosing <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal means opting for 
+          a service that saves time and avoids frustration, helping you achieve your goals in Portugal 
+          with confidence and peace of mind.
+        </p>
+
+      </div>
+
+
+      <div class="subtitle-2">
+        <h2>Welcome to Portugal - we look forward to helping you write the next chapter of your journey!</h2>
+      </div>
+
+      <div class="about-img3">
+        <img src="/site/assets/images/about_us_images/about_us_img3.jpg">
+      </div>
+
+    </div>
+  </main>
+
+
+
+
+
+  ITALIANO PAGE:
+
+
+
+
+
+   <main>
+    <div class="content-about-us">
+      <div class="title">
+        <h1>Discovery Portugal - Chi siamo</h1>
+      </div>
+
+      <div class="subtitle">
+        <h2><b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal è nata per creare una 
+          piattaforma che faccia la differenza nella vita delle persone, facilitando la vita di chi 
+          desidera vivere o fare affari in Portogallo. Fondata da specialisti in legislazione e 
+          burocrazia portoghese, l'azienda offre servizi di alta qualità per semplificare 
+          l'ottenimento dei documenti portoghesi in modo digitale.
+        </h2>
+        <h2>
+          La nostra missione è fornire un'esperienza <b class="big-letter">e</b>fficiente e 
+          <b class="big-letter">s</b>emplice per tutti coloro che necessitano di documenti 
+          portoghesi, sia per vivere, lavorare o fare affari nel paese. Con un servizio 
+          personalizzato in più lingue, aiutiamo a navigare nella burocrazia in 
+          modo rapido e senza stress.
+        </h2>
+      </div>
+
+      <div class="about-img1">
+        <img src="/site/assets/images/about_us_images/about_us_img1.jpg">
+      </div>
+
+      <div class="about-text-main">
+        <p>
+          Offriamo servizi come l'ottenimento del <b class="big-letter">N</b>umero di <b class="big-letter">I</b>
+          dentificazione della <b class="big-letter">S</b>icurezza <b class="big-letter">S</b>ociale (NISS), 
+          necessario per la sicurezza sociale, il <b class="big-letter">N</b>umero di <b class="big-letter">I</b>
+          dentificazione <b class="big-letter">F</b>iscale (NIF), essenziale per questioni fiscali e commerciali, 
+          e la guida per il <b class="big-letter">V</b>isto <b class="big-letter">D</b>7, destinato ai cittadini 
+          stranieri con redditi passivi. Diamo priorità alla sicurezza e alla riservatezza dei dati dei nostri 
+          clienti, utilizzando tecnologia all'avanguardia.
+        </p>
+        <p>
+          Il team di <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal è composto da 
+          professionisti esperti in legislazione, assistenza clienti e tecnologia, dedicati a offrire la 
+          migliore esperienza possibile. Il nostro impegno è verso la soddisfazione del cliente, 
+          offrendo un servizio affidabile ed efficiente che semplifica i 
+          processi burocratici complessi.
+        </p>
+      </div>
+
+      <div class="about-img2">
+        <img src="/site/assets/images/about_us_images/about_us_img2.jpg">
+      </div>
+
+      <div class="about-text-main-2">
+
+        <p>
+          Scegliere <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal significa optare 
+          per un servizio che risparmia tempo ed evita frustrazioni, aiutandoti a raggiungere i tuoi 
+          obiettivi in Portogallo con fiducia e tranquillità.
+        </p>
+
+      </div>
+
+
+      <div class="subtitle-2">
+        <h2>Benvenuti in Portogallo - non vediamo l'ora di aiutarvi a scrivere il prossimo capitolo del vostro viaggio!
+        </h2>
+      </div>
+
+      <div class="about-img3">
+        <img src="/site/assets/images/about_us_images/about_us_img3.jpg">
+      </div>
+
+    </div>
+  </main>
+
+
+
+  FRANCES PAGE: 
+
+
+
+
+  <main>
+    <div class="content-about-us">
+      <div class="title">
+        <h1>Discovery Portugal - À propos de nous</h1>
+      </div>
+
+      <div class="subtitle">
+        <h2><b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal est née pour créer une 
+          plateforme qui fait la différence dans la vie des gens, en facilitant la vie de ceux qui 
+          souhaitent vivre ou faire des affaires au Portugal. Fondée par des spécialistes en 
+          législation et bureaucratie portugaise, l'entreprise offre des services de haute 
+          qualité pour simplifier l'obtention des documents portugais de manière numérique.
+        </h2>
+        <h2>
+          Notre mission est de fournir une expérience <b class="big-letter">e</b>fficace et <b class="big-letter">s</b>imple 
+          pour tous ceux qui ont besoin de documents portugais, que ce soit pour vivre, travailler ou faire des 
+          affaires dans le pays. Avec un service personnalisé en plusieurs langues, nous aidons à naviguer 
+          dans la bureaucratie rapidement et sans stress.
+        </h2>
+      </div>
+
+      <div class="about-img1">
+        <img src="/site/assets/images/about_us_images/about_us_img1.jpg">
+      </div>
+
+      <div class="about-text-main">
+        <p>
+          Nous offrons des services tels que l'obtention du <b class="big-letter">N</b>uméro de 
+          <b class="big-letter">S</b>écurité <b class="big-letter">S</b>ociale (NISS), nécessaire 
+          pour la sécurité sociale, du <b class="big-letter">N</b>uméro d'<b class="big-letter">I</b>
+          dentification <b class="big-letter">F</b>iscale (NIF), essentiel pour les questions 
+          fiscales et commerciales, et l'orientation pour le <b class="big-letter">V</b>isa <b class="big-letter">D</b>7, 
+          destiné aux citoyens étrangers ayant des revenus passifs. Nous privilégions la sécurité et la confidentialité 
+          des données de nos clients, en utilisant une technologie de pointe.
+        </p>
+        <p>
+          L'équipe de <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal est composée 
+          de professionnels expérimentés en législation, service client et technologie, dédiés à offrir 
+          la meilleure expérience possible. Notre engagement est envers la satisfaction du client, 
+          offrant un service fiable et efficace qui simplifie les 
+          processus bureaucratiques complexes.
+        </p>
+      </div>
+
+      <div class="about-img2">
+        <img src="/site/assets/images/about_us_images/about_us_img2.jpg">
+      </div>
+
+      <div class="about-text-main-2">
+
+        <p>
+          Choisir <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal, c'est opter 
+          pour un service qui fait gagner du temps et évite les frustrations, vous aidant à atteindre 
+          vos objectifs au Portugal avec confiance et tranquillité.
+        </p>
+
+      </div>
+
+
+      <div class="subtitle-2">
+        <h2>Bienvenue au Portugal - nous sommes impatients de vous aider à écrire le prochain chapitre de votre voyage !
+        </h2>
+      </div>
+      <div class="about-img3">
+        <img src="/site/assets/images/about_us_images/about_us_img3.jpg">
+      </div>
+
+    </div>
+  </main>
+
+
+  ALEMAO PAGE:
+
+
+  <main>
+    <div class="content-about-us">
+      <div class="title">
+        <h1>Discovery Portugal - Über uns</h1>
+      </div>
+
+      <div class="subtitle">
+        <h2><b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal wurde gegründet, um eine 
+          Plattform zu schaffen, die einen Unterschied im Leben der Menschen macht und das Leben derjenigen 
+          erleichtert, die in Portugal leben oder Geschäfte machen möchten. Gegründet von Spezialisten für 
+          portugiesische Gesetzgebung und Bürokratie, bietet das Unternehmen hochwertige Dienstleistungen, 
+          um die Beschaffung portugiesischer Dokumente digital zu vereinfachen.
+        </h2>
+        <h2>
+          Unsere Mission ist es, eine <b class="big-letter">e</b>ffiziente und <b class="big-letter">u</b>nkomplizierte 
+          Erfahrung für alle zu bieten, die portugiesische Dokumente benötigen, sei es zum Leben, Arbeiten oder für 
+          Geschäfte im Land. Mit einem personalisierten Service in mehreren Sprachen helfen wir Ihnen, die 
+          Bürokratie schnell und stressfrei zu bewältigen.
+        </h2>
+      </div>
+
+      <div class="about-img1">
+        <img src="/site/assets/images/about_us_images/about_us_img1.jpg">
+      </div>
+
+      <div class="about-text-main">
+        <p>
+          Wir bieten Dienstleistungen wie die Beschaffung der <b class="big-letter">S</b>ozialversicherungsnummer 
+          (NISS), die für die Sozialversicherung notwendig ist, der <b class="big-letter">S</b>teueridentifikationsnummer 
+          (NIF), die für steuerliche und geschäftliche Angelegenheiten erforderlich ist, und die Beratung für das 
+          <b class="big-letter">D</b>7-<b class="big-letter">V</b>isum, das sich an ausländische Staatsbürger mit 
+          passivem Einkommen richtet. Wir legen großen Wert auf die Sicherheit und Vertraulichkeit der Daten 
+          unserer Kunden und nutzen modernste Technologie.
+        </p>
+        <p>
+          Das Team von <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal besteht aus 
+          erfahrenen Fachleuten in den Bereichen Gesetzgebung, Kundenservice und Technologie, die sich 
+          dafür einsetzen, die bestmögliche Erfahrung zu bieten. Unser Engagement gilt der 
+          Kundenzufriedenheit, indem wir einen zuverlässigen und effizienten Service bieten, 
+          der komplexe bürokratische Prozesse vereinfacht.
+        </p>
+      </div>
+
+      <div class="about-img2">
+        <img src="/site/assets/images/about_us_images/about_us_img2.jpg">
+      </div>
+
+      <div class="about-text-main-2">
+
+        <p>
+          Die Wahl von <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal bedeutet, 
+          sich für einen Service zu entscheiden, der Zeit spart und Frustrationen vermeidet, und Ihnen 
+          hilft, Ihre Ziele in Portugal mit Vertrauen und Ruhe zu erreichen.
+        </p>
+
+      </div>
+
+
+      <div class="subtitle-2">
+        <h2>Willkommen in Portugal - wir freuen uns darauf, Ihnen dabei zu helfen, das nächste Kapitel Ihrer Reise zu schreiben!</h2>      </div>
+
+      <div class="about-img3">
+        <img src="/site/assets/images/about_us_images/about_us_img3.jpg">
+      </div>
+
+    </div>
+  </main>
+
+
+  ESPANHOL PAGE 
+
+
+
+  <main>
+    <div class="content-about-us">
+      <div class="title">
+        <h1>Discovery Portugal - Acerca de nosotros</h1>
+      </div>
+
+      <div class="subtitle">
+        <h2>
+          <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal nació para crear una 
+          plataforma que marque la diferencia en la vida de las personas, facilitando la vida de 
+          quienes desean vivir o hacer negocios en Portugal. Fundada por especialistas en 
+          legislación y burocracia portuguesa, la empresa ofrece servicios de alta 
+          calidad para simplificar la obtención de documentos 
+          portugueses de manera digital.
+        </h2>
+        <h2>
+          Nuestra misión es proporcionar una experiencia <b class="big-letter">e</b>ficiente y 
+          <b class="big-letter">s</b>encilla para todos aquellos que necesitan documentos 
+          portugueses, ya sea para vivir, trabajar o hacer negocios en el país. 
+          Con un servicio personalizado en varios idiomas, ayudamos a navegar 
+          por la burocracia de manera rápida y sin estrés.
+        </h2>
+      </div>
+
+      <div class="about-img1">
+        <img src="/site/assets/images/about_us_images/about_us_img1.jpg">
+      </div>
+
+      <div class="about-text-main">
+        <p>
+          Ofrecemos servicios como la obtención del <b class="big-letter">N</b>úmero de <b class="big-letter">I</b>dentificación
+          de <b class="big-letter">S</b>eguridad <b class="big-letter">S</b>ocial (NISS), necesario para la seguridad social, 
+          del <b class="big-letter">N</b>úmero de <b class="big-letter">I</b>dentificación 
+          <b class="big-letter">F</b>iscal (NIF), esencial para asuntos fiscales y 
+          comerciales, y orientación para el <b class="big-letter">V</b>isado 
+          <b class="big-letter">D</b>7, destinado a ciudadanos extranjeros 
+          con ingresos pasivos. Priorizamos la seguridad y la 
+          confidencialidad de los datos de nuestros clientes, 
+          utilizando tecnología de punta.
+        </p>
+        <p>
+          El equipo de <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal está 
+          compuesto por profesionales experimentados en legislación, atención al cliente y 
+          tecnología, dedicados a ofrecer la mejor experiencia posible. Nuestro compromiso 
+          es con la satisfacción del cliente, proporcionando un servicio confiable y 
+          eficiente que simplifica los procesos burocráticos complejos.
+        </p>
+      </div>
+
+      <div class="about-img2">
+        <img src="/site/assets/images/about_us_images/about_us_img2.jpg">
+      </div>
+
+      <div class="about-text-main-2">
+
+        <p>
+          Elegir <b class="big-letter">D</b>iscovery <b class="big-letter">P</b>ortugal significa optar 
+          por un servicio que ahorra tiempo y evita frustraciones, ayudándole a alcanzar sus objetivos 
+          en Portugal con confianza y tranquilidad.
+        </p>
+
+      </div>
+
+
+      <div class="subtitle-2">
+        <h2>Bienvenido a Portugal: ¡esperamos ayudarte a escribir el próximo capítulo de tu viaje!</h2>
+      </div>
+
+      <div class="about-img3">
+        <img src="/site/assets/images/about_us_images/about_us_img3.jpg">
+      </div>
+
+    </div>
+  </main>

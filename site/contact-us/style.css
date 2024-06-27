@@ -181,8 +181,6 @@ textarea::-webkit-scrollbar-thumb {
     }
   }
 
-
-
 #enviar-mobile{
   display: none;
 }
@@ -204,6 +202,7 @@ textarea::-webkit-scrollbar-thumb {
     /* height: 800px; */
   }
   .container{
-    height: 630px;
+    height: 530px;
+    width: 430px;
   }
 }
