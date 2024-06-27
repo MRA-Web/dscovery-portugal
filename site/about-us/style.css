@@ -2,9 +2,8 @@
 .content-about-us {
     margin-top: 150px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction:column;
+    
 }
 
 .title h1 {
@@ -14,39 +13,49 @@
     color: rgb(7, 43, 97);
 }
 
+.first-section{
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 2fr);
+}
+
 .subtitle{
     margin-top: 20px;
-    padding: 0 100px;
-    font-size: 14px;
-    text-align: center;
+    padding-right: 100px;
+    font-size: 15px;
+    text-align: left;
 }
 .subtitle-2 h2{
     margin-top: 50px;
     padding: 0 100px;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
     font-family: trattatello, fantasy;
     color: rgb(7, 43, 97);
 }
-.big-letter{
-    font-size: 25px;
-    
-    color: rgb(7, 43, 97);
-}
 
-
-.about-img1 img,
-.about-img2 img{
+.about-img1 img{
     display: block;
-    margin-top: 25px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 60%; 
-    height: auto; 
+    max-width: 100%; 
+   
     border-radius: 10px;
-    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+   
+}
 
+.about-img2 img{
+    display: block;
+    max-width: 50%;
+    display: flex;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; 
+    border-radius: 10px;
+   
 }
 
 .about-img3 img{
@@ -54,25 +63,49 @@
     margin-top: 35px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 90%; 
+    max-width: 100%; 
     height: auto; 
     border-radius: 10px;
-    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+   
 }
 
-.about-text-main,
-.about-text-main-2 {
-    margin-top: 25px;
-    padding: 0 100px;
-    font-size: 19px;
+.about-text-main {
+    margin-top: 60px;
+    padding-left: 100px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+.about-text-main-2{
+    margin-top: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
 }
 
+.big-letter{
+    font-size: 28px;
+    color: rgb(7, 43, 97);
+}
+.big-letter-bottom{
+    font-size: 35px;
+    color: rgb(7, 43, 97);
+}
+
 @media screen and (max-width: 1050px){
+    .content-about-us p{
+        font-size: 17px;
+    }
     .title h1{
         text-align: center;
         font-size: 40px;
+    }
+    
+    .first-section{
+        display: flex;
+        flex-direction: column;
     }
     .subtitle{
         margin-top: 20px;
@@ -83,13 +116,13 @@
     .subtitle-2 h2{
         padding: 0 5px;
         font-size: 30px;
-        font-weight: 600;
+        font-weight: 00;
         text-align: center;
         
     }
     .about-img1 img,
     .about-img2 img{
-        max-width: 90%; 
+        max-width: 100%; 
     }
     .about-img3 img{
         max-width: 100%;
