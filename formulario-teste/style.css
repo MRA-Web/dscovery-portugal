@@ -1,0 +1,215 @@
+*{
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#navegacao{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    align-content: center;
+}
+.logo-home img{
+    width: 100%;
+}
+.circulo{
+    color: #000;
+    background: aliceblue;
+    border-radius: 50px;
+    
+    width: 30px;
+    height: 30px;
+
+    margin: 25px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    transition: all 0.4s;
+}
+.circulo span{
+    margin-top: 6px;
+    z-index: -1;
+    color: rgba(240, 248, 255, 0);
+    transform: translateX(-30px);
+    transition: 0.4s;
+}
+.circulo i{
+    margin-left: 33px;
+    margin-top: 8px;
+    
+    transition: all 0.4s;
+}
+.circulo:hover{
+    width: 90px;
+    
+    i{
+        color: #000;
+        margin-left: -8px;
+        transition: all 0.4s;
+    }
+    span{
+        color: black;
+        z-index: 0;
+        display: flex;
+        transform: translateX(10px);
+        transition: all 0.4s;
+    }
+
+    transition: all 0.4s;
+}
+
+
+/* seletor de idiomas */
+.language-selector {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    border-radius: 20px;
+    height: min-content;
+}
+.idioma-atual-desktop {
+    background-color: #012E40;
+    color: white;
+    padding: 6px 4px;
+    width: 60px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+    transition: all 0.4s;
+}
+.language-selector-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    max-width: 0 !important;
+    text-align: left;
+    margin-left: 60px;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.language-selector-content:hover{
+    max-width: 400px !important;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    transition: all 0.4s;
+}
+.language-selector:hover .idioma-atual-desktop{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: all 0.4s;
+}
+.idioma-atual-desktop:hover + .language-selector-content {
+    max-width: 400px !important;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    transition: all 0.4s;
+}
+.opcao-idioma {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    
+    padding: 6px 6px;
+    border-radius: 6px;
+}
+.opcao-idioma .icons-language{
+    margin-right: 2px;
+}
+.opcao-idioma:hover {
+    background-color: #ddd;
+}
+.opcao-idioma:hover .language-selector-content {
+    max-height: 400px;
+}
+.icons-language{
+    width: 20px;
+    height: 20px;
+}
+
+
+#multiStepForm {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+
+
+    .form-step {
+        display: none;
+    }
+
+    .form-step.active {
+        display: block;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"], input[type="date"] {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+}
