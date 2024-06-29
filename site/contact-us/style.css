@@ -26,10 +26,10 @@ main {
     max-width: 100%;
     min-height: 480px;
     margin-top: 30px;
-    margin-bottom: -20px;
+    margin-bottom: -20px:
 }
 
-.container {
+.container{
     zoom: 90%;
 }
 
@@ -158,116 +158,7 @@ textarea::-webkit-scrollbar-thumb {
     font-size: 14px;
 }
 
-ul {
-    list-style: none;
-}
 
-.example-2 {
-    position: fixed;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.example-2 .icon-content {
-    margin: 10px 0;
-    position: relative;
-    padding: 0.5rem;
-}
-
-.example-2 .icon-content .tooltip {
-    position: absolute;
-    top: 50%;
-    left: -150%;
-    transform: translateY(-50%);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.example-2 .icon-content:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-}
-
-.example-2 .icon-content a {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #4d4d4d;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-.example-2 .icon-content a:hover {
-    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-}
-
-.example-2 .icon-content a svg {
-    position: relative;
-    z-index: 1;
-    width: 30px;
-    height: 30px;
-}
-
-.example-2 .icon-content a:hover {
-    color: white;
-}
-
-.example-2 .icon-content a .filled {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
-}
-
-.example-2 .icon-content a:hover .filled {
-    height: 100%;
-}
-
-.example-2 .icon-content a[data-social="linkedin"] .filled,
-.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-    background-color: #0274b3;
-}
-
-.example-2 .icon-content a[data-social="github"] .filled,
-.example-2 .icon-content a[data-social="github"] ~ .tooltip {
-    background-color: #24262a;
-}
-
-.example-2 .icon-content a[data-social="instagram"] .filled,
-.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-    background: linear-gradient(
-      45deg,
-      #405de6,
-      #5b51db,
-      #b33ab4,
-      #c135b4,
-      #e1306c,
-      #fd1f1f
-    );
-}
-
-.example-2 .icon-content a[data-social="youtube"] .filled,
-.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
-    background-color: #ff0000;
-}
 
 @media screen and (max-width: 1050px) {
     #contact {
@@ -281,7 +172,7 @@ ul {
         padding: 0 40px;
     }
     #enviar-mobile {
-        margin-top: 300px;
+      margin-top: 300px;
         display: block;
         background-color: transparent;
         color: #3d22b5;
@@ -295,34 +186,30 @@ ul {
         margin-top: 15px;
         margin-bottom: 25px; 
     }
-}
+  }
 
-#enviar-mobile {
-    display: none;
+#enviar-mobile{
+  display: none;
 }
 
 @media screen and (max-width: 1050px) {
-    #enviador {
-        display: none;
-    }
-    #message {
-        height: 20px;
-        padding-bottom: 50px;
-    }
-    #enviar-mobile {
-        margin: 10px 0;
-        display: flex;
-    }
-    .container .contact form {
-        padding: 40px 40px;
-        /* height: 800px; */
-    }
-    .container {
-        height: 530px;
-        width: 430px;
- 
-    }
-
-    
+  #enviador {
+    display: none;
+  }
+  #message{
+    height: 20px;
+    padding-bottom: 50px;
+  }
+  #enviar-mobile{
+    margin: 10px 0;
+    display: flex;
+  }
+  .container .contact form{
+    padding: 40px 40px;
+    /* height: 800px; */
+  }
+  .container{
+    height: 530px;
+    width: 430px;
+  }
 }
-
