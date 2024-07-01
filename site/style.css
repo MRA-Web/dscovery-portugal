@@ -355,6 +355,16 @@ main hr {
         flex-direction: column;
         margin-top: 150px;
     }
+    .hover-button{
+        text-align: center;
+    }
+    .card-information{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-2{
+        margin-left: 0;
+    }
     .card-inicial-content {
         display: flex;
         flex-direction: column;
