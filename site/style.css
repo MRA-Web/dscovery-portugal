@@ -323,8 +323,8 @@ main hr {
     top: -16px;
     right: -16px; /* Alterado de left para right */
     background-color: #093679;
-    height: 32px;
-    width: 32px;
+    height: 33px;
+    width: 33px;
     border-radius: 32px;
     transform: scale(1);
     transform-origin: 50% 50%;
@@ -355,7 +355,9 @@ main hr {
         flex-direction: column;
         margin-top: 150px;
     }
-
+    .card1{
+        
+    }
     .card-inicial-content {
         display: flex;
         flex-direction: column;
