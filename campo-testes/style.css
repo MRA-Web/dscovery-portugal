@@ -1,0 +1,44 @@
+.botao-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #lista-expansivel {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 0;
+    transition: width 0.5s ease-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  #lista-expansivel li {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateX(-100%);
+  }
+  
+  #lista-expansivel li:hover {
+    background-color: #ddd;
+  }
+  
+  .botao-container:hover #lista-expansivel {
+    width: 300px; /* Defina a largura máxima desejada para a lista expandida */
+  }
+  
+  .botao-container:hover #lista-expansivel li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+  }
+  
