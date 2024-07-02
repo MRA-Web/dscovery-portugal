@@ -42,7 +42,7 @@ main {
 .card-main p {
   font-size: 25px;
   font-weight: 500; /* Alterado para refletir a ordem desejada */
-  line-height: 20px;
+  line-height: 23px;
   color: #000000;
   margin-bottom: 15px; 
 }
