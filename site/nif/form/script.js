@@ -1,9 +1,14 @@
 let currentStep = 0;
 const formSteps = document.querySelectorAll('.form-step');
+const formNumbers = document.querySelectorAll('.circulo');
 
 function showStep(step) {
     formSteps.forEach((stepElement, index) => {
         stepElement.style.display = index === step ? 'block' : 'none';
+    });
+    formNumbers.forEach((stepNumber, index) => {
+        stepNumber.style.backgroundColor = index === step ? 'rgba(9,54,121,1)' : 'aliceblue';
+        stepNumber.style.color = index === step ? 'aliceblue' : 'rgba(9,54,121,1)';
     });
 }
 
