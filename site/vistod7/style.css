@@ -159,6 +159,17 @@ main {
   margin: 1rem 0 2rem;
 }
 
+.img-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.img-visa{
+  zoom: 15%;
+  border-radius: 80px;
+}
 
 .section-child {
   border-radius: 10px;
