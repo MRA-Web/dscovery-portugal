@@ -42,21 +42,22 @@ main {
 .card-main p {
   font-size: 25px;
   font-weight: 500; /* Alterado para refletir a ordem desejada */
-  line-height: 20px;
+  line-height: 1.0;
   color: #000000;
   margin-bottom: 15px; 
 }
 
 .card-information {
   display: flex;
-  margin-top: -170px;
+  margin-top: -250px;
   margin-left: 50px;
   zoom: 85%;
 }
 
 .card-main p.small {
-  font-size: 14px;
-  margin-top: 25px;
+  font-size: 15px;
+  margin-top: 15px;
+  line-height: 1.2;
 }
 
 .go-corner {

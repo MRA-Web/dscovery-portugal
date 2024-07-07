@@ -355,35 +355,6 @@ main {
 .card-information{
   display: none;
 }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* RESPONSIVE BODY */
-@media screen and (max-width: 1050px) {
   .content-main {
     display: flex;
     flex-direction: column;
@@ -517,6 +488,12 @@ main {
     margin-bottom: 20px;
     width: 70%;
     display: none;
+  }
+
+  .medium-container-1, .medium-container-2{
+    display: flex;
+    flex-direction: column;
+   
   }
 }
 
