@@ -373,6 +373,9 @@ main hr {
     }
 }
 @media screen and (max-width: 1050px) {
+    main h2{
+        font-family: trattatelo, fantasy;
+    }
     .content-main {
         display: flex;
         flex-direction: column;
