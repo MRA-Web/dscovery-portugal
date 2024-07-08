@@ -200,26 +200,31 @@ main {
 .image-main-2 img {
     border-radius: 20px;
 }
-
+.image-main-2-mobile{
+    display: none;
+}
 /* NISS PART */
 .image-main-3 {
     zoom: 55%;
     display: flex;
-
 }
-
 .image-main-3 img {
     border-radius: 20px;
 }
-/* VISA PART*/
-.image-main-4{
-    zoom: 30%;
-    display: flex;
-    
+.image-main-3-mobile{
+    display: none;
 }
 
+/* VISA PART*/
+.image-main-4{
+    zoom: 20%;
+    display: flex;
+}
 .image-main-4 img {
     border-radius: 50px;
+}
+.image-main-4-mobile{
+    display: none;
 }
 
 /* LINK 'A' "BUTTON" STYLE */
@@ -373,9 +378,7 @@ main hr {
     }
 }
 @media screen and (max-width: 1050px) {
-    main h2{
-        font-family: trattatelo, fantasy;
-    }
+    
     .content-main {
         display: flex;
         flex-direction: column;
@@ -492,6 +495,7 @@ main hr {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: -30px;
     }
 
     .text-main-3 {
@@ -546,17 +550,31 @@ main hr {
         font-size: 45px;
     }
 
-    .image-main-2 {
+    .image-main-2 img {
         display: none;
+    }
+    .image-main-4-mobile,
+    .image-main-3-mobile,
+    .image-main-2-mobile{
+        display: flex;
+        
+    }
+    .image-main-4-mobile img,
+    .image-main-3-mobile img,
+    .image-main-2-mobile img{ 
+        margin-top: 60px;
+        width: 100%;
+        justify-self: center;
+        border-radius: 5px;
+    }
+    .image-main-3 img{
+       display: none;
     }
 
-    .image-main-3 {
-        display: none;
+    .image-main-4 img{
+       display: none;
     }
 
-    .image-main-4{
-        display: none;
-    }
     .image-main-1 img {
         margin-top: 25px;
         width: 70%;
