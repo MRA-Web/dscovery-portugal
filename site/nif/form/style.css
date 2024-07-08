@@ -198,7 +198,7 @@ header{
     align-items: center;
     width: fit-content;
     height: fit-content;
-    padding: 5% 10% ;
+    padding: 10% 30% ;
     border-radius: 15px;
     background: linear-gradient(180deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
 }
@@ -258,6 +258,7 @@ header{
     }
     #holder{
         margin-bottom: 0;
+        padding: 15% 10%;
     }
 
     /* parte do menu de idiomas */
