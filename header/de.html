@@ -1,0 +1,130 @@
+<!-- header em alemão by luizzmg -->
+<nav class="nav-bar"> <!-- barra de navegação desktop -->
+    
+    <!-- logo do site que leva à página inicial -->
+    <div><a href="/de.html">
+      <img class="logo" src="/assets/images/DiscoveryLogo.png">
+    </a></div>
+      
+    <!-- navegação entre as principais partes do site (para desktop) -->
+    <div class="nav-list">
+      
+      <div class="nav-item"> <!-- home -->
+        <a class="nav-link" href="/de.html">
+            Startseite
+          <hr class="title-lines">
+        </a>
+      </div>
+      
+      <div class="nav-item"> <!-- services -->
+        
+        <a class="nav-link" href="#">
+            Dienstleistungen
+          <hr class="title-lines">
+        </a>
+        
+        <ul class="item-content">
+          <li>
+            <a href="/nif/de.html">Holen Sie sich Ihre NIF<br>
+              <hr class="sub-lines"><br>
+              <p>Deine NIF, dein Tor nach Portugal</p>
+            </a>
+          </li>
+          <li>
+            <a href="/niss/de.html">Holen Sie sich Ihre NISS<br>
+              <hr class="sub-lines"><br>
+              <p>Beginne deine Reise in Portugal</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">Erhalten Sie Ihr Visum<br>
+              <hr class="sub-lines"><br>
+              <p>Beginnen Sie Ihr Leben in Portugal</p>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+      
+      <div class="nav-item"> <!-- contact us -->
+        <a class="nav-link" href="/contact-us/de.html">
+            Kontaktiere uns
+          <hr class="title-lines">
+        </a>
+      </div>
+      
+      <div class="nav-item"> <!-- about-us -->
+        <a class="nav-link" href="/about-us/de.html">
+           Über uns 
+          <hr class="title-lines">
+        </a>
+      </div>
+      
+    </div>
+    
+    <!-- seleção de idiomas desktop -->
+    <div class="language-selector">
+      
+      <!-- botão da linguagem atual -->
+      <!-- ao passar o mouse em cima, exibe as opções de mudança de idioma -->
+      <button class="idioma-atual-desktop">
+        <!-- alemão --><img class="icons-language" src ="/assets/images/countries/germany.png"> DE
+      </button>
+      
+      <ul class="language-selector-content">
+        <!--inglês-----><li><a href="index.html" class="opcao-idioma"><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN</a></li>
+        <!--português--><li><a href="pt.html" class="opcao-idioma"><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT</a></li>
+        <!--espanhol---><li><a href="es.html" class="opcao-idioma"><img class="icons-language" src ="/assets/images/countries/spain.png"> ES</a></li>
+        <!--francês----><li><a href="fr.html" class="opcao-idioma"><img class="icons-language" src ="/assets/images/countries/france.png"> FR</a></li>
+        <!--italiano---><li><a href="it.html" class="opcao-idioma"><img class="icons-language" src ="/assets/images/countries/italy.png"> IT</a></li>
+      </ul>
+      
+    </div>
+    
+    <!-- botão que exibe menu mobile (aqueles "três tracinhos")-->
+    <div class="mobile-menu-icon">
+      <button onclick="menuShow()">
+        <img class="icon" src="/assets/mobile-icons/menu_white_36dp.svg" alt="">
+      </button>
+    </div>
+    
+  </nav>
+  
+  <!-- menu que aparece ao clicar nos "três tracinhos" -->
+  <div class="mobile-menu">
+    <ul>
+      
+      <li class="nav-item"><a class="nav-link" href="/de.html"> <!-- home -->
+        Startseite
+      </a></li>
+      <li class="nav-item"><a class="nav-link" href="/nif/de.html"> <!-- services -->
+        Holen Sie sich Ihre NIF
+      </a></li>
+      <li class="nav-item"><a class="nav-link" href="/niss/de.html"> <!-- services -->
+        Holen Sie sich Ihre NISS
+      </a></li>
+      <li class="nav-item"><a class="nav-link" href="/contact-us/de.html"> <!-- contact us -->
+        Kontaktiere uns
+      </a></li>
+      <li class="nav-item"><a class="nav-link" href="/about-us/de.html"> <!-- about us -->
+        Über uns
+      </a></li>
+      <li class="nav-item nav-link"> <!-- language -->
+        Sprache:
+      </li>
+      
+      <!-- opções de idiomas (versão de celular) -->
+      <li class="language-selector-mobile">
+  
+        <!-- inglês  ----><a href="index.html"><button class = "ling-opcoes"><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"></button></a>
+        <!-- português --><a href="pt.html"><button class="ling-opcoes"><img class="icons-language" src ="/assets/images/countries/portugal.png"></button></a>
+        <!-- espanhol----><a href="es.html"><button class = "ling-opcoes"><img class="icons-language" src ="/assets/images/countries/spain.png"></button></a>
+        <!-- francês ----><a href="fr.html"><button class = "ling-opcoes"><img class="icons-language" src ="/assets/images/countries/france.png"></button></a>
+        <!-- italiano ---><a href="it.html"><button class = "ling-opcoes"><img class="icons-language" src ="/assets/images/countries/italy.png"></button></a>
+        <!-- alemão ----><button class = "ling-opcoes" id="ling-atual"><img class="icons-language" src ="/assets/images/countries/germany.png"></button>
+  
+      </li>
+  
+    </ul>
+  </div>
+  
