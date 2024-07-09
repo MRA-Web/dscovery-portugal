@@ -10,15 +10,15 @@ const traducoesIngles = [
 `
     <!-- seletor de idiomas -->
     <button class="idioma-atual-desktop">
-        <!-- inglês --><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN
+        <!-- inglês --><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN
     </button>
 
     <ul class="language-selector-content" >
-        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT</button></li>
-        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/site/assets/images/countries/spain.png"> ES</button></li>
-        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR</button></li>
-        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT</button></li>
-        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE</button></li>
+        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT</button></li>
+        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/assets/images/countries/spain.png"> ES</button></li>
+        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/assets/images/countries/france.png"> FR</button></li>
+        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/assets/images/countries/italy.png"> IT</button></li>
+        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/assets/images/countries/germany.png"> DE</button></li>
     </ul>
 `,
 "Personal Information",
@@ -66,15 +66,15 @@ const traducoesAlemao = [
 `
     <!-- seletor de idiomas -->
     <button class="idioma-atual-desktop">
-        <!-- alemão --><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE
+        <!-- alemão --><img class="icons-language" src ="/assets/images/countries/germany.png"> DE
     </button>
 
     <ul class="language-selector-content" >
-        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT</button></li>
-        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/site/assets/images/countries/spain.png"> ES</button></li>
-        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR</button></li>
-        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT</button></li>
-        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN</button></li>
+        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT</button></li>
+        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/assets/images/countries/spain.png"> ES</button></li>
+        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/assets/images/countries/france.png"> FR</button></li>
+        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/assets/images/countries/italy.png"> IT</button></li>
+        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN</button></li>
     </ul>
 `,
 "Persönliche Informationen",
@@ -122,15 +122,15 @@ const traducoesEspanhol = [
     `
     <!-- seletor de idiomas -->
     <button class="idioma-atual-desktop">
-        <!-- espanhol --><img class="icons-language" src ="/site/assets/images/countries/spain.png"> ES
+        <!-- espanhol --><img class="icons-language" src ="/assets/images/countries/spain.png"> ES
     </button>
 
     <ul class="language-selector-content" >
-        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT</button></li>
-        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE</button></li>
-        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR</button></li>
-        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT</button></li>
-        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN</button></li>
+        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT</button></li>
+        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/assets/images/countries/germany.png"> DE</button></li>
+        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/assets/images/countries/france.png"> FR</button></li>
+        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/assets/images/countries/italy.png"> IT</button></li>
+        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN</button></li>
     </ul>
 `,
 "Información personal",
@@ -178,15 +178,15 @@ const traducoesItaliano = [
     `
     <!-- seletor de idiomas -->
     <button class="idioma-atual-desktop">
-        <!-- italiano --><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT
+        <!-- italiano --><img class="icons-language" src ="/assets/images/countries/italy.png"> IT
     </button>
 
     <ul class="language-selector-content" >
-        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT</button></li>
-        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE</button></li>
-        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR</button></li>
-        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/site/assets/images/countries/spain.png"> ES</button></li>
-        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN</button></li>
+        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT</button></li>
+        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/assets/images/countries/germany.png"> DE</button></li>
+        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/assets/images/countries/france.png"> FR</button></li>
+        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/assets/images/countries/spain.png"> ES</button></li>
+        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN</button></li>
     </ul>
 `,
 "Informazioni personali",
@@ -234,15 +234,15 @@ const traducoesFrances = [
     `
     <!-- seletor de idiomas -->
     <button class="idioma-atual-desktop">
-        <!-- francês --><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR
+        <!-- francês --><img class="icons-language" src ="/assets/images/countries/france.png"> FR
     </button>
 
     <ul class="language-selector-content" >
-        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT</button></li>
-        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE</button></li>
-        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT</button></li>
-        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/site/assets/images/countries/spain.png"> ES</button></li>
-        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN</button></li>
+        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT</button></li>
+        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/assets/images/countries/germany.png"> DE</button></li>
+        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/assets/images/countries/italy.png"> IT</button></li>
+        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/assets/images/countries/spain.png"> ES</button></li>
+        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN</button></li>
     </ul>
 `,
 "Informations personnelles",
@@ -290,15 +290,15 @@ const traducoesPortugues = [
     `
     <!-- seletor de idiomas -->
     <button class="idioma-atual-desktop">
-        <!-- português --><img class="icons-language" src ="/site/assets/images/countries/portugal.png"> PT
+        <!-- português --><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT
     </button>
 
     <ul class="language-selector-content" >
-        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/site/assets/images/countries/spain.png"> ES</button></li>
-        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/site/assets/images/countries/germany.png"> DE</button></li>
-        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/site/assets/images/countries/france.png"> FR</button></li>
-        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/site/assets/images/countries/italy.png"> IT</button></li>
-        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/site/assets/images/countries/united-kingdom.png"> EN</button></li>
+        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/assets/images/countries/spain.png"> ES</button></li>
+        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/assets/images/countries/germany.png"> DE</button></li>
+        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/assets/images/countries/france.png"> FR</button></li>
+        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/assets/images/countries/italy.png"> IT</button></li>
+        <!--inglês--><li><button class="opcao-idioma" onclick="traduzir('en')"><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN</button></li>
     </ul>
 `,
 "Informações Pessoais",

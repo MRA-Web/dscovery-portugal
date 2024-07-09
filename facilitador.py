@@ -5,13 +5,13 @@ subpastas = ["about-us","campo-testes","contact-us","footer","formulario-teste",
 for pagina in [""]:
 
   # Defina o diretório onde estão os arquivos
-  diretorio = f'C:/Users/Luiz Miguel/Desktop/git-clones/discovery-portugal'
+  diretorio = f'C:/Users/Luiz Miguel/Desktop/git-clones/discovery-portugal/nif/form/'
 
   # Percorre todos os arquivos no diretório
   for nome_arquivo in os.listdir(diretorio):
 
     # Verifica se o arquivo é um arquivo de texto (ou qualquer outra extensão específica)
-    if nome_arquivo.endswith('.html'):
+    if nome_arquivo.endswith('.js'):
       caminho_arquivo = os.path.join(diretorio, nome_arquivo)
       
       # Lê o conteúdo do arquivo
