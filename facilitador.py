@@ -1,10 +1,11 @@
 import os
 
+subpastas = ["about-us","campo-testes","contact-us","footer","formulario-teste","header","nif","nif/form","niss","niss/form","vistod7"]
 
-for pagina in ["about-us","campo-testes","contact-us","footer","formulario-teste","header","nif","nif/form","niss","niss/form","vistod7"]:
+for pagina in [""]:
 
   # Defina o diretório onde estão os arquivos
-  diretorio = f'C:/Users/Luiz Miguel/Desktop/git-clones/discovery-portugal/{pagina}'
+  diretorio = f'C:/Users/Luiz Miguel/Desktop/git-clones/discovery-portugal'
 
   # Percorre todos os arquivos no diretório
   for nome_arquivo in os.listdir(diretorio):

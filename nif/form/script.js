@@ -35,14 +35,14 @@ const traducoesIngles = [
 
 "Documents",
 "Do you have an identity card?",
-" Yes",
-" No",
+`<input type="radio" name="passaporte" value="sim"> Yes`,
+`<input type="radio" name="passaporte" value="nao"> No`,
 "Previous",
 "Next",
 
 "Do you have a proof of address?",
-" Yes",
-" No",
+`<input type="radio" name="comprovante" value="sim"> Yes`,
+`<input type="radio" name="comprovante" value="nao"> No`,
 "Previous",
 "Next",
 
@@ -91,14 +91,14 @@ const traducoesAlemao = [
 
 "Dokumente",
 "Haben Sie einen Personalausweis?",
-" Ja",
-" Nein",
+`<input type="radio" name="passaporte" value="sim"> Ja`,
+`<input type="radio" name="passaporte" value="nao"> Nein`,
 "Zurück",
 "Weiter",
 
 "Haben Sie einen Adressnachweis?",
-" Ja",
-" Nein",
+`<input type="radio" name="comprovante" value="sim"> Ja`,
+`<input type="radio" name="comprovante" value="nao"> Nein`,
 "Zurück",
 "Weiter",
 
@@ -153,8 +153,8 @@ const traducoesEspanhol = [
 "Siguiente",
 
 "¿Tiene una prueba de domicilio?",
-" Sí",
-" No",
+`<input type="radio" name="comprovante" value="sim"> Sí`,
+`<input type="radio" name="comprovante" value="nao"> No`,
 "Anterior",
 "Siguiente",
 
@@ -209,8 +209,8 @@ const traducoesItaliano = [
 "Successivo",
 
 "Hai una prova di indirizzo?",
-" Sì",
-" No",
+`<input type="radio" name="comprovante" value="sim"> Sì`,
+`<input type="radio" name="comprovante" value="nao"> No`,
 "Precedente",
 "Successivo",
 
@@ -265,8 +265,8 @@ const traducoesFrances = [
 "Suivant",
 
 "Avez-vous une preuve de domicile ?",
-" Oui",
-" Non",
+`<input type="radio" name="comprovante" value="sim"> Oui`,
+`<input type="radio" name="comprovante" value="nao"> Non`,
 "Précédent",
 "Suivant",
 
@@ -321,8 +321,8 @@ const traducoesPortugues = [
 "Próximo",
 
 "Você possui um comprovante de endereço?",
-`<label><input type="radio" name="comprovante" value="sim"> Sim`,
-`<label><input type="radio" name="comprovante" value="nao"> Não`,
+`<input type="radio" name="comprovante" value="sim"> Sim`,
+`<input type="radio" name="comprovante" value="nao"> Não`,
 "Anterior",
 "Próximo",
 
