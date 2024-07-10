@@ -219,6 +219,7 @@ main {
 .image-main-4{
     zoom: 35%;
     display: flex;
+    /*  */
     justify-content: flex-start;
 }
 .image-main-4 img {
