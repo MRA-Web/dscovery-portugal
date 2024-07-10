@@ -217,8 +217,9 @@ main {
 
 /* VISA PART*/
 .image-main-4{
-    zoom: 30%;
+    zoom: 35%;
     display: flex;
+    justify-content: flex-start;
 }
 .image-main-4 img {
     border-radius: 50px;
