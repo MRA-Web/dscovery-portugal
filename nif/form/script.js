@@ -441,11 +441,11 @@ document.addEventListener('DOMContentLoaded', () => {
     showStep(currentStep);
 });
 
-window.addEventListener('beforeunload', function (event) {
-    var mensagem = "Tem certeza que deseja sair desta página? Você perderá o seu progresso.";
-    event.returnValue = mensagem; // Padrão para a maioria dos navegadores
-    return mensagem; // Para o Chrome
-});
+// window.addEventListener('beforeunload', function (event) {
+//     var mensagem = "Tem certeza que deseja sair desta página? Você perderá o seu progresso.";
+//     event.returnValue = mensagem; // Padrão para a maioria dos navegadores
+//     return mensagem; // Para o Chrome
+// });
 
 showStep(currentStep);
 
