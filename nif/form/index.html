@@ -26,10 +26,10 @@
             <div id="etapas">
                 <div href="#" class="circulo"><i class="fa-solid fa-user"></i></div>
                 <div href="#" class="circulo"><i class="fa-solid fa-people-group"></i></div>
+                <div href="#" class="circulo"><i class="fa-solid fa-file"></i></div>
                 <div href="#" class="circulo"><i class="fa-solid fa-file-invoice"></i></div>
                 <div href="#" class="circulo"><i class="fa-solid fa-plane-departure"></i></div>
                 <div href="#" class="circulo"><i class="fa-solid fa-circle-info"></i></div>
-                <div href="#" class="circulo">6</div>
             </div>
         
         
@@ -73,11 +73,10 @@
                 </form>
 
                 <!-- etapa 2 -->
-                <form class="form-step" onsubmit="return handleNext(event)" style="display: none;">
+                <form class="form-step form-age" onsubmit="return handleNext(event)" style="display: none;">
                     <h2 class="traduzir">Age</h2>
-                    <label class="traduzir"><input type="radio" name="idade" value="adulto"> I am an adult</label>
-                    <label class="traduzir"><input type="radio" name="idade" value="crianca"> I am a child</label>
-
+                    <label class="traduzir"><input type="radio" name="idade" value="adulto" required> I am an adult <i class="fa-solid fa-person fa-adult"></i></label>
+                    <label class="traduzir"><input type="radio" name="idade" value="crianca" required> I am a child <i class="fa-solid fa-child"></i></label>
                     <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
                     <button type="submit" class="traduzir">Next</button>
                 </form>
