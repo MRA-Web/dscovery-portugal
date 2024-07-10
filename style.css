@@ -514,6 +514,7 @@ main hr {
 
     .text-main-1 h1 {
         text-align: center;
+        font-family: trattatello, fantasy;
     }
 
     .text-main-1 h3 {
@@ -534,6 +535,7 @@ main hr {
 
     .text-main-2 h2 {
         font-size: 45px;
+        font-family: trattatello, fantasy;
     }
 
     .text-main-3 p {
@@ -542,6 +544,7 @@ main hr {
 
     .text-main-3 h2 {
         font-size: 45px;
+        font-family: trattatello, fantasy;
     }
 
     .text-main-4 p{
@@ -550,6 +553,7 @@ main hr {
 
     .text-main-4 h2{
         font-size: 45px;
+        font-family: trattatello, fantasy;
     }
 
     .image-main-2 img {
