@@ -360,7 +360,7 @@ main hr {
 
 /* RESPONSIVE BODY */
 
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
     .card1 {
         padding: 32px 10px;
     }
@@ -380,7 +380,7 @@ main hr {
     .content-main p{
         font-size: 16px;
     }
-}
+} */
 @media screen and (max-width: 1050px) {
     
     .content-main {
