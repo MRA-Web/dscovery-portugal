@@ -27,7 +27,7 @@ header{
     flex-direction: row;
     align-items: center;
     margin-right: 100px ;
-    margin-bottom: 60px;
+    margin-bottom: 13px;
     position: center;
     margin-top: -8px;
 }
@@ -252,7 +252,7 @@ header{
         align-items: center;
     }
     .mobile-menu{
-
+        margin-top: -18px;
         background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
     }
     .mobile-menu .nav-item{
