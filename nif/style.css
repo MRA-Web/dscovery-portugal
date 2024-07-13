@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -295,70 +296,95 @@ main {
   transition: all 0.4s;
 }
 
-@media screen and (max-width: 1050px) {
-  
-  .main-container {
-    display: flex;
+    @media screen and (max-width: 1050px) {
+  .main-container,
+  .first-container,
+  .final-container {
     flex-direction: column;
     margin-top: 20px;
     align-items: center;
+    text-align: center;
   }
+
   .first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .first-container h1 {
+    align-items: center;
+  }
+
+  .text-main {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .text-main h1 {
+    align-items: center;
+    text-align: center;
+    margin-right: 40px;
+  }
+  .text-main h2 {
+    align-items: center;
+    text-align: center;
+    margin-right: 40px;
+  }
+
+  .text-main-2 {
+    align-items: center;
+    text-align: center;
+  }
+
+  .button-main {
+    text-align: center;
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+
+  .second-container {
     display: flex;
     flex-direction: column;
     margin-top: 70px;
     align-items: center;
-    text-align: center;
-    margin-left: 0px;
   }
-  .first-container h1 {  
-    align-items: center
-    ;}
 
-
-.button-main{
+  .text-main-2 h2 {
+    align-items: center;
     text-align: center;
-    margin-right: 40px;
-    margin-top: 20px;
-}
+  }
 
-.icon-text-container{
-  margin-bottom: 40px;
-}
-.first-image {
+  .icon-text-container {
+    margin-bottom: 40px;
+  }
+
+  .first-image {
     display: none;
-}
-.hover-button-2{
-margin-top:15px;
-margin-left: 20px;
-}
-
- .second-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 70px;
-  align-items: center;
   }
-  .second-container h2{
+
+  .hover-button-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+
+  .final-container {
     text-align: center;
-  }
-  
-  .text-main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 55px;
+    display: flex;
+    flex-direction: column;
   }
 
-   .text-main-2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: -30px;
+  .card-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
- .card-information{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- }
+
+  .card-main {
+    margin-top: 200px;
+  }
 }
