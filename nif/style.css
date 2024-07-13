@@ -56,6 +56,11 @@ main {
   margin-top: 55px;
 }
 
+.hover-button:hover {
+  transform: scale(1.2);
+  transition: all 0.4s;
+}
+
 .first-image img {
   zoom: 100%;
   display: flex;
