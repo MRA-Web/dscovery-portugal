@@ -40,10 +40,7 @@ main {
   width: 100%;
 }
 
-.button-main {
-  margin-left: 50px;
-  margin-top: -120px;
-}
+
 .hover-button {
   display: inline-block;
   padding: 10px 20px;
@@ -56,6 +53,7 @@ main {
     rgba(0, 180, 255, 1) 100%
   );
   transition: all 0.4s;
+  margin-top: 55px;
 }
 .hover-button:hover {
   transform: scale(1.2);
@@ -93,7 +91,7 @@ main {
   font-weight: 500;
   font-size: 25px;
   color: rgb(5, 28, 77);
-  margin-left: 70px;
+ 
   margin: 1rem 0 2rem;
 }
 
@@ -124,15 +122,13 @@ main {
   width: 30%;
 }
 
-.first-container .text-main {
-  margin-left: 55px;
-}
+
 
 .first-container .text-main h1 {
   color: rgb(7, 43, 97); /* Texto azul escuro */
   font-size: 70px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   font-family: trattatello, fantasy;
 }
 
@@ -301,7 +297,7 @@ main {
   transition: all 0.4s;
 }
 
-    @media screen and (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
   .main-container,
   .first-container,
   .final-container {
