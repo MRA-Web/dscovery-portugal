@@ -76,7 +76,6 @@ main {
 }
 
 .text-main-2 {
-  padding: 20px;
   border-radius: 20px;
 }
 
@@ -298,7 +297,7 @@ main {
   transition: all 0.4s;
 }
 
-@media screen and (max-width: 1050px) {
+    @media screen and (max-width: 1050px) {
   .main-container,
   .first-container,
   .final-container {
