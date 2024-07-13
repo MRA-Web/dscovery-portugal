@@ -42,18 +42,24 @@ main {
 
 .button-main {
   margin-left: 50px;
+  margin-top: -250px;
 }
 .hover-button {
   display: inline-block;
   padding: 10px 20px;
   color: white;
   border-radius: 0.5rem;
+  margin-top: 100px;
   background: linear-gradient(
     90deg,
     rgba(0, 5, 36, 1) 0%,
     #093679 50%,
     rgba(0, 180, 255, 1) 100%
   );
+  transition: all 0.4s;
+}
+.hover-button:hover {
+  transform: scale(1.2);
   transition: all 0.4s;
 }
 
@@ -290,6 +296,7 @@ main {
   );
   transition: all 0.4s;
 }
+
 
 .hover-button-2:hover {
   transform: scale(1.2);
