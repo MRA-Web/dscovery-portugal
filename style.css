@@ -270,7 +270,7 @@ main hr {
 }
 /* CARD MAIN PAGE  */
 .card p {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 500; /* Alterado para refletir a ordem desejada */
     line-height: 20px;
     color: #000000;
@@ -283,7 +283,7 @@ main hr {
   }
   
   .card p.small {
-    font-size: 14px;
+    font-size: 11.5px;
     margin-top: 25px;
   }
   
@@ -360,27 +360,7 @@ main hr {
 
 /* RESPONSIVE BODY */
 
-@media screen and (max-width: 1400px) {
-    .card1 {
-        padding: 32px 10px;
-    }
-}
-@media screen and (max-width: 1230px) {
-    .card1 {
-        padding: 32px 25px;
-    }
-    .card p.small {
-        font-size: 14px;
-        margin-top: 25px;
-      }
 
-    .content-main h2{
-        font-size: 30px;
-    }
-    .content-main p{
-        font-size: 16px;
-    }
-}
 @media screen and (max-width: 1050px) {
     
     .content-main {
