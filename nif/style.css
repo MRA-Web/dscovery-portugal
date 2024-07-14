@@ -322,11 +322,13 @@ main {
 .first-container .text-main h1{
 text-align: center;
 font-size: 48px;
+font-family: trattatello, fantasy;
 
 }
 .first-container .text-main h2{
   text-align: center;
   font-size: 19px;
+  font-family: trattatello, fantasy;
 }
 
 .button-main {
@@ -337,11 +339,12 @@ text-align: center;
 }
 .second-container .text-main-2 h2{
   font-size: 48px;
-
+  font-family: trattatello, fantasy;
 }
 .final-container .text-main-2 h1{
  font-size: 48px;
  text-align: left;
+ font-family: trattatello, fantasy;
 }
 
 .card-information{
