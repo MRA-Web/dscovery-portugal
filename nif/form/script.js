@@ -6,62 +6,6 @@ const aTraduzir = document.querySelectorAll('.traduzir');
 const formSteps = document.querySelectorAll('.form-step');
 const formNumbers = document.querySelectorAll('.circulo');
 
-const traducoesIngles = [
-`
-    <!-- seletor de idiomas -->
-    <button class="idioma-atual-desktop">
-        <!-- inglês --><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN
-    </button>
-
-    <ul class="language-selector-content" >
-        <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT</button></li>
-        <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/assets/images/countries/spain.png"> ES</button></li>
-        <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/assets/images/countries/france.png"> FR</button></li>
-        <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/assets/images/countries/italy.png"> IT</button></li>
-        <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/assets/images/countries/germany.png"> DE</button></li>
-    </ul>
-`,
-"Personal Information",
-"Full Name:",
-"Phone (with country code):",
-"Email:",
-"Next",
-
-"Age",
-`<input type="radio" name="idade" value="adulto"> I am an adult`,
-`<input type="radio" name="idade" value="crianca"> I am a child`,
-"Previous",
-"Next",
-
-"Documents",
-"Do you have an identity card?",
-`<input type="radio" name="passaporte" value="sim"> Yes`,
-`<input type="radio" name="passaporte" value="nao"> No`,
-"Previous",
-"Next",
-
-"Do you have a proof of address?",
-`<input type="radio" name="comprovante" value="sim"> Yes`,
-`<input type="radio" name="comprovante" value="nao"> No`,
-"Previous",
-"Next",
-
-"Payment",
-"Previous",
-"Next",
-
-"Final details",
-"Date of Birth:",
-"Passport or ID card number:",
-"Passport or ID card Expiry Date:",
-"Address:",
-"Portuguese NIF (if applicable):",
-"Father's name:",
-"Mother's name:",
-"Previous",
-"Submit"
-];
-
 const traducoesAlemao = [
 `
     <!-- seletor de idiomas -->
@@ -385,6 +329,7 @@ function traduzir(idioma){
 }
 
 function showStep(step) {
+    console.log("showStep(" + step + ")\n")
     formSteps.forEach((stepElement, index) => {
         stepElement.style.display = index === step ? 'block' : 'none';
     });
@@ -395,6 +340,7 @@ function showStep(step) {
 }
 
 function nextStep() {
+    console.log("nextStep() \n")
     if (currentStep < formSteps.length - 1) {
         currentStep++;
         showStep(currentStep);
@@ -402,6 +348,7 @@ function nextStep() {
 }
 
 function prevStep() {
+    console.log("prevStep() \n")
     if (currentStep > 0) {
         currentStep--;
         showStep(currentStep);
@@ -409,11 +356,73 @@ function prevStep() {
 }
 
 function goStep(number){
+    console.log("goStep() \n")
     currentStep = number
     showStep(currentStep)
 }
 
+function handleAge(event) {
+    ageValue = '';
+
+    console.log("handleAge() \n")
+    event.preventDefault();
+    const form = event.target;
+    allForms.push(form)
+
+    var ageValue = form.querySelector('input[name="idade"]:checked').value;
+    
+    if (ageValue === 'adulto') {
+        handleAdult();
+    } else if (ageValue === 'crianca') {
+        handleChild();
+    }
+
+    ageValue = '';
+}
+
+function handleAdult(){
+    document.getElementById("adulto-crianca").innerHTML = `
+    <h2 class="traduzir">CASO ADULTO</h2>
+    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
+    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
+    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
+
+    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+    <button type="submit" class="traduzir">Next</button>
+    `
+
+    if (form.checkValidity()) {
+        nextStep();
+    } else {
+        form.reportValidity();
+    }
+
+    nextStep();
+}
+function handleChild(){
+    console.log("handleChild()")
+    document.getElementById("adulto-crianca").innerHTML = `
+    <h2 class="traduzir">CASO CRIANÇA</h2>
+    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
+    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
+    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
+
+    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+    <button type="submit" class="traduzir">Next</button>
+    `
+
+    if (form.checkValidity()) {
+        nextStep();
+    } else {
+        form.reportValidity();
+    }
+
+    nextStep()
+}
+
+
 function handleNext(event) {
+    console.log("handleNext() \n")
     event.preventDefault();
     const form = event.target;
     allForms.push(form)
@@ -426,6 +435,7 @@ function handleNext(event) {
 }
 
 function handleSubmit(event) {
+    console.log("handleSubmit() \n")
     event.preventDefault();
     const form = event.target;
     allForms.push(form)
@@ -448,4 +458,3 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 
 showStep(currentStep);
-

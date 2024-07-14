@@ -73,10 +73,21 @@
                 </form>
 
                 <!-- etapa 2 -->
-                <form class="form-step form-age" onsubmit="return handleNext(event)" style="display: none;">
+                <form class="form-step form-age" onsubmit="return handleAge(event)" style="display: none;">
                     <h2 class="traduzir">Age</h2>
                     <label class="traduzir"><input type="radio" name="idade" value="adulto" required> I am an adult <i class="fa-solid fa-person fa-adult"></i></label>
                     <label class="traduzir"><input type="radio" name="idade" value="crianca" required> I am a child <i class="fa-solid fa-child"></i></label>
+                    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+                    <button type="submit" class="traduzir">Next</button>
+                </form>
+
+                <!-- etapa x -->
+                <form class="form-step" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca">
+                    <h2 class="traduzir">CASO ADULTO</h2>
+                    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
+                    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
+                    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
+
                     <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
                     <button type="submit" class="traduzir">Next</button>
                 </form>
