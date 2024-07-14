@@ -209,7 +209,7 @@ header{
 
 @media screen and (max-width: 1050px) {
     .logo{
-       margin-left: -30px;
+       margin-left: -50px;
     }
     .nav-item {
         display: none;
