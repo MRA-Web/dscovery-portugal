@@ -1,5 +1,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 * {
   margin: 0;
@@ -61,10 +62,11 @@ main {
 }
 
 .first-image img {
-  zoom: 100%;
+  zoom: 40%;
   display: flex;
   float: right;
-  margin-right: 55px;
+  border-radius: 20px;
+
 }
 
 .second-container {
@@ -90,15 +92,9 @@ main {
   font-weight: 500;
   font-size: 25px;
   color: rgb(5, 28, 77);
- 
   margin: 1rem 0 2rem;
 }
 
-.second-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .img-visa {
   zoom: 15%;
@@ -144,8 +140,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 50px 0;
-  margin-bottom: 50px;
+ 
 }
 
 .final-container .text-main-2 {
@@ -164,16 +159,22 @@ main {
   font-family: trattatello, fantasy;
 }
 
+.niss-image-2{
+    margin-top: 55px;
+    zoom: 50%;
+    display: flex;
+    border-radius: 20px;
+    
+}
 .card-information {
   display: flex;
   flex-direction: row;
-  margin-top: 100px;
-  margin-right: 70px;
+  margin-top: 25px;
 }
 
 .card-main {
   display: flex;
-  margin-top: 180px;
+  
 
 }
 
@@ -236,7 +237,7 @@ main {
   right: -16px;
   background-color: #093679;
   height: 32px;
-  width: 35px;
+  width: 39px;
   border-radius: 32px;
   transform: scale(1);
   transform-origin: 50% 50%;
@@ -256,7 +257,12 @@ main {
   transition: all 0.3s ease-out;
   color: #fff;
 }
-
+.card-1-niss{
+  margin-right: 50px;
+}
+.card-3-niss{
+  margin-left: 50px;
+}
 .icon-text-container {
   display: flex;
   justify-content: center;
@@ -268,7 +274,9 @@ main {
 .icon-text {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .icon-text i {
@@ -296,95 +304,81 @@ main {
   transition: all 0.4s;
 }
 
+
 @media screen and (max-width: 1050px) {
-  .main-container,
-  .first-container,
-  .final-container {
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .first-container {
+  .first-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  
   }
-
-  .first-container h1 {
-    align-items: center;
+  .first-container .text-main h1{
+  text-align: center;
+  font-size: 48px;
+  font-family: "Lilita One", sans-serif;
+  color: rgb(9, 51, 113);
+  
   }
-
-  .text-main {
-    align-items: center;
+  .first-container .text-main h2{
     text-align: center;
-    flex-direction: column;
+    font-size: 19px;
+   
   }
-  .text-main h1 {
-    align-items: center;
-    text-align: center;
-    margin-right: 40px;
-  }
-  .text-main h2 {
-    align-items: center;
-    text-align: center;
-    margin-right: 40px;
-  }
-
-  .text-main-2 {
-    align-items: center;
-    text-align: center;
-  }
-
+  
   .button-main {
-    text-align: center;
-    margin-right: 40px;
-    margin-top: 20px;
+  text-align: center;
   }
-
-  .second-container {
+  .second-container{
+    display: flex;
+  }
+  .second-container .text-main-2 h2{
+    font-size: 48px;
+    font-family: "Lilita One", sans-serif;
+    color: rgb(9, 51, 113);
+  }
+  .final-container .text-main-2 h1{
+   font-size: 48px;
+   text-align: left;
+   font-family: "Lilita One", sans-serif;
+   color: rgb(9, 51, 113);
+  }
+  
+  .card-information{
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
-    align-items: center;
-  }
-
-  .text-main-2 h2 {
-    align-items: center;
-    text-align: center;
-  }
-
-  .icon-text-container {
-    margin-bottom: 40px;
-  }
-
-  .first-image {
-    display: none;
-  }
-
-  .hover-button-2 {
-    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
-    margin-left: 20px;
   }
-
-  .final-container {
+  
+  .card-information p.small{
+    font-size : 13px;
+  }
+  .card1{
+   max-width: 200px;
+  
+  }
+  .card-1-niss,
+  .card-3-niss{
+    margin: 0;
+  }
+  .german-3-card p{
+  font-size: 17px;
+  }
+  .first-image{
+    display: none;
+  
+  }
+  .niss-image-2{
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+  }
+  .icon-text-container{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+  
   }
-
-  .card-information {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .icon-text {
+   font-size: 20px;
   }
-
-  .card-main {
-    margin-top: 200px;
   }
-}

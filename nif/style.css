@@ -79,7 +79,6 @@ main {
 }
 
 .text-main-2 {
-  
   border-radius: 20px;
 }
 
@@ -88,7 +87,6 @@ main {
   font-weight: 300;
   font-size: 50px;
   color: rgb(9, 51, 113);
-  
 }
 
 .text-main-2 h4 {
@@ -98,11 +96,6 @@ main {
   margin: 1rem 0 2rem;
 }
 
-.second-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .img-visa {
   zoom: 15%;
@@ -149,7 +142,6 @@ main {
   align-items: center;
   text-align: center;
  
- 
 }
 
 .final-container .text-main-2 {
@@ -166,7 +158,6 @@ main {
   font-size: 70px;
   font-weight: 500;
   font-family: trattatello, fantasy;
-
 }
 .nif-image-1{
   margin-top: 55px;
@@ -266,7 +257,6 @@ main {
   transition: all 0.3s ease-out;
   color: #fff;
 }
-
 .card-1-nif{
   margin-right: 50px;
 }
