@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 header('Content-Type: application/json');
 
 // Informações de conexão com o banco de dados
-$servername = "162.159.24.201";
+$servername = "server1423";
 $username = "u562265580_contact_user";
 $password = "N>UQhF8np5";
 $dbname = "u562265580_contact_form";
