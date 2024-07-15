@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Usa consulta preparada para evitar SQL Injection
-        $stmt = $conn->prepare("INSERT INTO contatos (name, tel, email, subject, message) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare(`INSERT INTO contatos (name, tel, email, subject, message) VALUES (?, ?, ?, ?, ?)`);
         $stmt->bind_param("sssss", $name, $tel, $email, $subject, $message);
 
         if ($stmt->execute()) {
