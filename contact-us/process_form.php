@@ -1,6 +1,6 @@
 <?php
 // Informações de conexão com o banco de dados
-$servername = 'localhost'; // geralmente é 'localhost'
+$servername = "localhost"; // geralmente é 'localhost'
 $username = "contact_user"; // seu nome de usuário do banco de dados
 $password = "d>TDAf9[2I"; // sua senha do banco de dados
 $dbname = "contact_form"; // nome do seu banco de dados
@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo json_encode(["status" => "success"]);
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo json_encode(["status" => "error", "message" => $conn->error]);
     }
 }
 
