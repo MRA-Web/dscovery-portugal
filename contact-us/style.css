@@ -47,7 +47,7 @@ main {
 }
 
 .container button {
-    background: linear-gradient(90deg, rgb(12, 23, 90) 0%, rgb(9, 71, 165) 50%, rgba(0, 180, 255, 1) 100%);
+    background-color: transparent;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -162,7 +162,10 @@ textarea::-webkit-scrollbar-thumb {
     font-size: 14px;
 }
 
+.mobile-submit{
+    background: linear-gradient(90deg, rgb(12, 23, 90) 0%, rgb(9, 71, 165) 50%, rgba(0, 180, 255, 1) 100%);
 
+}
 @media screen and (max-width: 1050px) {
     #contact {
         width: 100%;
