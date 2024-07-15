@@ -213,6 +213,7 @@ main {
 }
 
 .card1 {
+  cursor: default;
   display: block;
   position: relative;
   max-width: 262px;
