@@ -425,6 +425,7 @@ function handleAdult(form){
         form.reportValidity();
     }
 }
+
 function handleChild(form){
     console.log("handleChild()")
     document.getElementById("adulto-crianca-1").innerHTML = `
@@ -487,7 +488,6 @@ function handleChild(form){
         form.reportValidity();
     }
 }
-
 
 function handleNext(event) {
     console.log("handleNext() \n")
