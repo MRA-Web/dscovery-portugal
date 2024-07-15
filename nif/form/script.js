@@ -372,15 +372,15 @@ function handleAge(event) {
     var ageValue = form.querySelector('input[name="idade"]:checked').value;
     
     if (ageValue === 'adulto') {
-        handleAdult();
+        handleAdult(form);
     } else if (ageValue === 'crianca') {
-        handleChild();
+        handleChild(form);
     }
 
     ageValue = '';
 }
 
-function handleAdult(){
+function handleAdult(form){
     document.getElementById("adulto-crianca").innerHTML = `
     <h2 class="traduzir">CASO ADULTO</h2>
     <label for="passaporte" class="traduzir">Do you have an identity card?</label>
@@ -396,10 +396,8 @@ function handleAdult(){
     } else {
         form.reportValidity();
     }
-
-    nextStep();
 }
-function handleChild(){
+function handleChild(form){
     console.log("handleChild()")
     document.getElementById("adulto-crianca").innerHTML = `
     <h2 class="traduzir">CASO CRIANÇA</h2>
@@ -416,8 +414,6 @@ function handleChild(){
     } else {
         form.reportValidity();
     }
-
-    nextStep()
 }
 
 
