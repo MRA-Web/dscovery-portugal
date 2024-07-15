@@ -363,9 +363,10 @@ main {
   .german-3-card p{
   font-size: 17px;
   }
-  .first-image{
-    display: none;
-  
+  .first-image img{
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
   }
   .niss-image-2{
     display: flex;
