@@ -1,8 +1,9 @@
 <?php
-$servername = 'localhost';  // geralmente é 'localhost'
+// Informações de conexão com o banco de dados
+$servername = 'localhost'; // geralmente é 'localhost'
 $username = "contact_user"; // seu nome de usuário do banco de dados
-$password = "d>TDAf9[2I";    // sua senha do banco de dados
-$dbname = "contact_form";   // nome do seu banco de dados
+$password = "d>TDAf9[2I"; // sua senha do banco de dados
+$dbname = "contact_form"; // nome do seu banco de dados
 
 // Cria a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,6 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Processa os dados do formulário se a requisição for do tipo POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $tel = $_POST['tel'];
@@ -28,5 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// Fecha a conexão
 $conn->close();
 ?>
