@@ -22,6 +22,13 @@ $message = mysqli_real_escape_string($conn, $_POST['message']);
 // Cria a consulta SQL para inserir os dados
 $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
 
+// Executa a consulta
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
 // Fecha a conexão
 mysqli_close($conn);
 ?>
