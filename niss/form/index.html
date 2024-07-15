@@ -1,27 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Discovery Portugal</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Multi-etapas</title>
     <link rel="shortcut icon" href="/assets/images/DiscoveryLogoIcon.ico">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="/assets/script/functions.js"></script>
-  </head>
-  
-  
-  <body onload="jogar_texto('/header/en.html', 'header'); jogar_texto('/footer/en.html', 'footer');">
-    
-    <header id="header"></header>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <!-- header em inglês by luizzmg -->
 
+    <header>
+
+        <!-- header em inglês by luizzmg -->
+        
+            <h1 class="logo-home">
+                <a href="/">
+                    <img class="logo" src="/assets/images/DiscoveryLogo.png">
+                </a>
+            </h1>
+            
+            <div id="etapas">
+                <div href="#" class="circulo"><i class="fa-solid fa-user"></i></div>
+                <div href="#" class="circulo"><i class="fa-solid fa-people-group"></i></div>
+                <div href="#" class="circulo"><i class="fa-solid fa-file"></i></div>
+                <div href="#" class="circulo"><i class="fa-solid fa-file-invoice"></i></div>
+                <div href="#" class="circulo"><i class="fa-solid fa-plane-departure"></i></div>
+                <div href="#" class="circulo"><i class="fa-solid fa-circle-info"></i></div>
+            </div>
+        
+        
+            <!-- seleção de idiomas desktop -->
+        
+            <div class="language-selector traduzir">
+                <!-- seletor de idiomas -->
+                <button class="idioma-atual-desktop">
+                    <!-- inglês --><img class="icons-language" src ="/assets/images/countries/united-kingdom.png"> EN
+                </button>
+                
+                <ul class="language-selector-content" >
+                    <!--português--><li><button class="opcao-idioma" onclick="traduzir('pt')"><img class="icons-language" src ="/assets/images/countries/portugal.png"> PT</button></li>
+                    <!--espanhol--><li><button class="opcao-idioma" onclick="traduzir('es')"><img class="icons-language" src ="/assets/images/countries/spain.png"> ES</button></li>
+                    <!--francês--><li><button class="opcao-idioma" onclick="traduzir('fr')"><img class="icons-language" src ="/assets/images/countries/france.png"> FR</button></li>
+                    <!--italiano--><li><button class="opcao-idioma" onclick="traduzir('it')"><img class="icons-language" src ="/assets/images/countries/italy.png"> IT</button></li>
+                    <!--alemão--><li><button class="opcao-idioma" onclick="traduzir('de')"><img class="icons-language" src ="/assets/images/countries/germany.png"> DE</button></li>
+                </ul>
+            </div>
+        
+        </nav>
+    
+    </header>
+      
     <main>
-      <h1>EN form</h1>
+
+        <div id="holder">
+            <div id="multiStepForm">
+
+                <!-- etapa 1 -->
+                <form class="form-step" onsubmit="return handleNext(event)" style="display: block;">
+                    <h2 class="traduzir">Personal Information</h2>
+                    <label for="nome" class="traduzir">Full Name:</label>
+                    <input type="text" id="nome" name="nome" required="">
+                    <label for="telefone" class="traduzir">Phone (with country code):</label>
+                    <input type="tel" id="telefone" name="telefone" required="">
+                    <label for="email" class="traduzir">Email:</label>
+                    <input type="email" id="email" name="email" required="">
+
+                    <button type="submit" class="traduzir">Next</button>
+                </form>
+
+                <!-- etapa 2 -->
+                <form class="form-step form-age" onsubmit="return handleAge(event)" style="display: none;">
+                    <h2 class="traduzir">Age</h2>
+                    <label class="traduzir"><input type="radio" name="idade" value="adulto" required> I am an adult <i class="fa-solid fa-person fa-adult"></i></label>
+                    <label class="traduzir"><input type="radio" name="idade" value="crianca" required> I am a child <i class="fa-solid fa-child"></i></label>
+                    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+                    <button type="submit" class="traduzir">Next</button>
+                </form>
+
+                <!-- etapa x -->
+                <form class="form-step" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca">
+                    <h2 class="traduzir">CASO ADULTO</h2>
+                    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
+                    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
+                    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
+
+                    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+                    <button type="submit" class="traduzir">Next</button>
+                </form>
+
+                <!-- etapa 3.1 -->
+                <form class="form-step" onsubmit="return handleNext(event)" style="display: none;">
+                    <h2 class="traduzir">Documents</h2>
+                    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
+                    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
+                    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
+
+                    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+                    <button type="submit" class="traduzir">Next</button>
+                </form>
+                
+                <!-- etapa 3.2 -->
+                <form class="form-step" onsubmit="return handleNext(event)" style="display: none;">
+                    <h2 class="traduzir">Do you have a proof of address?</h2>
+                    <label for="comprovante" class="traduzir"><input type="radio" name="comprovante" value="sim"> Yes</label>
+                    <label><input type="radio" name="comprovante" value="sim"> Sim</label>
+                    <label><input type="radio" name="comprovante" value="nao"> Não</label>
+
+                    <button type="button" onclick="prevStep()" class="traduzir"><input type="radio" name="comprovante" value="nao"> No</button>
+                    <button type="submit" class="traduzir">Previous</button>
+                </form>
+
+                <!-- etapa 4 -->
+                <form class="form-step" onsubmit="return handleNext(event)" style="display: none;">
+                    <h2 class="traduzir">Next</h2>
+                    <!-- Integração de pagamento -->
+                    <p class="traduzir">Payment</p>
+
+                    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+                    <button type="submit" class="traduzir">Next</button>
+                </form>
+
+                <!-- etapa 5 -->
+                <form class="form-step" onsubmit="return handleSubmit(event)" style="display: none;">
+                    <h2 class="traduzir">Final details</h2>
+                    <label for="dataNascimento" class="traduzir">Date of Birth:</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required="">
+                    <label for="numPassaporte" class="traduzir">Passport or ID card number:</label>
+                    <input type="text" id="numPassaporte" name="numPassaporte" required="">
+                    <label for="validadePassaporte" class="traduzir">Passport or ID card Expiry Date:</label>
+                    <input type="date" id="validadePassaporte" name="validadePassaporte" required="">
+                    <label for="endereco" class="traduzir">Address:</label>
+                    <input type="text" id="endereco" name="endereco" required="">
+                    <label for="nif" class="traduzir">Portuguese NIF (if applicable):</label>
+                    <input type="text" id="nif" name="nif">
+                    <label for="nomePai" class="traduzir">Father's name:</label>
+                    <input type="text" id="nomePai" name="nomePai" required="">
+                    <label for="nomeMae" class="traduzir">Mother's name:</label>
+                    <input type="text" id="nomeMae" name="nomeMae" required="">
+
+                    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+                    <button type="submit" class="traduzir">Submit</button>
+                </form>
+            </div>
+        </div>
+
     </main>
 
-    <footer id="footer"></footer>
-  
-  </body>
-  
+    <script src="script.js"></script>
+</body>
 </html>
