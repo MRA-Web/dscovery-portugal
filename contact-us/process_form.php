@@ -1,38 +1,34 @@
 <?php
-// Configuração do banco de dados
-$servername = "localhost"; // ou o IP do servidor
-$username = "root"; // usuário do banco de dados
-$password = ""; // senha do banco de dados
-$dbname = "contact_form"; // nome do banco de dados
+$servername = "localhost"; // O nome do servidor fornecido pela Hostinger
+$database = "u562265580_contact_form"; // Nome do banco de dados
+$username = "u562265580_contact_user"; // Nome de usuário do banco de dados
+$password = "N>UQhF8np5"; // Senha do banco de dados
 
 // Cria a conexão
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $database);
 
 // Verifica a conexão
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
-// Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Coleta os dados do formulário
-    $name = $conn->real_escape_string($_POST['name']);
-    $tel = $conn->real_escape_string($_POST['tel']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $subject = $conn->real_escape_string($_POST['subject']);
-    $message = $conn->real_escape_string($_POST['message']);
+// Obtém os dados do formulário
+$name = mysqli_real_escape_string($conn, $_POST['name']);
+$tel = mysqli_real_escape_string($conn, $_POST['tel']);
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$subject = mysqli_real_escape_string($conn, $_POST['subject']);
+$message = mysqli_real_escape_string($conn, $_POST['message']);
 
-    // Prepara a consulta SQL
-    $sql = "INSERT INTO usuarios (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
+// Cria a consulta SQL para inserir os dados
+$sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
 
-    // Executa a consulta
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+// Executa a consulta
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 // Fecha a conexão
-$conn->close();
+mysqli_close($conn);
 ?>

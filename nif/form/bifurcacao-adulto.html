@@ -1,0 +1,37 @@
+<!-- caso seja adulto -->
+
+<!-- etapa 3 adulto -->
+<form action="/upload" method="post" enctype="multipart/form-data" class="form-step" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca-1">
+    <label for="passaporteOuId" class="traduzir">Anexe seu passaporte (ou cartão de identidade, caso seja cidadão europeu):</label>
+    <input type="file" id="passaporteOuId" name="passaporteOuId" required>
+
+    <br><br>
+
+    <label for="comprovanteEndereco" class="traduzir">Anexe seu comprovante de endereço</label>
+    <input type="file" id="comprovanteEndereco" name="comprovanteEndereco" required>
+    
+    <br><br>
+
+    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+    <button type="submit" class="traduzir">Next</button>
+</form>
+
+<!-- etapa 4 adulto -->
+<form class="form-step" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca-2">
+    <h2 class="traduzir">Final details</h2>
+    
+    <label for="dataNascimento" class="traduzir">Date of Birth:</label>
+    <input type="date" id="dataNascimento" name="dataNascimento" required="">
+    
+    <label for="numPassaporteOuId" class="traduzir">Passport or ID card number:</label>
+    <input type="text" id="numPassaporteOuId" name="numPassaporteOuId" required="">
+    
+    <label for="validadePassaporteOuId" class="traduzir">Passport or ID card Expiry Date:</label>
+    <input type="date" id="validadePassaporteOuId" name="validadePassaporteOuId" required="">
+    
+    <label for="endereco" class="traduzir">Address:</label>
+    <input type="text" id="endereco" name="endereco" required="">
+    
+    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+    <button type="submit" class="traduzir">Next</button>
+</form>
