@@ -191,14 +191,9 @@ textarea::-webkit-scrollbar-thumb {
     }
   }
 
-#enviar-mobile{
-  display: flex;
-}
 
 @media screen and (max-width: 1050px) {
-  #enviador {
-    display: none;
-  }
+  
   #message{
     height: 20px;
     padding-bottom: 50px;
