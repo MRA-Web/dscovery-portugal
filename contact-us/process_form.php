@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Informações de conexão com o banco de dados
-$servername = "srv1423.hstgr.io"; // geralmente é 'localhost'
+$servername = "193.203.168.80"; // geralmente é 'localhost'
 $username = "u562265580_contact_user"; // seu nome de usuário do banco de dados
 $password = "d>TDAf9[2I"; // sua senha do banco de dados
 $dbname = "u562265580_contact_form"; // nome do seu banco de dados
