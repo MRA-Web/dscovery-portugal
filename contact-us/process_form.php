@@ -4,18 +4,22 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+// Define o tipo de conteúdo como JSON
+header('Content-Type: application/json');
+
 // Informações de conexão com o banco de dados
-$servername = "server1423"; // geralmente é 'localhost'
-$username = "u562265580_contact_user"; // seu nome de usuário do banco de dados
-$password = "d>TDAf9[2I"; // sua senha do banco de dados
-$dbname = "u562265580_contact_form"; // nome do seu banco de dados
+$servername = "server1423";
+$username = "u562265580_contact_user";
+$password = "d>TDAf9[2I";
+$dbname = "u562265580_contact_form";
 
 // Cria a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verifica a conexão
 if ($conn->connect_error) {
-    die(json_encode(["status" => "error", "message" => "Conexão falhou: " . $conn->connect_error]));
+    echo json_encode(["status" => "error", "message" => "Conexão falhou: " . $conn->connect_error]);
+    exit;
 }
 
 // Processa os dados do formulário se a requisição for do tipo POST
