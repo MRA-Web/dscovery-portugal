@@ -1,5 +1,5 @@
 <?php
-$servername = "162.159.25.42"; // O nome do servidor fornecido pela Hostinger
+$servername = "localhost"; // O nome do servidor fornecido pela Hostinger
 $database = "u562265580_contact_form"; // Nome do banco de dados
 $username = "u562265580_contact_user"; // Nome de usuário do banco de dados
 $password = "N>UQhF8np5"; // Senha do banco de dados
