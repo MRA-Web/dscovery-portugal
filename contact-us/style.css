@@ -47,7 +47,7 @@ main {
 }
 
 .container button {
-    background-color: transparent;
+    background: linear-gradient(90deg, rgb(12, 23, 90) 0%, rgb(9, 71, 165) 50%, rgba(0, 180, 255, 1) 100%);
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
