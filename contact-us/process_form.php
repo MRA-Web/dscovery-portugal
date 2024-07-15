@@ -1,4 +1,9 @@
 <?php
+// Habilita a exibição de erros
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Informações de conexão com o banco de dados
 $servername = "localhost"; // geralmente é 'localhost'
 $username = "contact_user"; // seu nome de usuário do banco de dados
@@ -15,18 +20,23 @@ if ($conn->connect_error) {
 
 // Processa os dados do formulário se a requisição for do tipo POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $tel = $_POST['tel'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    // Verifica se todos os campos estão presentes
+    if (isset($_POST['name']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
+        $name = $_POST['name'];
+        $tel = $_POST['tel'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
 
-    $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
+        $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo json_encode(["status" => "success"]);
+        if ($conn->query($sql) === TRUE) {
+            echo json_encode(["status" => "success"]);
+        } else {
+            echo json_encode(["status" => "error", "message" => $conn->error]);
+        }
     } else {
-        echo json_encode(["status" => "error", "message" => $conn->error]);
+        echo json_encode(["status" => "error", "message" => "Todos os campos são obrigatórios."]);
     }
 }
 
