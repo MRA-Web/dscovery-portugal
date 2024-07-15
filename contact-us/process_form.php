@@ -22,11 +22,28 @@ $message = mysqli_real_escape_string($conn, $_POST['message']);
 // Cria a consulta SQL para inserir os dados
 $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
 
+<<<<<<< HEAD
 // Executa a consulta
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+=======
+        // Usa consulta preparada para evitar SQL Injection
+        $stmt = $conn->prepare(`INSERT INTO contatos (name, tel, email, subject, message) VALUES (?, ?, ?, ?, ?)`);
+        $stmt->bind_param("sssss", $name, $tel, $email, $subject, $message);
+
+        if ($stmt->execute()) {
+            echo json_encode(["status" => "success"]);
+        } else {
+            echo json_encode(["status" => "error", "message" => "Erro ao inserir dados: " . $stmt->error]);
+        }
+
+        $stmt->close();
+    } else {
+        echo json_encode(["status" => "error", "message" => "Os campos 'Name', 'E-mail' e 'Message' são obrigatórios."]);
+    }
+>>>>>>> e1537010f4b090e31b13a125fbab152f8161e0d3
 }
 
 // Fecha a conexão
