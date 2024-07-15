@@ -19,6 +19,7 @@
 
     <main>
         <div class="container">
+
             <div id="contact">
                 <form id="contactForm">
                     <h1>Contact-us</h1>
@@ -39,37 +40,78 @@
                     
                     <button type="submit" class="mobile-submit">Send</button>
                 </form>
+                <div id="success-message" style="display:none;">
+                    <h1>Thank you!</h1>
+                    <p>Your message has been sent successfully.</p>
+                </div>
             </div>
+
             <div class="toggle-panel">
                 <h1>Send your message</h1>
                 <p>We look forward to hearing from you!</p>
             </div>
+        </div>
+
+        <div class="cards-bottom-container">
+            <a class="card-bottom" href="#">
+                <h3 class="title" id="instagram"><img src="/assets/images/contact_images/instagram-logo.png" alt="instagram" class="card-logo"></h3>
+                
+                <span class="subtitle">
+                    @DscoveryPortugal
+                </span>
+            </a>
+
+            <a class="card-bottom" href="#">
+                <h3 class="title" id="whatsapp"><img src="/assets/images/contact_images/whatsapp-logo.png" alt="whatsapp" class="card-logo"></h3>
+                
+                <span class="subtitle">
+                    Contacte via Whatsapp
+                </span>
+            </a>
+
+            <a class="card-bottom" href="#">
+                <h3 class="title" id="email"><img src="/assets/images/contact_images/email-logo.png" alt="email" class="card-logo"></h3>
+                
+                <span class="subtitle">
+                    Contacte via email
+                </span>
+            </a>
+
+            <a class="card-bottom" href="#">
+                <h3 class="title" id="facebook"><img src="/assets/images/contact_images/facebook-logo.png" alt="facebook" class="card-logo"></h3>
+                
+                <span class="subtitle">
+                    Contacte via Facebook
+                </span>
+            </a>
+
+
         </div>
     </main>
 
     <footer id="footer"></footer>
 
     <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const formData = new FormData(this);
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'process_form.php', true);
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                const response = JSON.parse(xhr.responseText);
-                if (response.status === 'success') {
-                    document.getElementById('contactForm').reset(); // Limpa os campos do formulário
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(this);
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'process_form.php', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    if (response.status === 'success') {
+                        document.getElementById('contactForm').reset(); // Limpa os campos do formulário
+                    } else {
+                        alert('Error: ' + response.message);
+                    }
                 } else {
-                    alert('Error: ' + response.message);
+                    alert('An error occurred while submitting the form.');
                 }
-            } else {
-                alert('An error occurred while submitting the form.');
-            }
-        };
-        xhr.send(formData);
-    });
-    </script>
+            };
+            xhr.send(formData);
+        });
+        </script>
 </body>
 </html>
