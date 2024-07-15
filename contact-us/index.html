@@ -20,7 +20,7 @@
     <main>
         <div class="container">
             <div id="contact">
-                <form method="post" action="process_form.php" id="contactForm">
+                <form id="contactForm">
                     <h1>Contact-us</h1>
                     <label for="name">Name</label>
                     <input type="text" placeholder="Name" id="name" name="name" required>
@@ -39,6 +39,10 @@
                     
                     <button type="submit" class="mobile-submit">Send</button>
                 </form>
+                <div id="success-message" style="display:none;">
+                    <h1>Thank you!</h1>
+                    <p>Your message has been sent successfully.</p>
+                </div>
             </div>
             <div class="toggle-panel">
                 <h1>Send your message</h1>
@@ -49,6 +53,28 @@
 
     <footer id="footer"></footer>
 
-    
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(this);
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'process_form.php', true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                if (response.status === 'success') {
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('success-message').style.display = 'block';
+                } else {
+                    alert('Error: ' + response.message);
+                }
+            } else {
+                alert('An error occurred while submitting the form.');
+            }
+        };
+        xhr.send(formData);
+    });
+    </script>
 </body>
 </html>

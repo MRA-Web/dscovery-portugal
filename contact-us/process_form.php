@@ -4,12 +4,15 @@ $database = "u562265580_contact_form"; // Nome do banco de dados
 $username = "u562265580_contact_user"; // Nome de usuário do banco de dados
 $password = "N>UQhF8np5"; // Senha do banco de dados
 
+header('Content-Type: application/json'); // Define o tipo de conteúdo como JSON
+
 // Cria a conexão
 $conn = mysqli_connect($servername, $username, $password, $database);
 
 // Verifica a conexão
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    echo json_encode(["status" => "error", "message" => "Connection failed: " . mysqli_connect_error()]);
+    exit();
 }
 
 // Obtém os dados do formulário
@@ -24,9 +27,9 @@ $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name
 
 // Executa a consulta
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo json_encode(["status" => "success", "message" => "New record created successfully"]);
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo json_encode(["status" => "error", "message" => "Error: " . $sql . "<br>" . mysqli_error($conn)]);
 }
 
 // Fecha a conexão
