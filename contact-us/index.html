@@ -13,7 +13,7 @@
     <script src="/assets/script/functions.js"></script>
     <script>
         function enviarFormulario(event) {
-            event.preventDefault();
+            event.preventDefault(); // Evita o envio padrão do formulário
         
             const form = document.querySelector('form');
             const formData = new FormData(form);
@@ -22,22 +22,22 @@
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.text()) // Mudei de .json() para .text() para depuração
+            .then(response => response.text()) // Recebe a resposta como texto
             .then(text => {
                 try {
-                    const data = JSON.parse(text);
+                    const data = JSON.parse(text); // Tenta converter o texto para JSON
                     if (data.status === 'success') {
                         form.reset(); // Esvazia os campos do formulário
-                        alert('Mensagem enviada com sucesso!'); // Opcional: Mostra uma mensagem de sucesso
+                        console.log('Mensagem enviada com sucesso!'); // Mensagem de sucesso no console
                     } else {
-                        alert('Erro ao enviar a mensagem: ' + data.message);
+                        console.error('Erro ao enviar a mensagem: ' + data.message); // Erro no console
                     }
                 } catch (e) {
-                    alert('Erro ao processar a resposta do servidor: ' + text);
+                    console.error('Erro ao processar a resposta do servidor: ' + text); // Erro de parsing no console
                 }
             })
             .catch(error => {
-                alert('Erro ao enviar a mensagem: ' + error);
+                console.error('Erro ao enviar a mensagem: ' + error); // Erro de fetch no console
             });
         }
         
@@ -67,13 +67,14 @@
                     <input type="text" placeholder="Subject" id="subject" name="subject">
                     <label for="message">Message</label>
                     <textarea placeholder="Type here" id="message" name="message" required></textarea>
-                    <button type="submit" id="enviar-mobil" class="mobile-submit">Send</button>
+                    <button type="submit" id="enviar-mobile" class="mobile-submit">Send</button>
+                    <button id="enviador" onclick="document.querySelector('form').submit();">Send</button>
                 </form>
             </div>
             <div class="toggle-panel">
                 <h1>Send your message</h1>
                 <p>We look forward to hearing from you!</p>
-                <button id="enviador" type="submit">Send</button>
+               
             </div>
         </div>
     </main>
