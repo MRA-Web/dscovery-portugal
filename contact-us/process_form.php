@@ -15,13 +15,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verifica a conexão
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die(json_encode(["status" => "error", "message" => "Conexão falhou: " . $conn->connect_error]));
 }
 
 // Processa os dados do formulário se a requisição for do tipo POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifica se todos os campos estão presentes
-    if (isset($_POST['name']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
+    if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['message'])) {
         $name = $_POST['name'];
         $tel = $_POST['tel'];
         $email = $_POST['email'];
@@ -41,12 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             echo json_encode(["status" => "success"]);
         } else {
-            echo json_encode(["status" => "error", "message" => $stmt->error]);
+            echo json_encode(["status" => "error", "message" => "Erro ao inserir dados: " . $stmt->error]);
         }
 
         $stmt->close();
     } else {
-        echo json_encode(["status" => "error", "message" => "Todos os campos são obrigatórios."]);
+        echo json_encode(["status" => "error", "message" => "Os campos 'Name', 'E-mail' e 'Message' são obrigatórios."]);
     }
 }
 

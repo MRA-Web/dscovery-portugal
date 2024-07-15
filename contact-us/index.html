@@ -52,7 +52,7 @@
                 <form method="post" action="process_form.php">
                     <h1>Contact-us</h1>
                     <label for="name">Name</label>
-                    <input type="text" placeholder="Name" id="name" name="name" required>
+                    <input type="text" placeholder="Name" id="name" name="name" required placeholder>
                     <label for="tel">Number</label>
                     <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel" name="tel">
                     <label for="email">E-mail</label>
@@ -61,13 +61,13 @@
                     <input type="text" placeholder="Subject" id="subject" name="subject">
                     <label for="message">Message</label>
                     <textarea placeholder="Type here" id="message" name="message" required></textarea>
-                    <button type="submit" id="enviar-mobile" class="mobile-submit">Send</button>
+                    <button type="submit" id="enviar-mobil" class="mobile-submit">Send</button>
                 </form>
             </div>
             <div class="toggle-panel">
                 <h1>Send your message</h1>
                 <p>We look forward to hearing from you!</p>
-                <button id="enviador" onclick="document.querySelector('form').submit();">Send</button>
+                <button id="enviador" type="submit">Send</button>
             </div>
         </div>
     </main>
