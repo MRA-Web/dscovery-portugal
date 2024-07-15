@@ -2,8 +2,6 @@
 
 let currentStep = 0;
 let allForms = [];
-let etapa1 = 0;
-let idiomaAtual;
 const aTraduzir = document.querySelectorAll('.traduzir');
 const formSteps = document.querySelectorAll('.form-step');
 const formNumbers = document.querySelectorAll('.circulo');
@@ -292,8 +290,6 @@ const traducoesPortugues = [
 
 function traduzir(idioma){
 
-    idiomaAtual = idioma;
-
     if(idioma == "en"){
         for (let i = 0; i < aTraduzir.length && i < traducoesIngles.length; i++) {
             aTraduzir[i].innerHTML = traducoesIngles[i];
@@ -385,36 +381,12 @@ function handleAge(event) {
 }
 
 function handleAdult(form){
-    document.getElementById("adulto-crianca-1").innerHTML = `
-    <label for="passaporteOuId" class="traduzir">Anexe seu passaporte (ou cartão de identidade, caso seja cidadão europeu):</label>
-    <input type="file" id="passaporteOuId" name="passaporteOuId" required>
+    document.getElementById("adulto-crianca").innerHTML = `
+    <h2 class="traduzir">CASO ADULTO</h2>
+    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
+    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
+    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
 
-    <br><br>
-
-    <label for="comprovanteEndereco" class="traduzir">Anexe seu comprovante de endereço</label>
-    <input type="file" id="comprovanteEndereco" name="comprovanteEndereco" required>
-    
-    <br><br>
-
-    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
-    <button type="submit" class="traduzir">Next</button>
-    `
-
-    document.getElementById("adulto-crianca-2").innerHTML = `
-    <h2 class="traduzir">Final details</h2>
-    
-    <label for="dataNascimento" class="traduzir">Date of Birth:</label>
-    <input type="date" id="dataNascimento" name="dataNascimento" required="">
-    
-    <label for="numPassaporteOuId" class="traduzir">Passport or ID card number:</label>
-    <input type="text" id="numPassaporteOuId" name="numPassaporteOuId" required="">
-    
-    <label for="validadePassaporteOuId" class="traduzir">Passport or ID card Expiry Date:</label>
-    <input type="date" id="validadePassaporteOuId" name="validadePassaporteOuId" required="">
-    
-    <label for="endereco" class="traduzir">Address:</label>
-    <input type="text" id="endereco" name="endereco" required="">
-    
     <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
     <button type="submit" class="traduzir">Next</button>
     `
@@ -427,56 +399,12 @@ function handleAdult(form){
 }
 function handleChild(form){
     console.log("handleChild()")
-    document.getElementById("adulto-crianca-1").innerHTML = `
-    <label for="passaporteOuIdCrianca" class="traduzir">Anexe o passaporte da criança (caso seja cidadão europeu, pode anexar o cartão de identidade):</label>
-    <input type="file" id="passaporteOuIdCrianca" name="passaporteOuIdCrianca" required>
+    document.getElementById("adulto-crianca").innerHTML = `
+    <h2 class="traduzir">CASO CRIANÇA</h2>
+    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
+    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
+    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
 
-    <br><br>
-
-    <label for="passaporteOuIdResponsavel" class="traduzir">Anexe o passaporte do responsável da criança (caso seja cidadão europeu, pode anexar o cartão de identidade):</label>
-    <input type="file" id="passaporteOuIdResponsavel" name="passaporteOuIdResponsavel" required>
-
-    <br><br>
-
-    <label for="comprovanteEndereco" class="traduzir">Anexe o comprovante de endereço</label>
-    <input type="file" id="comprovanteEndereco" name="comprovanteEndereco" required>
-    
-    <br><br>
-
-    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
-    <button type="submit" class="traduzir">Next</button>
-    `
-
-    document.getElementById("adulto-crianca-2").innerHTML = `
-    <h2 class="traduzir">Final details</h2>
-    
-    <!-- info sobre a criança -->
-    
-    <label for="dataNascimentoCrianca" class="traduzir">Data de nascimento da criança:</label>
-    <input type="date" id="dataNascimentoCrianca" name="dataNascimentoCrianca" required="">
-    
-    <label for="numPassaporteOuIdCrianca" class="traduzir">nº do passaporte ou cartão de identidade da criança:</label>
-    <input type="text" id="numPassaporteOuIdCrianca" name="numPassaporteOuIdCrianca" required="">
-    
-    <label for="validadePassaporteOuIdCrianca" class="traduzir">Data de validade do passaporte ou cartão de identidade da criança:</label>
-    <input type="date" id="validadePassaporteOuIdCrianca" name="validadePassaporteOuIdCrianca" required="">
-
-    <!-- info sobre o responsável da criança -->
-
-    <label for="dataNascimentoResponsavel" class="traduzir">Data de nascimento do responsável:</label>
-    <input type="date" id="dataNascimentoResponsavel" name="dataNascimentoResponsavel" required="">
-    
-    <label for="numPassaporteOuIdResponsavel" class="traduzir">nº do passaporte ou cartão de identidade do responsável:</label>
-    <input type="text" id="numPassaporteOuIdResponsavel" name="numPassaporteOuIdResponsavel" required="">
-    
-    <label for="validadePassaporteOuIdResponsavel" class="traduzir">Data de validade do passaporte ou cartão de identidade do responsável:</label>
-    <input type="date" id="validadePassaporteOuIdResponsavel" name="validadePassaporteOuIdResponsavel" required="">
-    
-    <!-- presumimos que os dois moram no mesmo endereço -->
-
-    <label for="endereco" class="traduzir">Address:</label>
-    <input type="text" id="endereco" name="endereco" required="">
-    
     <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
     <button type="submit" class="traduzir">Next</button>
     `
