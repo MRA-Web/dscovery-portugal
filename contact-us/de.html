@@ -14,11 +14,6 @@
     <script src="/assets/script/functions.js"></script>
 </head>
 
-<script>
-  jogar_texto('/footer/de.html', 'footer');
-  jogar_texto('/header/de.html', 'header');
-</script>
-
 <body onload="jogar_texto('/header/de.html', 'header'); jogar_texto('/footer/de.html', 'footer');">
 
     <header id="header"></header>
@@ -29,27 +24,63 @@
                 <form>
                     <h1>Kontaktieren Sie uns</h1>
                     <label for="name">Name</label>
-                    <input type="text" placeholder="Name" id="name">
+                    <input type="text" placeholder="Name" id="name" required>
                     <label for="tel">Nummer</label>
-                    <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel">
+                    <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel" required>
                     <label for="email">E-Mail</label>
-                    <input type="email" placeholder="E-Mail" id="email">
+                    <input type="email" placeholder="E-Mail" id="email" required>
                     <label for="subject">Betreff</label>
-                    <input type="text" placeholder="Text" id="subject">
+                    <input type="text" placeholder="Text" id="subject" required>
                     <label for="message">Nachricht</label>
-                    <textarea placeholder="Hier tippen" id="message"></textarea>
-                    <button type="submit" id="enviar-mobile" class="mobile-submit">Senden</button>
+                    <textarea placeholder="Hier tippen" id="message" required></textarea>
+                    <button type="submit" class="hover-button">Senden</button>
                 </form>
             </div>
             <div class="toggle-panel">
                 <h1>Senden Sie Ihre Nachricht</h1>
                 <p>Wir freuen uns auf Ihre Nachricht!</p>
-                <button id="enviador">Senden</button>
             </div>
+        </div>
+        <div class="cards-bottom-container">
+            <a class="card-bottom" href="#">
+                <h3 class="title"><img src="/assets/images/contact_images/instagram-logo.png" alt="instagram" class="card-logo"></h3>
+                
+                <span class="subtitle">
+                    @DscoveryPortugal
+                </span>
+            </a>
+
+            <a class="card-bottom" href="#">
+                <h3 class="title"><img src="/assets/images/contact_images/whatsapp-logo.png" alt="whatsapp" class="card-logo"></h3>
+                
+                <span class="subtitle">
+                    Contacte via Whatsapp
+                </span>
+            </a>
+
+            <a class="card-bottom" href="#">
+                <h3 class="title" id="email"><img src="/assets/images/contact_images/email-logo.png" alt="email" class="card-logo"></h3>
+                
+                <span class="subtitle">
+                    Contacte via email
+                </span>
+            </a>
+
+            <a class="card-bottom" href="#">
+                <h3 class="title"><img src="/assets/images/contact_images/facebook-logo.png" alt="facebook" class="card-logo"></h3>
+                
+                <span class="subtitle">
+                    Contacte via Facebook
+                </span>
+            </a>
+
+
         </div>
     </main>
 
     <footer id="footer"></footer>
+
+    <script src="/contact-us/form_script.js"></script>
 
 </body>
 

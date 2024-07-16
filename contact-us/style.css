@@ -217,7 +217,9 @@ textarea::-webkit-scrollbar-thumb {
 .card-bottom:hover .subtitle {
     transform: translateY(0);
 }
-
+#instagram{
+    margin-right: 0;
+}
 .hover-button {
     background: linear-gradient(90deg, rgba(0, 5, 36, 1) 0%, #093679 50%, rgba(0, 180, 255, 1) 100%);
     transition: all 0.4s;

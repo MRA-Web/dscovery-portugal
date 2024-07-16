@@ -1,18 +1,22 @@
 <?php
-$servername = "localhost"; // O nome do servidor fornecido pela Hostinger
-$database = "u562265580_contact_form"; // Nome do banco de dados
-$username = "u562265580_contact_user"; // Nome de usuário do banco de dados
-$password = "N>UQhF8np5"; // Senha do banco de dados
+require 'vendor/autoload.php'; // Inclui o autoload do Composer
 
-header('Content-Type: application/json'); // Define o tipo de conteúdo como JSON
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use TCPDF;
+
+// Configurações do banco de dados
+$servername = "localhost";
+$database = "u562265580_contact_form";
+$username = "u562265580_contact_user";
+$password = "N>UQhF8np5";
 
 // Cria a conexão
 $conn = mysqli_connect($servername, $username, $password, $database);
 
 // Verifica a conexão
 if (!$conn) {
-    echo json_encode(["status" => "error", "message" => "Connection failed: " . mysqli_connect_error()]);
-    exit();
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 // Obtém os dados do formulário
@@ -26,10 +30,44 @@ $message = mysqli_real_escape_string($conn, $_POST['message']);
 $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
 
 // Executa a consulta
-if (mysqli_query($conn, $sql)) {
-    echo json_encode(["status" => "success", "message" => "New record created successfully"]);
-} else {
-    echo json_encode(["status" => "error", "message" => "Error: " . $sql . "<br>" . mysqli_error($conn)]);
+if (!mysqli_query($conn, $sql)) {
+    die("Error: " . $sql . "<br>" . mysqli_error($conn));
+}
+
+// Gera o PDF
+$pdf = new TCPDF();
+$pdf->AddPage();
+$pdf->SetFont('helvetica', '', 12);
+$pdf->Cell(0, 10, "Contact Form Submission", 0, 1, 'C');
+$pdf->Cell(0, 10, "Name: $name", 0, 1);
+$pdf->Cell(0, 10, "Phone: $tel", 0, 1);
+$pdf->Cell(0, 10, "Email: $email", 0, 1);
+$pdf->Cell(0, 10, "Subject: $subject", 0, 1);
+$pdf->MultiCell(0, 10, "Message: $message");
+$pdf->Output('contact_form.pdf', 'F');
+
+// Enviar e-mail para o chefe com o PDF em anexo
+$mail = new PHPMailer(true);
+try {
+    $mail->setFrom('rodrigochoradms@gmail.com', 'Rodrigo');
+    $mail->addAddress('dscoveryportugal@gmail.com', 'DscoveryPortugal');
+    $mail->Subject = 'New Contact Form Submission';
+    $mail->Body    = 'Please find attached the PDF with the contact form submission details.';
+    $mail->addAttachment('contact_form.pdf');
+    $mail->send();
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+
+// Enviar e-mail para o cliente
+$mail->clearAddresses();
+$mail->addAddress($email, $name);
+$mail->Subject = 'Thank you for contacting us';
+$mail->Body    = 'Thank you for your message. We will contact you shortly.';
+
+// Envia o e-mail
+if (!$mail->send()) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
 // Fecha a conexão
