@@ -27,23 +27,19 @@
                     <input type="text" placeholder="Name" id="name" name="name" required>
                     
                     <label for="tel">Number</label>
-                    <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel" name="tel">
+                    <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel" name="tel" required>
                     
                     <label for="email">E-mail</label>
                     <input type="email" placeholder="E-mail" id="email" name="email" required>
                     
                     <label for="subject">Subject</label>
-                    <input type="text" placeholder="Subject" id="subject" name="subject">
+                    <input type="text" placeholder="Subject" id="subject" name="subject" required>
                     
                     <label for="message">Message</label>
                     <textarea placeholder="Type here" id="message" name="message" required></textarea>
                     
-                    <button type="submit" class="mobile-submit">Send</button>
+                    <button type="submit" class="hover-button">Send</button>
                 </form>
-                <div id="success-message" style="display:none;">
-                    <h1>Thank you!</h1>
-                    <p>Your message has been sent successfully.</p>
-                </div>
             </div>
 
             <div class="toggle-panel">
@@ -91,27 +87,6 @@
 
     <footer id="footer"></footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(this);
-            const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'process_form.php', true);
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    const response = JSON.parse(xhr.responseText);
-                    if (response.status === 'success') {
-                        document.getElementById('contactForm').reset(); // Limpa os campos do formulário
-                    } else {
-                        alert('Error: ' + response.message);
-                    }
-                } else {
-                    alert('An error occurred while submitting the form.');
-                }
-            };
-            xhr.send(formData);
-        });
-        </script>
+    <script src="/contact-us/form_script.js"></script>
 </body>
 </html>

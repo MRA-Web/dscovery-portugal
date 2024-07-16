@@ -14,10 +14,6 @@
     <script src="/assets/script/functions.js"></script>
 </head>
 
-<script>
-  jogar_texto('/footer/it.html', 'footer');
-  jogar_texto('/header/it.html', 'header');
-</script>
 
 <body onload="jogar_texto('/header/it.html', 'header'); jogar_texto('/footer/it.html', 'footer');">
 
@@ -26,18 +22,18 @@
     <main>
         <div class="container">
             <div id="contact">
-                <form>
+                <form id="contactForm">
                     <h1>Contattaci</h1>
                     <label for="name">Nome</label>
-                    <input type="text" placeholder="Nome" id="name">
+                    <input type="text" placeholder="Nome" id="name" require>
                     <label for="tel">Numero</label>
-                    <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel">
+                    <input type="tel" placeholder="(xx) xxxx-xxxx" id="tel" required>
                     <label for="email">E-mail</label>
-                    <input type="email" placeholder="E-mail" id="email">
+                    <input type="email" placeholder="E-mail" id="email" required>
                     <label for="subject">Oggetto</label>
-                    <input type="text" placeholder="Testo" id="subject">
+                    <input type="text" placeholder="Testo" id="subject" required>
                     <label for="message">Messaggio</label>
-                    <textarea placeholder="Scrivi qui" id="message"></textarea>
+                    <textarea placeholder="Scrivi qui" id="message" required></textarea>
                     <button type="submit" id="enviar-mobile" class="mobile-submit">Invia</button>
                 </form>
             </div>
@@ -50,6 +46,7 @@
     </main>
 
     <footer id="footer"></footer>
+    <script src="/contact-us/form_script.js"></script>
 
 </body>
 
