@@ -83,18 +83,15 @@ if (mysqli_query($conn, $sql)) {
 
         $mail->send();
 
-        // Resposta JSON de sucesso
         echo json_encode(["status" => "success", "message" => "New record created, PDF sent to the boss and alert sent to the client"]);
     } catch (Exception $e) {
-        // Resposta JSON de erro
         echo json_encode(["status" => "error", "message" => "Mailer Error: " . $mail->ErrorInfo]);
     }
 
     // Remove o arquivo PDF após o envio
     unlink($pdfFile);
 } else {
-    // Resposta JSON de erro
-    echo json_encode(["status" => "error", "message" => "Error: " . $sql . "<br>" . mysqli_error($conn)]);
+    echo json_encode(["status" => "error", "message" => "Error: " . mysqli_error($conn)]);
 }
 
 // Fecha a conexão
