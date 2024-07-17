@@ -17,7 +17,8 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 
 // Verifica a conexão
 if (!$conn) {
-    echo json_encode(["status" => "error", "message" => "Connection failed: " . mysqli_connect_error()]);
+    error_log("Connection failed: " . mysqli_connect_error()); // Adiciona erro ao log
+    echo json_encode(["status" => "error", "message" => "Connection failed. Please check the server logs."]);
     exit();
 }
 
@@ -79,10 +80,12 @@ if (mysqli_query($conn, $sql)) {
 
         echo json_encode(["status" => "success", "message" => "Dados enviados e e-mails notificados com sucesso!"]);
     } catch (Exception $e) {
+        error_log("PHPMailer Error: " . $mail->ErrorInfo); // Adiciona erro ao log
         echo json_encode(["status" => "error", "message" => "Não foi possível enviar o e-mail. Erro: {$mail->ErrorInfo}"]);
     }
 } else {
-    echo json_encode(["status" => "error", "message" => "Erro: " . mysqli_error($conn)]);
+    error_log("SQL Error: " . mysqli_error($conn)); // Adiciona erro ao log
+    echo json_encode(["status" => "error", "message" => "Erro ao inserir dados no banco de dados."]);
 }
 
 // Fecha a conexão
