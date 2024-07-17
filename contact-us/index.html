@@ -121,19 +121,21 @@
             emailjs.init('mH7Y-YFYHmYbEO9h7'); // Substitua pela sua Public Key
         })();
 
-        function sendEmail(pdfBlob, recipientEmail) {
+        function sendEmail(pdfBlob, nome, telefone, email, assunto, mensagem) {
             var reader = new FileReader();
             reader.readAsDataURL(pdfBlob);
             reader.onloadend = function() {
                 var base64data = reader.result.split(',')[1];
-
+        
                 var templateParams = {
-                    to_email: recipientEmail,
-                    pdf: base64data,
-                    from_name: 'Discovery Portugal',
-                    subject: 'PDF do Formulário'
+                    to_email: email,          // Campo de destinatário do email
+                    name: nome,               // Corresponde ao {{name}} no template
+                    tel: telefone,            // Corresponde ao {{tel}} no template
+                    subject: assunto,         // Corresponde ao {{subject}} no template
+                    message: mensagem,        // Corresponde ao {{message}} no template
+                    pdf: base64data           // Este campo pode ser usado como anexo se suportado pelo template
                 };
-
+        
                 emailjs.send('service_9skp7pg', 'template_25j1jmr', templateParams)
                     .then(function(response) {
                         console.log('Email enviado com sucesso!', response.status, response.text);
