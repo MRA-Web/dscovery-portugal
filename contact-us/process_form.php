@@ -37,10 +37,10 @@ $stmt->bind_param("sssss", $name, $tel, $email, $subject, $message);
 
 if ($stmt->execute()) {
     // Incluir o autoloader do Composer
-    require_once 'contact-us/vendor/autoload.php';
+    require_once __DIR__ . '/vendor/autoload.php';
 
     // Incluir a biblioteca FPDF
-    require_once 'contact-us/vendor/fpdf/fpdf/src/Fpdf/Fpdf.php';  // Ajuste o caminho conforme necessário
+    require_once __DIR__ . '/vendor/fpdf/fpdf/src/Fpdf.php';  // Ajuste o caminho conforme necessário
 
     $pdfPath = generate_pdf($name, $tel, $email, $subject, $message);
     
@@ -86,9 +86,9 @@ function send_emails($pdfPath, $clientEmail) {
     $bossEmail = 'dscoveryportugal@gmail.com';
 
     // Usar a biblioteca PHPMailer diretamente
-    require_once 'vendor/phpmailer/phpmailer/src/Exception.php';
-    require_once 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
-    require_once 'vendor/phpmailer/phpmailer/src/SMTP.php';
+    require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/Exception.php';
+    require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+    require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/SMTP.php';
 
     // Configurações do servidor SMTP do Gmail
     $smtpHost = 'smtp.gmail.com';  // Servidor SMTP do Gmail
