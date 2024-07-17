@@ -37,9 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
         generateAndSendPDF(nome, telefone, email, assunto, mensagem);
     });
 
-    const { jsPDF } = window.jspdf;
-
     function generateAndSendPDF(nome, telefone, email, assunto, mensagem) {
+        // Verifique se jsPDF está disponível globalmente
+        if (typeof jsPDF === 'undefined') {
+            console.error('jsPDF não está carregado corretamente.');
+            return;
+        }
+
+        // Cria um novo documento PDF
+        const { jsPDF } = window.jspdf;
         var doc = new jsPDF();
         doc.text("Nome: " + nome, 10, 10);
         doc.text("Telefone: " + telefone, 10, 20);
@@ -47,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         doc.text("Assunto: " + assunto, 10, 40);
         doc.text("Mensagem: " + mensagem, 10, 50);
 
+        // Converte o PDF para um blob
         var pdfBlob = doc.output('blob');
         sendEmail(pdfBlob, nome, telefone, email, assunto, mensagem);
     }
@@ -56,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         reader.readAsDataURL(pdfBlob);
         reader.onloadend = function() {
             var base64data = reader.result.split(',')[1];
-    
+
             var templateParams = {
                 to_email: email, // O e-mail do destinatário
                 name: nome,
@@ -65,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 message: mensagem,
                 pdf: base64data // Se o template suportar anexos
             };
-    
+
             emailjs.send('service_9skp7pg', 'template_25j1jmr', templateParams)
                 .then(function(response) {
                     console.log('Email enviado com sucesso!', response.status, response.text);
@@ -74,5 +81,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         };
     }
-    
 });
+
