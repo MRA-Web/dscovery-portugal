@@ -1,0 +1,22 @@
+{
+    "name": "rodri/composer",
+    "description": "Tratamento de dados em pdf e envio para emails",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rodri\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RodrigoAlSantos",
+            "email": "rodrigochoradms@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "fpdf/fpdf": "^1.86",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

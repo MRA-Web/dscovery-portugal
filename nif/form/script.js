@@ -136,7 +136,7 @@ const traducoesItaliano = [
     </ul>
 `,
 "Informazioni personali",
-"Nome completo:",
+"Nome e cognome:",
 "Telefono (con prefisso internazionale):",
 "Email:",
 "Successivo",

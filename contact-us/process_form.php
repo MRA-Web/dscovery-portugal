@@ -1,10 +1,15 @@
 <?php
-$servername = "localhost"; // O nome do servidor fornecido pela Hostinger
-$database = "u562265580_contact_form"; // Nome do banco de dados
-$username = "u562265580_contact_user"; // Nome de usuário do banco de dados
-$password = "N>UQhF8np5"; // Senha do banco de dados
+// Habilita a exibição de erros para depuração
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 header('Content-Type: application/json'); // Define o tipo de conteúdo como JSON
+
+$servername = "localhost";
+$database = "u562265580_contact_form";
+$username = "u562265580_contact_user";
+$password = "N>UQhF8np5";
 
 // Cria a conexão
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -25,11 +30,24 @@ $message = mysqli_real_escape_string($conn, $_POST['message']);
 // Cria a consulta SQL para inserir os dados
 $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
 
-// Executa a consulta
+// Executa a consulta e verifica se a inserção foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
-    echo json_encode(["status" => "success", "message" => "New record created successfully"]);
+    // Obtém o ID do último registro inserido
+    $id = mysqli_insert_id($conn);
+
+    // Inclui os arquivos para geração de PDF e envio de e-mails
+    require 'generate_pdf.php';
+    require 'send_emails.php';
+
+    // Gera o PDF
+    $pdfFile = generatePDF($id);
+
+    // Envia os e-mails
+    sendEmails($pdfFile, $email);
+
+    echo json_encode(["status" => "success"]);
 } else {
-    echo json_encode(["status" => "error", "message" => "Error: " . $sql . "<br>" . mysqli_error($conn)]);
+    echo json_encode(["status" => "error", "message" => "SQL Error: " . mysqli_error($conn)]);
 }
 
 // Fecha a conexão
