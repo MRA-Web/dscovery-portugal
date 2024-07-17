@@ -4,6 +4,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+// Importar namespaces do Symfony Mailer
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mailer\Transport\Smtp\EsmtpTransport;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
+
 // Configurações do banco de dados
 $servername = "localhost";
 $username = "u562265580_contact_user";
@@ -68,7 +74,7 @@ function generate_pdf($name, $tel, $email, $subject, $message) {
     $pdf->Cell(0, 10, 'Mensagem: ' . $message, 0, 1);
 
     // Verificar se a pasta 'pdfs' existe, caso contrário, criar
-    $pdfDir = 'contact-us/pdfs';
+    $pdfDir = 'pdfs';
     if (!is_dir($pdfDir)) {
         mkdir($pdfDir, 0755, true);
     }
@@ -79,42 +85,44 @@ function generate_pdf($name, $tel, $email, $subject, $message) {
     return $pdfPath;
 }
 
-// Função para enviar e-mails usando SwiftMailer
+// Função para enviar e-mails usando Symfony Mailer
 function send_emails($pdfPath, $clientEmail) {
     $bossEmail = 'dscoveryportugal@gmail.com';
 
-    // Usar a biblioteca SwiftMailer
-   
     // Configurações do servidor SMTP
     $smtpHost = 'smtp.gmail.com';  // Servidor SMTP do Gmail
     $smtpUsername = 'dscoveryportugal@gmail.com'; // Seu e-mail
     $smtpPassword = 'R7p!O2x@mB9z&T4X'; // Senha do seu e-mail
     $smtpPort = 587; // Porta SMTP para TLS
 
-    // Instanciar SwiftMailer
-    $transport = (new Swift_SmtpTransport($smtpHost, $smtpPort, 'tls'))
-        ->setUsername($smtpUsername)
-        ->setPassword($smtpPassword);
-    $mailer = new Swift_Mailer($transport);
+    // Criar o transporte
+    $transport = new EsmtpTransport($smtpHost, $smtpPort, 'tls');
+    $transport->setUsername($smtpUsername);
+    $transport->setPassword($smtpPassword);
+
+    // Criar o mailer
+    $mailer = new Mailer($transport);
 
     // Enviar e-mail para o chefe
-    $message = (new Swift_Message('Novo formulário de contato'))
-        ->setFrom([$smtpUsername => 'Seu Nome'])
-        ->setTo([$bossEmail => 'Chefe'])
-        ->setBody('Um novo formulário de contato foi enviado. Veja o PDF em anexo.')
-        ->attach(Swift_Attachment::fromPath($pdfPath));
+    $email = (new Email())
+        ->from($smtpUsername)
+        ->to($bossEmail)
+        ->subject('Novo formulário de contato')
+        ->text('Um novo formulário de contato foi enviado. Veja o PDF em anexo.')
+        ->attachFromPath($pdfPath);
     
     try {
-        $mailer->send($message);
+        $mailer->send($email);
 
         // Enviar e-mail para o cliente
-        $message = (new Swift_Message('Recebemos seu formulário'))
-            ->setFrom([$smtpUsername => 'Seu Nome'])
-            ->setTo([$clientEmail])
-            ->setBody('Obrigado por entrar em contato. Recebemos seu formulário e responderemos em breve.');
+        $email = (new Email())
+            ->from($smtpUsername)
+            ->to($clientEmail)
+            ->subject('Recebemos seu formulário')
+            ->text('Obrigado por entrar em contato. Recebemos seu formulário e responderemos em breve.');
         
-        $mailer->send($message);
-    } catch (Exception $e) {
+        $mailer->send($email);
+    } catch (TransportExceptionInterface $e) {
         error_log("Erro ao enviar e-mail: " . $e->getMessage());
     }
 }
