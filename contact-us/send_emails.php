@@ -25,7 +25,7 @@ function sendEmails($pdfFile, $clientEmail) {
 
         // E-mail para o chefe
         $mail->setFrom('dscoveryportugal@gmail.com', 'Dscovery Portugal');
-        $mail->addAddress('rodrigocowbr@gmail.com'); // Substitua pelo e-mail do chefe
+        $mail->addAddress('rodrigocowbr@gmail.com');
         $mail->addAttachment($pdfFile);
 
         $mail->isHTML(true);

@@ -32,6 +32,19 @@ $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name
 
 // Executa a consulta e verifica se a inserção foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
+    // Obtém o ID do último registro inserido
+    $id = mysqli_insert_id($conn);
+
+    // Inclui os arquivos para geração de PDF e envio de e-mails
+    require 'generate_pdf.php';
+    require 'send_emails.php';
+
+    // Gera o PDF
+    $pdfFile = generatePDF($id);
+
+    // Envia os e-mails
+    sendEmails($pdfFile, $email);
+
     echo json_encode(["status" => "success"]);
 } else {
     echo json_encode(["status" => "error", "message" => "SQL Error: " . mysqli_error($conn)]);
