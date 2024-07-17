@@ -1,4 +1,9 @@
 <?php
+// Exibir erros para depuração
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Configurações do banco de dados
 $servername = "localhost";
 $username = "u562265580_contact_user";
@@ -14,29 +19,33 @@ if ($conn->connect_error) {
 }
 
 // Obter dados do formulário
-$name = $_POST['name'];
-$tel = $_POST['tel'];
-$email = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+$name = $_POST['name'] ?? '';
+$tel = $_POST['tel'] ?? '';
+$email = $_POST['email'] ?? '';
+$subject = $_POST['subject'] ?? '';
+$message = $_POST['message'] ?? '';
 
 // Preparar e executar a consulta SQL
 $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES (?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
+
+if (!$stmt) {
+    die("Erro na preparação da consulta: " . $conn->error);
+}
+
 $stmt->bind_param("sssss", $name, $tel, $email, $subject, $message);
 
-if ($stmt->execute()) {
-    // Gerar o PDF
-    require_once 'fpdf/fpdf.php'; // Inclua a biblioteca FPDF
-    $pdfPath = generate_pdf($name, $tel, $email, $subject, $message);
-    
-    // Enviar e-mails
-    send_emails($pdfPath, $email);
-
-    echo "Formulário enviado com sucesso!";
-} else {
-    echo "Erro ao enviar formulário: " . $stmt->error;
+if (!$stmt->execute()) {
+    die("Erro ao enviar formulário: " . $stmt->error);
 }
+
+// Gerar o PDF
+require_once 'fpdf/fpdf.php'; // Inclua a biblioteca FPDF
+
+$pdfPath = generate_pdf($name, $tel, $email, $subject, $message);
+
+// Enviar e-mails
+send_emails($pdfPath, $email);
 
 // Fechar a conexão
 $stmt->close();
@@ -84,7 +93,9 @@ function send_emails($pdfPath, $clientEmail) {
     $message .= chunk_split(base64_encode(file_get_contents($pdfPath))) . "\r\n\r\n";
     $message .= "--" . $mimeBoundary . "--";
 
-    mail($to, $subject, $message, $headers);
+    if (!mail($to, $subject, $message, $headers)) {
+        die("Erro ao enviar e-mail para o chefe.");
+    }
 
     // Enviar e-mail para o cliente
     $to = $clientEmail;
@@ -93,6 +104,8 @@ function send_emails($pdfPath, $clientEmail) {
     $headers = "From: no-reply@seusite.com\r\n";
     $headers .= "Content-Type: text/plain; charset=\"utf-8\"\r\n";
     
-    mail($to, $subject, $body, $headers);
+    if (!mail($to, $subject, $body, $headers)) {
+        die("Erro ao enviar e-mail para o cliente.");
+    }
 }
 ?>
