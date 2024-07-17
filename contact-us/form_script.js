@@ -3,7 +3,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     
     const formData = new FormData(this);
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'process_form.php', true);
+    xhr.open('POST', '/contact-us/process_form.php', true); // Certifique-se de que o caminho está correto
     xhr.onload = function() {
         if (xhr.status === 200) {
             try {
