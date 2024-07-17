@@ -90,8 +90,7 @@ if (mysqli_query($conn, $sql)) {
     // Remove o arquivo PDF após o envio
     unlink($pdfFile);
 } else {
-    echo json_encode(["status" => "success", "message" => "Obrigado por entrar em contato! Entraremos em breve."]);
-
+    echo json_encode(["status" => "error", "message" => "Error: " . mysqli_error($conn)]);
 }
 
 // Fecha a conexão
