@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'rodri/composer',
+        'name' => 'rodri/contact-us',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd64d120ae62253bffb37cbf5ed816a985410fb83',
+        'reference' => 'fb25cb33bb504d840ca104c2725338b5a6656da1',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -28,10 +28,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'rodri/composer' => array(
+        'rodri/contact-us' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd64d120ae62253bffb37cbf5ed816a985410fb83',
+            'reference' => 'fb25cb33bb504d840ca104c2725338b5a6656da1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

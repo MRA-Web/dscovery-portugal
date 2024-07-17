@@ -1,11 +1,10 @@
 {
-    "name": "rodri/composer",
-    "description": "Tratamento de dados em pdf e envio para emails",
+    "name": "rodri/contact-us",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Rodri\\Composer\\": "src/"
+            "Rodri\\ContactUs\\": "src/"
         }
     },
     "authors": [
