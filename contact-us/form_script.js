@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         generateAndSendPDF(nome, telefone, email, assunto, mensagem);
     });
 
-    function generateAndSendPDF(nome, telefone, email, assunto, mensagem) {
+    function generateAndSendPDF(name, telefone, email, assunto, mensagem) {
         // Verifique se jsPDF está disponível globalmente
         if (typeof jsPDF === 'undefined') {
             console.error('jsPDF não está carregado corretamente.');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Cria um novo documento PDF
         const { jsPDF } = window.jspdf;
         var doc = new jsPDF();
-        doc.text("Nome: " + nome, 10, 10);
+        doc.text("Nome: " + name, 10, 10);
         doc.text("Telefone: " + telefone, 10, 20);
         doc.text("Email: " + email, 10, 30);
         doc.text("Assunto: " + assunto, 10, 40);
@@ -55,18 +55,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Converte o PDF para um blob
         var pdfBlob = doc.output('blob');
-        sendEmail(pdfBlob, nome, telefone, email, assunto, mensagem);
+        sendEmail(pdfBlob, name, telefone, email, assunto, mensagem);
     }
 
-    function sendEmail(pdfBlob, nome, telefone, email, assunto, mensagem) {
+    function sendEmail(pdfBlob, name, telefone, email, assunto, mensagem) {
         var reader = new FileReader();
         reader.readAsDataURL(pdfBlob);
         reader.onloadend = function() {
             var base64data = reader.result.split(',')[1];
 
             var templateParams = {
-                to_email: email, // O e-mail do destinatário
-                name: nome,
+                email: email, // O e-mail do destinatário
+                name: name,
                 tel: telefone,
                 subject: assunto,
                 message: mensagem,
