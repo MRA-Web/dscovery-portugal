@@ -371,7 +371,7 @@ function handleAge(event) {
     console.log("handleAge() \n")
     event.preventDefault();
     const form = event.target;
-    allForms.push(form)
+    allForms[currentStep] = form;
 
     var ageValue = form.querySelector('input[name="idade"]:checked').value;
     
@@ -493,7 +493,7 @@ function handleNext(event) {
     console.log("handleNext() \n")
     event.preventDefault();
     const form = event.target;
-    allForms.push(form)
+    allForms[currentStep] = form;
 
     if (form.checkValidity()) {
         nextStep();
@@ -506,12 +506,16 @@ function handleSubmit(event) {
     console.log("handleSubmit() \n")
     event.preventDefault();
     const form = event.target;
-    allForms.push(form)
+    allForms[currentStep] = form;
 
     if (form.checkValidity()) {
         alert('Formulário enviado com sucesso!');
     } else {
         form.reportValidity();
+    }
+
+    for (let i = 0; i < allForms.length; i++) {
+        console.log(allForms[i]);
     }
 }
 
