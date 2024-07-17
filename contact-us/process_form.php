@@ -27,9 +27,9 @@ $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name
 
 // Executa a consulta
 if (mysqli_query($conn, $sql)) {
-    echo json_encode(["status" => "success", "message" => "New record created successfully"]);
+    echo json_encode(["status" => "success"]);
 } else {
-    echo json_encode(["status" => "error", "message" => "Error: " . $sql . "<br>" . mysqli_error($conn)]);
+    echo json_encode(["status" => "error"]);
 }
 
 // Fecha a conexão
