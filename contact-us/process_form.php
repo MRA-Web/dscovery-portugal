@@ -11,7 +11,7 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 
 // Verifica a conexão
 if (!$conn) {
-    // Não envia a mensagem de erro, apenas encerra
+    echo json_encode(['status' => 'error', 'message' => 'Database connection failed.']);
     exit();
 }
 
@@ -26,7 +26,11 @@ $message = mysqli_real_escape_string($conn, $_POST['message']);
 $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES ('$name', '$tel', '$email', '$subject', '$message')";
 
 // Executa a consulta
-mysqli_query($conn, $sql);
+if (mysqli_query($conn, $sql)) {
+    echo json_encode(['status' => 'success', 'message' => 'Data inserted successfully.']);
+} else {
+    echo json_encode(['status' => 'error', 'message' => 'Failed to insert data.']);
+}
 
 // Fecha a conexão
 mysqli_close($conn);
