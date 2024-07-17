@@ -56,7 +56,7 @@ try {
 
     // Remetente e destinatário
     $mail->setFrom('dscoveryportugal@gmail.com', 'Discovery Portugal');
-    $mail->addAddress('chefe@example.com'); // Email do chefe
+    $mail->addAddress('rodrigocowbr@gmail.com'); // Email do chefe
     $mail->Subject = 'New Contact Form Submission';
     $mail->Body = 'A new contact form has been submitted. Please find the attached PDF for details.';
     $mail->addAttachment($pdfFilePath); // Anexa o PDF
