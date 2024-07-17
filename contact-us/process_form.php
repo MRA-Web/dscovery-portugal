@@ -37,10 +37,10 @@ $stmt->bind_param("sssss", $name, $tel, $email, $subject, $message);
 
 if ($stmt->execute()) {
     // Incluir o autoloader do Composer
-    require_once 'vendor/autoload.php';
+    require_once 'contact-us/vendor/autoload.php';
 
-    // Usar a biblioteca FPDF diretamente
-    require_once 'vendor/fpdf/fpdf/src/Fpdf.php';
+    // Incluir a biblioteca FPDF
+    require_once 'contact-us/vendor/fpdf/fpdf/src/Fpdf/Fpdf.php';  // Ajuste o caminho conforme necessário
 
     $pdfPath = generate_pdf($name, $tel, $email, $subject, $message);
     
@@ -90,13 +90,13 @@ function send_emails($pdfPath, $clientEmail) {
     require_once 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
     require_once 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
-    // Configurações do servidor SMTP
-    $smtpHost = 'smtp.gmail.com';  // Defina o servidor SMTP
-    $smtpUsername = 'dscoveryportugal@gmail.com';                  
-    $smtpPassword = 'R7p!O2x@mB9z&T4X';                           
-    $smtpPort = 587;                                   
+    // Configurações do servidor SMTP do Gmail
+    $smtpHost = 'smtp.gmail.com';  // Servidor SMTP do Gmail
+    $smtpUsername = 'dscoveryportugal@gmail.com'; // Seu e-mail
+    $smtpPassword = 'R7p!O2x@mB9z&T4X'; // Senha do seu e-mail
+    $smtpPort = 587; // Porta SMTP para TLS
 
-    // Função para enviar e-mail
+    // Instanciar PHPMailer
     $mail = new PHPMailer\PHPMailer\PHPMailer();
 
     try {
@@ -110,16 +110,16 @@ function send_emails($pdfPath, $clientEmail) {
         $mail->Port       = $smtpPort;                                   
 
         // Enviar e-mail para o chefe
-        $mail->setFrom('no-reply@seusite.com', 'Mailer');
-        $mail->addAddress($bossEmail, 'Chefe');     
+        $mail->setFrom($smtpUsername, 'Seu Nome'); // Endereço do remetente
+        $mail->addAddress($bossEmail, 'Chefe');     // Endereço do destinatário
         $mail->isHTML(true);                                  
         $mail->Subject = 'Novo formulário de contato';
         $mail->Body    = 'Um novo formulário de contato foi enviado. Veja o PDF em anexo.';
-        $mail->addAttachment($pdfPath);
+        $mail->addAttachment($pdfPath); // Anexar o PDF
         $mail->send();
 
         // Enviar e-mail para o cliente
-        $mail->clearAddresses();
+        $mail->clearAddresses(); // Limpar endereços para o próximo e-mail
         $mail->addAddress($clientEmail);     
         $mail->Subject = 'Recebemos seu formulário';
         $mail->Body    = 'Obrigado por entrar em contato. Recebemos seu formulário e responderemos em breve.';
