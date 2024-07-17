@@ -39,9 +39,7 @@ if ($stmt->execute()) {
     // Incluir o autoloader do Composer
     require_once __DIR__ . '/vendor/autoload.php';
 
-    // Incluir a biblioteca FPDF
-    require_once __DIR__ . '/vendor/fpdf/fpdf/src/Fpdf.php';  // Ajuste o caminho conforme necessário
-
+    // Gerar o PDF usando o TCPDF
     $pdfPath = generate_pdf($name, $tel, $email, $subject, $message);
     
     // Enviar e-mails
@@ -56,12 +54,12 @@ if ($stmt->execute()) {
 $stmt->close();
 $conn->close();
 
-// Função para gerar PDF
+// Função para gerar PDF usando TCPDF
 function generate_pdf($name, $tel, $email, $subject, $message) {
-    // Criar uma instância do FPDF
-    $pdf = new Fpdf();
+    // Criar uma instância do TCPDF
+    $pdf = new TCPDF();
     $pdf->AddPage();
-    $pdf->SetFont('Arial', '', 12);
+    $pdf->SetFont('helvetica', '', 12);
     
     $pdf->Cell(0, 10, 'Nome: ' . $name, 0, 1);
     $pdf->Cell(0, 10, 'Telefone: ' . $tel, 0, 1);
@@ -70,7 +68,7 @@ function generate_pdf($name, $tel, $email, $subject, $message) {
     $pdf->Cell(0, 10, 'Mensagem: ' . $message, 0, 1);
 
     // Verificar se a pasta 'pdfs' existe, caso contrário, criar
-    $pdfDir = 'pdfs';
+    $pdfDir = 'contact-us/pdfs';
     if (!is_dir($pdfDir)) {
         mkdir($pdfDir, 0755, true);
     }
@@ -81,51 +79,43 @@ function generate_pdf($name, $tel, $email, $subject, $message) {
     return $pdfPath;
 }
 
-// Função para enviar e-mails
+// Função para enviar e-mails usando SwiftMailer
 function send_emails($pdfPath, $clientEmail) {
     $bossEmail = 'dscoveryportugal@gmail.com';
 
-    // Usar a biblioteca PHPMailer diretamente
-    require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/Exception.php';
-    require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/PHPMailer.php';
-    require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/SMTP.php';
-
-    // Configurações do servidor SMTP do Gmail
+    // Usar a biblioteca SwiftMailer
+   
+    // Configurações do servidor SMTP
     $smtpHost = 'smtp.gmail.com';  // Servidor SMTP do Gmail
     $smtpUsername = 'dscoveryportugal@gmail.com'; // Seu e-mail
     $smtpPassword = 'R7p!O2x@mB9z&T4X'; // Senha do seu e-mail
     $smtpPort = 587; // Porta SMTP para TLS
 
-    // Instanciar PHPMailer
-    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    // Instanciar SwiftMailer
+    $transport = (new Swift_SmtpTransport($smtpHost, $smtpPort, 'tls'))
+        ->setUsername($smtpUsername)
+        ->setPassword($smtpPassword);
+    $mailer = new Swift_Mailer($transport);
 
+    // Enviar e-mail para o chefe
+    $message = (new Swift_Message('Novo formulário de contato'))
+        ->setFrom([$smtpUsername => 'Seu Nome'])
+        ->setTo([$bossEmail => 'Chefe'])
+        ->setBody('Um novo formulário de contato foi enviado. Veja o PDF em anexo.')
+        ->attach(Swift_Attachment::fromPath($pdfPath));
+    
     try {
-        // Configurações do servidor SMTP
-        $mail->isSMTP();                                           
-        $mail->Host       = $smtpHost;                               
-        $mail->SMTPAuth   = true;                              
-        $mail->Username   = $smtpUsername;                  
-        $mail->Password   = $smtpPassword;                           
-        $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;         
-        $mail->Port       = $smtpPort;                                   
-
-        // Enviar e-mail para o chefe
-        $mail->setFrom($smtpUsername, 'Seu Nome'); // Endereço do remetente
-        $mail->addAddress($bossEmail, 'Chefe');     // Endereço do destinatário
-        $mail->isHTML(true);                                  
-        $mail->Subject = 'Novo formulário de contato';
-        $mail->Body    = 'Um novo formulário de contato foi enviado. Veja o PDF em anexo.';
-        $mail->addAttachment($pdfPath); // Anexar o PDF
-        $mail->send();
+        $mailer->send($message);
 
         // Enviar e-mail para o cliente
-        $mail->clearAddresses(); // Limpar endereços para o próximo e-mail
-        $mail->addAddress($clientEmail);     
-        $mail->Subject = 'Recebemos seu formulário';
-        $mail->Body    = 'Obrigado por entrar em contato. Recebemos seu formulário e responderemos em breve.';
-        $mail->send();
+        $message = (new Swift_Message('Recebemos seu formulário'))
+            ->setFrom([$smtpUsername => 'Seu Nome'])
+            ->setTo([$clientEmail])
+            ->setBody('Obrigado por entrar em contato. Recebemos seu formulário e responderemos em breve.');
+        
+        $mailer->send($message);
     } catch (Exception $e) {
-        error_log("Erro ao enviar e-mail: {$mail->ErrorInfo}");
+        error_log("Erro ao enviar e-mail: " . $e->getMessage());
     }
 }
 ?>

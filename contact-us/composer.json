@@ -15,7 +15,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "fpdf/fpdf": "^1.86",
-        "phpmailer/phpmailer": "^6.9"
+        "swiftmailer/swiftmailer": "^6.3",
+        "tecnickcom/tcpdf": "^6.7"
     }
 }
