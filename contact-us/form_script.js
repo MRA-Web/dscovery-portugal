@@ -56,17 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
         reader.readAsDataURL(pdfBlob);
         reader.onloadend = function() {
             var base64data = reader.result.split(',')[1];
-
+    
             var templateParams = {
-                to_email: email,
+                to_email: email, // O e-mail do destinatário
                 name: nome,
                 tel: telefone,
                 subject: assunto,
                 message: mensagem,
-                pdf: base64data  // Se o template suportar anexos, isso deve funcionar
+                pdf: base64data // Se o template suportar anexos
             };
-
-            emailjs.send('service_9skp7pg', 'template_25j1jmr', templateParams)
+    
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
                 .then(function(response) {
                     console.log('Email enviado com sucesso!', response.status, response.text);
                 }, function(error) {
@@ -74,4 +74,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         };
     }
+    
 });
