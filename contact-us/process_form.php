@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $servername = "localhost"; // O nome do servidor fornecido pela Hostinger
 $database = "u562265580_contact_form"; // Nome do banco de dados
 $username = "u562265580_contact_user"; // Nome de usuário do banco de dados

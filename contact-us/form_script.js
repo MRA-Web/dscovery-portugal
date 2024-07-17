@@ -12,20 +12,20 @@ document.getElementById('contactForm').addEventListener('submit', function(event
                 const response = JSON.parse(xhr.responseText);
                 if (response.status === 'success') {
                     document.getElementById('contactForm').reset(); // Limpa os campos do formulário
-                    alert('Formulário enviado com sucesso!');
+                    console.log('Formulário enviado com sucesso!');
                 } else {
-                    alert('Error: ' + response.message);
+                    console.error('Erro na resposta do servidor: ' + response.message);
                 }
             } catch (e) {
-                alert('Erro ao processar a resposta: ' + e.message);
+                console.error('Erro ao processar a resposta: ' + e.message);
             }
         } else {
-            alert('An error occurred while submitting the form. Status: ' + xhr.status);
+            console.error('Ocorreu um erro ao enviar o formulário. Status: ' + xhr.status);
         }
     };
     
     xhr.onerror = function() {
-        alert('Request failed. Please try again later.');
+        console.error('Falha na requisição. Tente novamente mais tarde.');
     };
     
     xhr.send(formData);
