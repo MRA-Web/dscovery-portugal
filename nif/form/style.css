@@ -9,15 +9,17 @@
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 fieldset {
     display: none;
 }
+
 fieldset.active {
     display: block;
 }
+
 .buttons {
     margin-top: 10px;
 }
@@ -238,7 +240,7 @@ header {
     background-color: #0056b3;
 }
 
-#holder {
+.holder {
     display: flex;
     justify-content: center;
     align-items: center;

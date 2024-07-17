@@ -1,7 +1,7 @@
 <!-- caso seja criança -->
 
 <!-- etapa 3 criança -->
-<form class="form-step" action="/upload" method="post" enctype="multipart/form-data" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca-1">
+<fieldset class="form-step" action="/upload" method="post" enctype="multipart/form-data" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca-1">
     <label for="passaporteOuIdCrianca" class="traduzir">Anexe o passaporte da criança (caso seja cidadão europeu, pode anexar o cartão de identidade):</label>
     <input type="file" id="passaporteOuIdCrianca" name="passaporteOuIdCrianca" required>
 
@@ -19,10 +19,10 @@
 
     <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
     <button type="submit" class="traduzir">Next</button>
-</form>
+</fieldset>
 
 <!-- etapa 4 criança -->
-<form class="form-step" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca-2">
+<fieldset class="form-step" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca-2">
     <h2 class="traduzir">Final details</h2>
     
     <!-- info sobre a criança -->
@@ -54,4 +54,4 @@
     
     <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
     <button type="submit" class="traduzir">Next</button>
-</form>
+</fieldset>
