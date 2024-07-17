@@ -37,7 +37,7 @@ $stmt->bind_param("sssss", $name, $tel, $email, $subject, $message);
 
 if ($stmt->execute()) {
     // Verificar se a biblioteca FPDF está disponível
-    $fpdfPath = 'composer/vendor/fpdf/fpdf.php';
+    $fpdfPath = '/contact-us/composer/vendor/fpdf/src/Fpdf.php';
     if (!file_exists($fpdfPath)) {
         die("Erro: Biblioteca FPDF não encontrada em '$fpdfPath'.");
     }
