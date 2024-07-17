@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 pdf: base64data // Se o template suportar anexos
             };
     
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            emailjs.send('service_9skp7pg', 'template_25j1jmr', templateParams)
                 .then(function(response) {
                     console.log('Email enviado com sucesso!', response.status, response.text);
                 }, function(error) {
