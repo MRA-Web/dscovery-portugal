@@ -6,7 +6,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     xhr.open('POST', 'process_form.php', true);
     xhr.onload = function() {
         if (xhr.status === 200) {
-            console.log(xhr.responseText); // Exibe a resposta completa para depuração
             try {
                 const response = JSON.parse(xhr.responseText);
                 if (response.status === 'success') {

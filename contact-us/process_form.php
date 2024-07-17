@@ -5,6 +5,7 @@ use TCPDF;
 
 require 'vendor/autoload.php'; // Inclui o autoload do Composer
 
+// Configurações de erro
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -89,9 +90,8 @@ if (mysqli_query($conn, $sql)) {
     // Remove o arquivo PDF após o envio
     unlink($pdfFile);
 } else {
-    echo json_encode(["status" => "error", "message" => "Error: " . $sql . "<br>" . mysqli_error($conn)]);
+    echo json_encode(["status" => "error", "message" => "Error: " . mysqli_error($conn)]);
 }
 
 // Fecha a conexão
 mysqli_close($conn);
-?>
