@@ -1,5 +1,5 @@
 <?php
-// Exibir erros para depuração
+// Exibir todos os erros
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -19,33 +19,39 @@ if ($conn->connect_error) {
 }
 
 // Obter dados do formulário
-$name = $_POST['name'] ?? '';
-$tel = $_POST['tel'] ?? '';
-$email = $_POST['email'] ?? '';
-$subject = $_POST['subject'] ?? '';
-$message = $_POST['message'] ?? '';
+$name = $_POST['name'];
+$tel = $_POST['tel'];
+$email = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
 
 // Preparar e executar a consulta SQL
 $sql = "INSERT INTO contatos (name, tel, email, subject, message) VALUES (?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 
-if (!$stmt) {
-    die("Erro na preparação da consulta: " . $conn->error);
+if ($stmt === false) {
+    die("Erro ao preparar a consulta: " . $conn->error);
 }
 
 $stmt->bind_param("sssss", $name, $tel, $email, $subject, $message);
 
-if (!$stmt->execute()) {
+if ($stmt->execute()) {
+    // Verificar se a biblioteca FPDF está disponível
+    $fpdfPath = 'fpdf/fpdf.php';
+    if (!file_exists($fpdfPath)) {
+        die("Erro: Biblioteca FPDF não encontrada em '$fpdfPath'.");
+    }
+
+    require_once $fpdfPath; // Inclua a biblioteca FPDF
+    $pdfPath = generate_pdf($name, $tel, $email, $subject, $message);
+    
+    // Enviar e-mails
+    send_emails($pdfPath, $email);
+
+    echo "Formulário enviado com sucesso!";
+} else {
     die("Erro ao enviar formulário: " . $stmt->error);
 }
-
-// Gerar o PDF
-require_once 'fpdf/fpdf.php'; // Inclua a biblioteca FPDF
-
-$pdfPath = generate_pdf($name, $tel, $email, $subject, $message);
-
-// Enviar e-mails
-send_emails($pdfPath, $email);
 
 // Fechar a conexão
 $stmt->close();
@@ -64,7 +70,13 @@ function generate_pdf($name, $tel, $email, $subject, $message) {
     $pdf->Cell(0, 10, 'Assunto: ' . $subject, 0, 1);
     $pdf->Cell(0, 10, 'Mensagem: ' . $message, 0, 1);
 
-    $pdfPath = 'pdfs/' . $email . '_contact_form.pdf';
+    // Verificar se a pasta 'pdfs' existe, caso contrário, criar
+    $pdfDir = 'pdfs';
+    if (!is_dir($pdfDir)) {
+        mkdir($pdfDir, 0755, true);
+    }
+
+    $pdfPath = $pdfDir . '/' . $email . '_contact_form.pdf';
     $pdf->Output($pdfPath, 'F');
     
     return $pdfPath;
@@ -94,7 +106,7 @@ function send_emails($pdfPath, $clientEmail) {
     $message .= "--" . $mimeBoundary . "--";
 
     if (!mail($to, $subject, $message, $headers)) {
-        die("Erro ao enviar e-mail para o chefe.");
+        error_log("Erro ao enviar e-mail para o chefe.");
     }
 
     // Enviar e-mail para o cliente
@@ -105,7 +117,7 @@ function send_emails($pdfPath, $clientEmail) {
     $headers .= "Content-Type: text/plain; charset=\"utf-8\"\r\n";
     
     if (!mail($to, $subject, $body, $headers)) {
-        die("Erro ao enviar e-mail para o cliente.");
+        error_log("Erro ao enviar e-mail para o cliente.");
     }
 }
 ?>
