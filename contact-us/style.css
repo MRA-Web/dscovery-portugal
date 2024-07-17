@@ -23,9 +23,9 @@ main {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 60%;
+    width: 70%;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 550px;
     margin-top: 30px;
     margin-bottom: -20px;
 }
@@ -48,17 +48,14 @@ main {
 }
 
 .container button {
-    background-color: transparent;
-    color: #fff;
     font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px 45px;
-    border-color: #fff;
+    border-style: none;
     border-radius: 8px;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-top: 15px;
-    cursor: pointer;
+    cursor:pointer;
 }
 
 #enviador:hover + .toggle-panel {
@@ -220,7 +217,18 @@ textarea::-webkit-scrollbar-thumb {
 .card-bottom:hover .subtitle {
     transform: translateY(0);
 }
+#instagram{
+    margin-right: 0;
+}
+.hover-button {
+    background: linear-gradient(90deg, rgba(0, 5, 36, 1) 0%, #093679 50%, rgba(0, 180, 255, 1) 100%);
+    transition: all 0.4s;
+}
 
+.hover-button:hover {
+    transform: scale(1.2);
+    transition: all 0.4S;
+}
 
 @media screen and (max-width: 1050px) {
     .cards-bottom-container{
