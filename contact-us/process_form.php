@@ -36,13 +36,12 @@ if ($stmt === false) {
 $stmt->bind_param("sssss", $name, $tel, $email, $subject, $message);
 
 if ($stmt->execute()) {
-    // Verificar se a biblioteca FPDF está disponível
-    $fpdfPath = '/contact-us/vendor/fpdf/fpdf/src/Fpdf/';
-    if (!file_exists($fpdfPath)) {
-        die("Erro: Biblioteca FPDF não encontrada em '$fpdfPath'.");
-    }
+    // Incluir o autoloader do Composer
+    require_once 'vendor/autoload.php';
 
-    require_once $fpdfPath; // Inclua a biblioteca FPDF
+    // Usar a biblioteca FPDF diretamente
+    require_once 'vendor/fpdf/fpdf/src/Fpdf.php';
+
     $pdfPath = generate_pdf($name, $tel, $email, $subject, $message);
     
     // Enviar e-mails
@@ -85,39 +84,48 @@ function generate_pdf($name, $tel, $email, $subject, $message) {
 // Função para enviar e-mails
 function send_emails($pdfPath, $clientEmail) {
     $bossEmail = 'dscoveryportugal@gmail.com';
-    
-    // Enviar e-mail para o chefe
-    $to = $bossEmail;
-    $subject = "Novo formulário de contato";
-    $body = "Um novo formulário de contato foi enviado. Veja o PDF em anexo.";
-    $headers = "From: no-reply@seusite.com\r\n";
-    $headers .= "Content-Type: multipart/mixed; boundary=\"boundary\"\r\n";
 
-    $mimeBoundary = "boundary";
-    $message = "--" . $mimeBoundary . "\r\n";
-    $message .= "Content-Type: text/plain; charset=\"utf-8\"\r\n";
-    $message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-    $message .= $body . "\r\n\r\n";
-    $message .= "--" . $mimeBoundary . "\r\n";
-    $message .= "Content-Type: application/pdf; name=\"" . basename($pdfPath) . "\"\r\n";
-    $message .= "Content-Transfer-Encoding: base64\r\n";
-    $message .= "Content-Disposition: attachment; filename=\"" . basename($pdfPath) . "\"\r\n\r\n";
-    $message .= chunk_split(base64_encode(file_get_contents($pdfPath))) . "\r\n\r\n";
-    $message .= "--" . $mimeBoundary . "--";
+    // Usar a biblioteca PHPMailer diretamente
+    require_once 'vendor/phpmailer/phpmailer/src/Exception.php';
+    require_once 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+    require_once 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
-    if (!mail($to, $subject, $message, $headers)) {
-        error_log("Erro ao enviar e-mail para o chefe.");
-    }
+    // Configurações do servidor SMTP
+    $smtpHost = 'smtp.gmail.com';  // Defina o servidor SMTP
+    $smtpUsername = 'dscoveryportugal@gmail.com';                  
+    $smtpPassword = 'R7p!O2x@mB9z&T4X';                           
+    $smtpPort = 587;                                   
 
-    // Enviar e-mail para o cliente
-    $to = $clientEmail;
-    $subject = "Recebemos seu formulário";
-    $body = "Obrigado por entrar em contato. Recebemos seu formulário e responderemos em breve.";
-    $headers = "From: no-reply@seusite.com\r\n";
-    $headers .= "Content-Type: text/plain; charset=\"utf-8\"\r\n";
-    
-    if (!mail($to, $subject, $body, $headers)) {
-        error_log("Erro ao enviar e-mail para o cliente.");
+    // Função para enviar e-mail
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+
+    try {
+        // Configurações do servidor SMTP
+        $mail->isSMTP();                                           
+        $mail->Host       = $smtpHost;                               
+        $mail->SMTPAuth   = true;                              
+        $mail->Username   = $smtpUsername;                  
+        $mail->Password   = $smtpPassword;                           
+        $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;         
+        $mail->Port       = $smtpPort;                                   
+
+        // Enviar e-mail para o chefe
+        $mail->setFrom('no-reply@seusite.com', 'Mailer');
+        $mail->addAddress($bossEmail, 'Chefe');     
+        $mail->isHTML(true);                                  
+        $mail->Subject = 'Novo formulário de contato';
+        $mail->Body    = 'Um novo formulário de contato foi enviado. Veja o PDF em anexo.';
+        $mail->addAttachment($pdfPath);
+        $mail->send();
+
+        // Enviar e-mail para o cliente
+        $mail->clearAddresses();
+        $mail->addAddress($clientEmail);     
+        $mail->Subject = 'Recebemos seu formulário';
+        $mail->Body    = 'Obrigado por entrar em contato. Recebemos seu formulário e responderemos em breve.';
+        $mail->send();
+    } catch (Exception $e) {
+        error_log("Erro ao enviar e-mail: {$mail->ErrorInfo}");
     }
 }
 ?>
