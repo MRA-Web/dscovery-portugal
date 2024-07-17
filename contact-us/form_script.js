@@ -20,8 +20,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 });
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicialize o EmailJS com sua chave pública
     emailjs.init('mH7Y-YFYHmYbEO9h7');  // Substitua pela sua chave pública
 
     document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -38,13 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function generateAndSendPDF(name, telefone, email, assunto, mensagem) {
-        // Verifique se jsPDF está disponível globalmente
         if (typeof jsPDF === 'undefined') {
             console.error('jsPDF não está carregado corretamente.');
             return;
         }
 
-        // Cria um novo documento PDF
         const { jsPDF } = window.jspdf;
         var doc = new jsPDF();
         doc.text("Nome: " + name, 10, 10);
@@ -53,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
         doc.text("Assunto: " + assunto, 10, 40);
         doc.text("Mensagem: " + mensagem, 10, 50);
 
-        // Converte o PDF para um blob
         var pdfBlob = doc.output('blob');
         sendEmail(pdfBlob, name, telefone, email, assunto, mensagem);
     }
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tel: telefone,
                 subject: assunto,
                 message: mensagem,
-                pdf: base64data // Se o template suportar anexos
+                pdf: base64data // PDF em Base64
             };
 
             emailjs.send('service_9skp7pg', 'template_25j1jmr', templateParams)
