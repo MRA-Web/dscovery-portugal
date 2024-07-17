@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use FPDF\FPDF;
 
-$servername = "localhost"; // O nome do servidor fornecido pela Hostinger
+$servername = "server1423"; // Nome do servidor fornecido pela Hostinger
 $database = "u562265580_contact_form"; // Nome do banco de dados
 $username = "u562265580_contact_user"; // Nome de usuário do banco de dados
 $password = "N>UQhF8np5"; // Senha do banco de dados
