@@ -32,15 +32,15 @@ if (mysqli_query($conn, $sql)) {
 
     // Chama o script para gerar o PDF
     require 'generate_pdf.php';
-    generatePDF($last_id);
+    $pdf_file = generatePDF($last_id);
 
     // Chama o script para enviar os e-mails
     require 'send_emails.php';
-    sendEmails($last_id, $email);
+    sendEmails($pdf_file, $email);
 
     echo json_encode(["status" => "success"]);
 } else {
-    echo json_encode(["status" => "error"]);
+    echo json_encode(["status" => "error", "message" => "Error: " . mysqli_error($conn)]);
 }
 
 // Fecha a conexão

@@ -2,29 +2,29 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-function sendEmails($id, $clientEmail) {
-    $pdfFile = generatePDF($id);
+function sendEmails($pdfFile, $clientEmail) {
     if (!$pdfFile) {
-        return false;
+        return false; // Se o arquivo PDF não foi gerado, retorna falso
     }
 
     $mail = new PHPMailer(true);
     try {
-        // Configurações do servidor de e-mail
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'dscoveryportugal@gmail.com';
         $mail->Password = 'R7p!O2x@mB9z&T4X';
+        
+        // Usando porta 587 com STARTTLS
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // E-mail para o chefe
-        $mail->setFrom('dscoveryportugal@gmail.com', 'Discovery Portugal');
+        $mail->setFrom('dscoveryportugal@gmail.com', 'Dscovery Portugal');
         $mail->addAddress('rodrigocowbr@gmail.com'); // Substitua pelo e-mail do chefe
         $mail->addAttachment($pdfFile);
 
