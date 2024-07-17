@@ -371,6 +371,7 @@ function handleAge(event) {
     console.log("handleAge() \n")
     event.preventDefault();
     const form = event.target;
+    console.log(form);
     allForms[currentStep] = form;
 
     var ageValue = form.querySelector('input[name="idade"]:checked').value;
@@ -493,6 +494,7 @@ function handleNext(event) {
     console.log("handleNext() \n")
     event.preventDefault();
     const form = event.target;
+    console.log(form.elems.value);
     allForms[currentStep] = form;
 
     if (form.checkValidity()) {
@@ -506,6 +508,7 @@ function handleSubmit(event) {
     console.log("handleSubmit() \n")
     event.preventDefault();
     const form = event.target;
+    console.log(form);
     allForms[currentStep] = form;
 
     if (form.checkValidity()) {

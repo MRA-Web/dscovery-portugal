@@ -8,6 +8,20 @@
     margin: 0;
 }
 
+.hidden{
+    display: none;
+}
+
+fieldset {
+    display: none;
+}
+fieldset.active {
+    display: block;
+}
+.buttons {
+    margin-top: 10px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
