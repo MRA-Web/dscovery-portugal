@@ -1,0 +1,57 @@
+<!-- caso seja criança -->
+
+<!-- etapa 3 criança -->
+<fieldset class="form-step" action="/upload" method="post" enctype="multipart/form-data" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca-1">
+    <label for="passaporteOuIdCrianca" class="traduzir">Anexe o passaporte da criança (caso seja cidadão europeu, pode anexar o cartão de identidade):</label>
+    <input type="file" id="passaporteOuIdCrianca" name="passaporteOuIdCrianca" required>
+
+    <br><br>
+
+    <label for="passaporteOuIdResponsavel" class="traduzir">Anexe o passaporte do responsável da criança (caso seja cidadão europeu, pode anexar o cartão de identidade):</label>
+    <input type="file" id="passaporteOuIdResponsavel" name="passaporteOuIdResponsavel" required>
+
+    <br><br>
+
+    <label for="comprovanteEndereco" class="traduzir">Anexe o comprovante de endereço</label>
+    <input type="file" id="comprovanteEndereco" name="comprovanteEndereco" required>
+    
+    <br><br>
+
+    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+    <button type="submit" class="traduzir">Next</button>
+</fieldset>
+
+<!-- etapa 4 criança -->
+<fieldset class="form-step" onsubmit="return handleNext(event)" style="display: none;" id="adulto-crianca-2">
+    <h2 class="traduzir">Final details</h2>
+    
+    <!-- info sobre a criança -->
+    
+    <label for="dataNascimentoCrianca" class="traduzir">Data de nascimento da criança:</label>
+    <input type="date" id="dataNascimentoCrianca" name="dataNascimentoCrianca" required="">
+    
+    <label for="numPassaporteOuIdCrianca" class="traduzir">nº do passaporte ou cartão de identidade da criança:</label>
+    <input type="text" id="numPassaporteOuIdCrianca" name="numPassaporteOuIdCrianca" required="">
+    
+    <label for="validadePassaporteOuIdCrianca" class="traduzir">Data de validade do passaporte ou cartão de identidade da criança:</label>
+    <input type="date" id="validadePassaporteOuIdCrianca" name="validadePassaporteOuIdCrianca" required="">
+
+    <!-- info sobre o responsável da criança -->
+
+    <label for="dataNascimentoResponsavel" class="traduzir">Data de nascimento do responsável:</label>
+    <input type="date" id="dataNascimentoResponsavel" name="dataNascimentoResponsavel" required="">
+    
+    <label for="numPassaporteOuIdResponsavel" class="traduzir">nº do passaporte ou cartão de identidade do responsável:</label>
+    <input type="text" id="numPassaporteOuIdResponsavel" name="numPassaporteOuIdResponsavel" required="">
+    
+    <label for="validadePassaporteOuIdResponsavel" class="traduzir">Data de validade do passaporte ou cartão de identidade do responsável:</label>
+    <input type="date" id="validadePassaporteOuIdResponsavel" name="validadePassaporteOuIdResponsavel" required="">
+    
+    <!-- presumimos que os dois moram no mesmo endereço -->
+
+    <label for="endereco" class="traduzir">Address:</label>
+    <input type="text" id="endereco" name="endereco" required="">
+    
+    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
+    <button type="submit" class="traduzir">Next</button>
+</fieldset>
