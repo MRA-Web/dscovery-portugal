@@ -21,62 +21,46 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    emailjs.init('mH7Y-YFYHmYbEO9h7');  // Substitua pela sua chave pública
-
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        var form = document.getElementById("contactForm");
-        var nome = form.querySelector('input[name="name"]').value;
-        var telefone = form.querySelector('input[name="tel"]').value;
-        var email = form.querySelector('input[name="email"]').value;
-        var assunto = form.querySelector('input[name="subject"]').value;
-        var mensagem = form.querySelector('textarea[name="message"]').value;
-
-        generateAndSendPDF(nome, telefone, email, assunto, mensagem);
-    });
-
-    function generateAndSendPDF(name, telefone, email, assunto, mensagem) {
-        if (typeof jsPDF === 'undefined') {
-            console.error('jsPDF não está carregado corretamente.');
-            return;
-        }
-
-        const { jsPDF } = window.jspdf;
-        var doc = new jsPDF();
-        doc.text("Nome: " + name, 10, 10);
-        doc.text("Telefone: " + telefone, 10, 20);
-        doc.text("Email: " + email, 10, 30);
-        doc.text("Assunto: " + assunto, 10, 40);
-        doc.text("Mensagem: " + mensagem, 10, 50);
-
-        var pdfBlob = doc.output('blob');
-        sendEmail(pdfBlob, name, telefone, email, assunto, mensagem);
-    }
-
-    function sendEmail(pdfBlob, name, telefone, email, assunto, mensagem) {
-        var reader = new FileReader();
-        reader.readAsDataURL(pdfBlob);
-        reader.onloadend = function() {
-            var base64data = reader.result.split(',')[1];
-
+    document.addEventListener('DOMContentLoaded', function() {
+        emailjs.init('mH7Y-YFYHmYbEO9h7');  // Substitua pela sua chave pública
+    
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var form = document.getElementById("contactForm");
+            var nome = form.querySelector('input[name="name"]').value;
+            var telefone = form.querySelector('input[name="tel"]').value;
+            var email = form.querySelector('input[name="email"]').value;
+            var assunto = form.querySelector('input[name="subject"]').value;
+            var mensagem = form.querySelector('textarea[name="message"]').value;
+    
+            sendEmail(nome, telefone, email, assunto, mensagem);
+        });
+    
+        function sendEmail(name, telefone, email, assunto, mensagem) {
             var templateParams = {
                 email: email, // O e-mail do destinatário
                 name: name,
                 tel: telefone,
                 subject: assunto,
-                message: mensagem,
-                pdf: base64data // PDF em Base64
+                message: mensagem
             };
-
+    
             emailjs.send('service_9skp7pg', 'template_25j1jmr', templateParams)
                 .then(function(response) {
                     console.log('Email enviado com sucesso!', response.status, response.text);
                 }, function(error) {
                     console.error('Falha ao enviar o email.', error);
                 });
-        };
-    }
-});
+        }
+    });
+    
 
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.querySelector('input[name="email"]').value;
+            
+        });
+    });
+    
