@@ -193,6 +193,7 @@ header {
     margin-bottom: 8px;
     font-size: 14px; /* aumenta o tamanho da fonte */
     text-align: left;
+    width: 100%;
 }
 
 #multiStepForm input[type="text"], input[type="tel"], input[type="email"], input[type="date"] {
@@ -201,13 +202,31 @@ header {
     border: none;
     border-radius: 8px;
     margin: 8px 0;
-    font-size: 14px; /* aumenta o tamanho da fonte */
+    font-size: 14px; 
     outline: none;
     background-color: #eee;
 }
+#multiStepForm input[type="file"] {
+    display: none;
+  }
+  
+  .traduzir {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s, border 0.3s;
+  }
+  
+  .traduzir i {
+    margin-right: 8px;
+  }
 
+  
 #multiStepForm button {
-    padding: 12px 50px; /* aumenta o padding */
+    padding: 12px 50px; 
     background-color: rgba(9,54,121,1);
     border-color: #fff;
     color: #fff;
@@ -217,7 +236,7 @@ header {
     text-transform: uppercase;
     margin-top: 15px;
     cursor: pointer;
-    font-size: 14px; /* aumenta o tamanho da fonte */
+    font-size: 14px;
 }
 
 #multiStepForm button:hover {
