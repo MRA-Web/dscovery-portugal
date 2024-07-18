@@ -45,45 +45,205 @@
     </header>
       
     <main>
-        <div id="holder">
-            <div id="multiStepForm">
-                <!-- etapa 1 -->
-                <form class="form-step active" onsubmit="return handleNext(event)">
-                    <h2 class="traduzir">Personal Information</h2>
-                    <label for="nome" class="traduzir">Full Name:</label>
-                    <input type="text" id="nome" name="nome" required>
-                    <label for="telefone" class="traduzir">Phone (with country code):</label>
-                    <input type="tel" id="telefone" name="telefone" required>
-                    <label for="email" class="traduzir">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <button type="submit" class="traduzir">Next</button>
-                </form>
+        <section id="decisao" class="etapa">
+            <button onclick="formAdult()">Para um adulto</button>
+            <button onclick="formChild()">Para uma criança</button>
+        </section>
 
-                <!-- etapa 2 -->
-                <form class="form-step form-age" onsubmit="return handleNext(event)">
-                    <h2 class="traduzir">Age</h2>
-                    <label class="traduzir"><input type="radio" name="idade" value="adulto" required> I am an adult <i class="fa-solid fa-person fa-adult"></i></label>
-                    <label class="traduzir"><input type="radio" name="idade" value="crianca" required> I am a child <i class="fa-solid fa-child"></i></label>
-                    <button type="button" onclick="prevStep()">Previous</button>
-                    <button type="submit" class="traduzir">Next</button>
-                </form>
+        <section id="resto">
 
-                <!-- etapa 3 -->
-                <form class="form-step form-documents" onsubmit="return handleNext(event)">
-                    <h2 class="traduzir">Documents</h2>
-                    <label for="address-proof" class="traduzir"><i class="fa fa-cloud-upload"></i> Address-proof:</label>
-                    <input type="file" id="address-proof" name="address-proof" required>
-                    <label for="passport" class="traduzir"><i class="fa fa-cloud-upload"></i>Passport:</label>
-                    <input type="file" id="passport" name="passport" required>
-                    <button type="button" onclick="prevStep()">Previous</button>
-                    <button type="submit" class="traduzir">Next</button>
+            <!-- formulário caso seja adulto -->
+            <div class="holder hidden" id="div-adult">
+                <form id="multiStepForm">
+        
+                    <!-- etapa 1 -->
+                    <fieldset class="form-step active">
+                        <h2 class="traduzir">Personal Information</h2>
+                        <label for="nome" class="traduzir">Full Name:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <label for="telefone" class="traduzir">Phone (with country code):</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        <label for="email" class="traduzir">Email:</label>
+                        <input type="email" id="email" name="email" required="">
+        
+                        <div class="buttons">
+                            <button type="button" id="prev1" onclick="revertAdult()">Voltar</button>
+                            <button type="button" class="traduzir" id="next1">Próximo</button>
+                        </div>
+                    </fieldset>
+        
+                    <!-- etapa 3 adulto -->
+                    <fieldset class="form-step">
+                        <label for="passaporteOuId" class="traduzir">Anexe seu passaporte (ou cartão de identidade, caso seja cidadão europeu):</label>
+                        <input type="file" id="passaporteOuId" name="passaporteOuId" required>
+        
+                        <br><br>
+        
+                        <label for="comprovanteEndereco" class="traduzir">Anexe seu comprovante de endereço</label>
+                        <input type="file" id="comprovanteEndereco" name="comprovanteEndereco" required>
+                        
+                        <br><br>
+        
+                        <div class="buttons">
+                            <button type="button" id="prev2">Voltar</button>
+                            <button type="button" id="next2">Próximo</button>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- etapa 4 adulto -->
+                    <fieldset class="form-step">
+                        <h2 class="traduzir">Final details</h2>
+                        
+                        <label for="dataNascimento" class="traduzir">Date of Birth:</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" required="">
+                        
+                        <label for="numPassaporteOuId" class="traduzir">Passport or ID card number:</label>
+                        <input type="text" id="numPassaporteOuId" name="numPassaporteOuId" required="">
+                        
+                        <label for="validadePassaporteOuId" class="traduzir">Passport or ID card Expiry Date:</label>
+                        <input type="date" id="validadePassaporteOuId" name="validadePassaporteOuId" required="">
+                        
+                        <label for="endereco" class="traduzir">Address:</label>
+                        <input type="text" id="endereco" name="endereco" required="">
+                        
+                        <div class="buttons">
+                            <button type="button" id="prev3">Voltar</button>
+                            <button type="button" id="next3">Próximo</button>
+                        </div>
+                    </fieldset>
+        
+                    <!-- etapa 5 -->
+                    <fieldset class="form-step">
+                        <!-- Integração de pagamento -->
+                        <p class="traduzir">Payment</p>
+        
+                        <div class="buttons">
+                            <button type="button" id="prev4">Voltar</button>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </fieldset>
+        
                 </form>
-
-                <!-- outras etapas... -->
             </div>
-        </div>
+
+            <!-- formulário caso seja criança -->
+            <div class="holder hidden" id="div-child">
+                <form id="multiStepForm">
+        
+                    <!-- etapa 1 -->
+                    <fieldset class="form-step active">
+                        <h2 class="traduzir">Personal Information</h2>
+                        <label for="nome" class="traduzir">Full Name:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <label for="telefone" class="traduzir">Phone (with country code):</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        <label for="email" class="traduzir">Email:</label>
+                        <input type="email" id="email" name="email" required="">
+        
+                        <div class="buttons">
+                            <button type="button" id="prev1" onclick="revertChild()">Voltar</button>
+                            <button type="button" class="traduzir" id="next1">Próximo</button>
+                        </div>
+                    </fieldset>
+        
+                    <!-- etapa 3 criança -->
+                    <fieldset class="form-step">
+                        <label for="passaporteOuIdCrianca" class="traduzir">Anexe o passaporte da criança (caso seja cidadão europeu, pode anexar o cartão de identidade):</label>
+                        <input type="file" id="passaporteOuIdCrianca" name="passaporteOuIdCrianca" required>
+
+                        <br><br>
+
+                        <label for="passaporteOuIdResponsavel" class="traduzir">Anexe o passaporte do responsável da criança (caso seja cidadão europeu, pode anexar o cartão de identidade):</label>
+                        <input type="file" id="passaporteOuIdResponsavel" name="passaporteOuIdResponsavel" required>
+
+                        <br><br>
+
+                        <label for="comprovanteEndereco" class="traduzir">Anexe o comprovante de endereço</label>
+                        <input type="file" id="comprovanteEndereco" name="comprovanteEndereco" required>
+                        
+                        <br><br>
+
+                        <div class="buttons">
+                            <button type="button" id="prev2">Voltar</button>
+                            <button type="button" id="next2">Próximo</button>
+                        </div>
+                    </fieldset>
+
+                    <!-- etapa 4 criança -->
+                    <fieldset class="form-step">
+                        <h2 class="traduzir">Final details</h2>
+                        
+                        <!-- info sobre a criança -->
+                        
+                        <label for="dataNascimentoCrianca" class="traduzir">Data de nascimento da criança:</label>
+                        <input type="date" id="dataNascimentoCrianca" name="dataNascimentoCrianca" required="">
+                        
+                        <label for="numPassaporteOuIdCrianca" class="traduzir">nº do passaporte ou cartão de identidade da criança:</label>
+                        <input type="text" id="numPassaporteOuIdCrianca" name="numPassaporteOuIdCrianca" required="">
+                        
+                        <label for="validadePassaporteOuIdCrianca" class="traduzir">Data de validade do passaporte ou cartão de identidade da criança:</label>
+                        <input type="date" id="validadePassaporteOuIdCrianca" name="validadePassaporteOuIdCrianca" required="">
+
+                        <!-- info sobre o responsável da criança -->
+
+                        <label for="dataNascimentoResponsavel" class="traduzir">Data de nascimento do responsável:</label>
+                        <input type="date" id="dataNascimentoResponsavel" name="dataNascimentoResponsavel" required="">
+                        
+                        <label for="numPassaporteOuIdResponsavel" class="traduzir">nº do passaporte ou cartão de identidade do responsável:</label>
+                        <input type="text" id="numPassaporteOuIdResponsavel" name="numPassaporteOuIdResponsavel" required="">
+                        
+                        <label for="validadePassaporteOuIdResponsavel" class="traduzir">Data de validade do passaporte ou cartão de identidade do responsável:</label>
+                        <input type="date" id="validadePassaporteOuIdResponsavel" name="validadePassaporteOuIdResponsavel" required="">
+                        
+                        <!-- presumimos que os dois moram no mesmo endereço -->
+
+                        <label for="endereco" class="traduzir">Address:</label>
+                        <input type="text" id="endereco" name="endereco" required="">
+                        
+                        <div class="buttons">
+                            <button type="button" id="prev3">Voltar</button>
+                            <button type="button" id="next3">Próximo</button>
+                        </div>
+                    </fieldset>
+        
+                    <!-- etapa 5 -->
+                    <fieldset class="form-step">
+                        <!-- Integração de pagamento -->
+                        <p class="traduzir">Payment</p>
+        
+                        <div class="buttons">
+                            <button type="button" id="prev4">Voltar</button>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </fieldset>
+        
+                </form>
+            </div>
+        </section>
+
+
     </main>
 
-    <script src="script.js"></script>
+    <script src="mudanca.js"></script>
 </body>
+
+<style>
+    #decisao{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+
+    #decisao>button{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10px;
+        border-radius: 10px;
+        width: 100px;
+        padding: 30px;
+        color: #000;
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+</style>
 </html>
