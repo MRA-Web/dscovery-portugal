@@ -231,6 +231,10 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1050px) {
+    form h1{
+        font-family: "Lilita One", sans-serif;
+        color: rgb(9, 51, 113);
+    }
     .cards-bottom-container{
         grid-template-columns: 50% 50%;
     }
@@ -259,28 +263,27 @@ textarea::-webkit-scrollbar-thumb {
         margin-top: 15px;
         margin-bottom: 25px; 
     }
+    #message{
+        height: 20px;
+        padding-bottom: 50px;
+      }
+      #enviar-mobile{
+        margin: 10px 0;
+        display: flex;
+      }
+      .container .contact form{
+        padding: 40px 40px;
+        /* height: 800px; */
+      }
+      .container{
+        height: 530px;
+        width: 430px;
+      }
+
+
   }
 
 
-@media screen and (max-width: 1050px) {
-  
-  #message{
-    height: 20px;
-    padding-bottom: 50px;
-  }
-  #enviar-mobile{
-    margin: 10px 0;
-    display: flex;
-  }
-  .container .contact form{
-    padding: 40px 40px;
-    /* height: 800px; */
-  }
-  .container{
-    height: 530px;
-    width: 430px;
-  }
-}
 
 @media screen and (max-width: 500px) {
     .cards-bottom-container{
