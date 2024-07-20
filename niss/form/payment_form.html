@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Pagamento</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        /* Estilos básicos para o formulário */
+        .StripeElement {
+            box-sizing: border-box;
+            height: 40px;
+            padding: 10px 12px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background-color: white;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            transition: box-shadow 150ms ease;
+        }
+
+        .StripeElement--focus {
+            box-shadow: 0 1px 3px 0 #cfd7df;
+        }
+
+        .StripeElement--invalid {
+            border-color: #fa755a;
+        }
+
+        .StripeElement--webkit-autofill {
+            background-color: #fefde5 !important;
+        }
+    </style>
+</head>
+<body>
+    <form id="payment-form" method="POST" action="index.php">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="payment-type">Tipo de Pagamento:</label>
+            <select id="payment-type" name="paymentType">
+                <option value="credit">Crédito</option>
+                <option value="debit">Débito</option>
+            </select>
+        </div>
+        <div id="card-element">
+            <!-- Um elemento Stripe será inserido aqui. -->
+        </div>
+        <button type="submit">Pagar</button>
+        <div id="card-errors" role="alert"></div>
+    </form>
+
+    <script>
+        // Crie uma instância do Stripe com sua chave pública
+        var stripe = Stripe('pk_test_51PekHyRsGETv09ikQXpVy11SZPlEXdoh4EWWXsYZ42d86YDZqVzGIp0tHQdSxEKYrnheNP3PVuShw4nAHmIQebv700OwlMGpBr'); // Substitua pela sua chave pública
+        var elements = stripe.elements();
+
+        // Estilize o elemento do cartão
+        var style = {
+            base: {
+                color: '#32325d',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+        };
+
+        // Crie uma instância do elemento do cartão
+        var card = elements.create('card', {style: style});
+
+        // Adicione o elemento do cartão ao formulário
+        card.mount('#card-element');
+
+        // Manipule erros em tempo real
+        card.addEventListener('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        // Manipule o envio do formulário
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                    // Exiba os erros no formulário
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    // Envie o token para o servidor
+                    stripeTokenHandler(result.token);
+                }
+            });
+        });
+
+        // Envie o token para o servidor
+        function stripeTokenHandler(token) {
+            var form = document.getElementById('payment-form');
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', token.id);
+            form.appendChild(hiddenInput);
+
+            // Adicione o tipo de pagamento selecionado ao formulário
+            var paymentType = document.getElementById('payment-type').value;
+            var paymentTypeInput = document.createElement('input');
+            paymentTypeInput.setAttribute('type', 'hidden');
+            paymentTypeInput.setAttribute('name', 'paymentType');
+            paymentTypeInput.setAttribute('value', paymentType);
+            form.appendChild(paymentTypeInput);
+
+            // Envie o formulário
+            form.submit();
+        }
+    </script>
+</body>
+</html>
