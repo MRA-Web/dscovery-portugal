@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 .hidden{
@@ -44,6 +45,7 @@ main {
     align-items: center;
     margin-left: 10%;
     padding: 30px;
+    height: 100vh;
 }
 
 /* parte da barra lateral */
@@ -203,7 +205,7 @@ body {
     display: none;
 }
 
-#multiStepForm {
+fieldset {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -231,7 +233,7 @@ body {
     display: block;
 }
 
-#multiStepForm h2 {
+fieldset h2 {
     margin-top: 0; /* Remove o espaço superior */
     margin-bottom: 20px; /* Ajuste de margem inferior do título */
     font-family: Trattatello, fantasy;
@@ -240,17 +242,17 @@ body {
     font-weight: 400;
 }
 
-#multiStepForm label {
+fieldset label {
     display: block;
     margin-bottom: 10px;
     font-size: 14px; /* Aumenta o tamanho da fonte */
     text-align: left;
 }
 
-#multiStepForm input[type="text"], 
-#multiStepForm input[type="tel"], 
-#multiStepForm input[type="email"], 
-#multiStepForm input[type="date"] {
+fieldset input[type="text"], 
+fieldset input[type="tel"], 
+fieldset input[type="email"], 
+fieldset input[type="date"] {
     width: calc(100% - 20px);
     padding: 12px 15px; /* Aumenta o padding */
     border: none;
@@ -419,10 +421,43 @@ body {
 }
 
 #resto {
- margin-top: 50px;
- margin-bottom: 10px;
+ margin-top: 30px;
+ margin-bottom: 20px;
+ 
 
 }
+
+.step-2 {
+    margin-top: 50px; /* Ajuste a margem superior para que fique na mesma altura do step-1 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajuste a largura para que seja igual ao step-1 */
+    max-width: 500px; /* Ajuste a largura máxima para que seja igual ao step-1 */
+}
+
+.step-2 input{
+    width: 100%;
+}
+
+.step-1 {
+    margin-top: 50px; /* Ajuste a margem superior para que fique na mesma altura do step-1 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajuste a largura para que seja igual ao step-1 */
+    max-width: 500px; /* Ajuste a largura máxima para que seja igual ao step-1 */
+}
+
+
 
 .step-1{
 margin-top: 550px !important;
@@ -430,11 +465,12 @@ box-sizing: border-box;
 }
 
 
-
-.step-2 input {
-    width: calc(100% - 20px); 
-    box-sizing: border-box; 
+.step-2{
+    margin-top: 270px !important; 
+    margin-bottom: 20px; 
+    box-sizing: border-box;
 }
+
 
 
 .form-step input[type="file"] {
@@ -594,20 +630,21 @@ box-sizing: border-box;
 @media screen and (max-width: 1050px) {
     
     body {
-        display: flex;
-        justify-items: center;
-        width: 100% !important;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        grid-template-areas: 'main' 'header';
-        flex-direction: column;
-        width: fit-content;
-        height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
-        margin: 0; /* Remove margens padrão */
-        min-height: 100vh;
-        box-sizing: border-box;
-        
+    display: flex;
+    justify-items: center;
+    width: 100% !important;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 'main' 'header';
+    flex-direction: column;
+    width: fit-content;
+    height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+    margin: 0; /* Remove margens padrão */
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative; /* Adiciona posição relativa ao body */
+
     }
 
     header {
@@ -617,27 +654,48 @@ box-sizing: border-box;
         box-shadow: 0px 3px 10px rgb(0, 0, 0);
         height: 10%;
         width: 100%;
-        position: absolute;
+        position: absolute; /* Adiciona posição absoluta ao header */
         z-index: 10;
         bottom: 0%;
         margin-bottom: 0;
         display: flex;
-        top: 112%;
+        top: 115%;
         
         
     }
+    #multiStepForm {
+        min-height: 500px; /* Ajuste a altura conforme necessário */
+    }
+    #resto {
+        min-height: 300px; /* Ajuste a altura conforme necessário */
+    }
+    #resto {
+        height: 300px; /* Ajuste a altura conforme necessário */
+    }
+    header {
+        min-height: 100px; /* Ajuste a altura conforme necessário */
+    }
+    header {
+        height: 100px; /* Ajuste a altura conforme necessário */
+    }
+    
 
     main {
-        flex-wrap: unset;
-        margin: 0;
-        width: 100%;
-        grid-area: main;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex: 1;
-        padding-bottom: 60px;
-    }
+    
+    flex-wrap: unset;
+    margin: 0;
+    width: 100%;
+    grid-area: main;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    padding-bottom: 60px;
+    height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
+    padding: 20px; /* Adiciona um espaçamento interno ao main */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+}
+
 
     .logo-home {
         height: 100%;
@@ -749,18 +807,14 @@ box-sizing: border-box;
     }
 
     /* formulário */
-    #multiStepForm {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff;
-        padding: 40px; /* aumenta o padding */
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        max-width: 500px; /* aumenta a largura máxima */
-    }
 
+    .step-1{
+        margin-top: 520px !important;
+    }
+    .step-2{
+        margin-top: 120px !important; 
+    }
+    
     #multiStepForm .form-step {
         display: none;
     }
@@ -864,7 +918,7 @@ box-sizing: border-box;
     }
     
 #resto{
-    margin-top: 130px;
+    margin-top: 150px;
     margin-bottom: 30px;
 }
 #multiStepForm .form-step.step-2 {
