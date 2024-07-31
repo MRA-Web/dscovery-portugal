@@ -6,6 +6,7 @@
     border: none;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .hidden{
@@ -28,10 +29,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: grid;
-    /* grid-template-columns: header main; */
+    display: flex;
     height: 100vh;
     background-color: #f0f0f0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 main {
@@ -40,6 +44,7 @@ main {
     align-items: center;
     margin-left: 10%;
     padding: 30px;
+    height: 100vh;
 }
 
 /* parte da barra lateral */
@@ -48,7 +53,6 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    align-content: center !important;
     background: linear-gradient(180deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
     box-shadow: 0px 3px 10px rgb(0, 0, 0);
     height: 100%;
@@ -56,6 +60,9 @@ header {
     position: fixed;
     z-index: 1;
     top: 0;
+    left: 0; 
+    bottom: 0; 
+    margin: 0;
 }
 
 .logo-home {
@@ -175,16 +182,45 @@ header {
 }
 
 /* parte do formulário em si na main */
-#multiStepForm {
-    text-align: center; /* centraliza o texto */
+body {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Cor de fundo para visualização */
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+fieldset {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
-    padding: 40px; /* aumenta o padding */
+    padding: 30px; 
     border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 500px; /* aumenta a largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; 
+    margin-top: 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box; 
+    min-height: 80vh; /* Ajuste de altura mínima */
+    overflow-y: auto; /* Scroll interno */
 }
 
 #multiStepForm .form-step {
@@ -195,117 +231,341 @@ header {
     display: block;
 }
 
-#multiStepForm h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
+fieldset h2 {
+    margin-top: 0; /* Remove o espaço superior */
+    margin-bottom: 20px; /* Ajuste de margem inferior do título */
     font-family: Trattatello, fantasy;
     font-size: 36px; 
     color: #131c6c;
     font-weight: 400;
 }
 
-#multiStepForm label {
+fieldset label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 14px; /* aumenta o tamanho da fonte */
+    margin-bottom: 10px;
+    font-size: 14px; /* Aumenta o tamanho da fonte */
     text-align: left;
-    width: 100%;
 }
 
-#multiStepForm input[type="text"], input[type="tel"], input[type="email"], input[type="date"] {
+fieldset input[type="text"], 
+fieldset input[type="tel"], 
+fieldset input[type="email"], 
+fieldset input[type="date"] {
     width: calc(100% - 20px);
-    padding: 12px 15px; /* aumenta o padding */
+    padding: 12px 15px; /* Aumenta o padding */
     border: none;
     border-radius: 8px;
-    margin: 8px 0;
-    font-size: 14px; 
+    margin: 8px 0; 
+    font-size: 14px; /* Aumenta o tamanho da fonte */
     outline: none;
     background-color: #eee;
 }
-#multiStepForm input[type="file"] {
-    display: none;
-  }
-  
-  .traduzir {
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    border-radius: 4px;
-    font-size: 16px;
-    transition: background-color 0.3s, border 0.3s;
-  }
-  
-  .traduzir i {
-    margin-right: 8px;
-  }
+
 
   
 #multiStepForm button {
-    padding: 12px 50px; 
+    padding: 10px 40px;
     background-color: rgba(9,54,121,1);
     border-color: #fff;
     color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 15px;
     cursor: pointer;
     font-size: 14px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 #multiStepForm button:hover {
     background-color: #0056b3;
 }
 
-.holder {
+#prev2, #next2 {
+    margin-top: 120px !important;
+}
+
+#prev3, #next3 {
+    margin-top: 50px !important;
+}
+
+
+
+#decisao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 30px;
+    text-align: center;
+}
+
+#decisao h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card i {
+    font-size: 50px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+/* Adicionando animação ao card */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#decisao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 30px;
+    text-align: center;
+    width: auto;
+}
+
+#decisao h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #131c6c;
+    font-family: Tratattello, fantasy;
+    font-weight: 500;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card i {
+    font-size: 50px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+/* Adicionando animação ao card */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#decisao button {
+    background-color: #004080;
+    width: 150px;
+    height: 50px;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    height: 100%;
-    padding: 10% 30%;
-    background: linear-gradient(180deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
+    text-align: center;
 }
+
+/* Efeito hover */
+#decisao button:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ativo */
+#decisao button:active {
+    background-color: #002050;
+    transform: scale(1);
+}
+
+#resto {
+ margin-top: 30px;
+ margin-bottom: 20px;
+ 
+
+}
+
+.step-2 {
+    margin-top: 50px; /* Ajuste a margem superior para que fique na mesma altura do step-1 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajuste a largura para que seja igual ao step-1 */
+    max-width: 500px; /* Ajuste a largura máxima para que seja igual ao step-1 */
+}
+
+.step-2 input{
+    width: 100%;
+}
+
+.step-1 {
+    margin-top: 50px; /* Ajuste a margem superior para que fique na mesma altura do step-1 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajuste a largura para que seja igual ao step-1 */
+    max-width: 500px; /* Ajuste a largura máxima para que seja igual ao step-1 */
+}
+
+
+
+.step-1{
+margin-top: 250px !important;
+box-sizing: border-box;
+}
+
+
+.step-2{
+    margin-top: 70px !important; 
+    margin-bottom: 20px; 
+    box-sizing: border-box;
+}
+
+
+
+.form-step input[type="file"] {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    
+  }
+
+
 
 /* responsividade */
 @media screen and (max-width: 1050px) {
     body {
-        display: grid;
-        justify-items: center;
-        width: 100% !important;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        grid-template-areas: 'main' 'header';
-        flex-direction: column;
-        width: fit-content;
+
+    display: flex;
+    justify-items: center;
+    width: 100% !important;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 'main' 'header';
+    flex-direction: column;
+    width: fit-content;
+    height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+    margin: 0; /* Remove margens padrão */
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative; /* Adiciona posição relativa ao body */
+}
+    
+header {
+
+    flex-direction: row;
+    background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
+    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+    height: 10%;
+    width: 100%;
+    position: absolute; /* Adiciona posição absoluta ao header */
+    z-index: 10;
+    bottom: 0%;
+    margin-bottom: 0;
+    display: flex;
+    top: 115%;
+      
     }
 
-    header {
-        grid-area: header;
-        flex-direction: row;
-        background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
-        box-shadow: 0px 3px 10px rgb(0, 0, 0);
-        height: 10%;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-        bottom: 0%;
-        margin-bottom: 0;
-        top: 100vh;
-        
+    #multiStepForm {
+        min-height: 500px; /* Ajuste a altura conforme necessário */
     }
+    #resto {
+        min-height: 300px; /* Ajuste a altura conforme necessário */
+    }
+    #resto {
+        height: 300px; /* Ajuste a altura conforme necessário */
+    }
+    header {
+        min-height: 100px; /* Ajuste a altura conforme necessário */
+    }
+    header {
+        height: 100px; /* Ajuste a altura conforme necessário */
+    }
+
 
     main {
-        flex-wrap: unset;
-        margin: 0;
-        width: 100%;
-        grid-area: main;
-        justify-content: center;
-        align-items: center;
-    }
+        
+    flex-wrap: unset;
+    margin: 0;
+    width: 100%;
+    grid-area: main;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    padding-bottom: 60px;
+    height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
+    padding: 20px; /* Adiciona um espaçamento interno ao main */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+}
 
     .logo-home {
         height: 100%;
@@ -327,10 +587,6 @@ header {
         height: 40px;
     }
 
-    #holder {
-        margin-bottom: 0;
-        padding: 15% 10%;
-    }
 
     /* parte do menu de idiomas */
     .language-selector {
@@ -420,18 +676,14 @@ header {
     }
 
     /* formulário */
-    #multiStepForm {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff;
-        padding: 40px; /* aumenta o padding */
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        max-width: 500px; /* aumenta a largura máxima */
-    }
 
+    .step-1{
+        margin-top: 520px !important;
+    }
+    .step-2{
+        margin-top: 120px !important; 
+    }
+    
     #multiStepForm .form-step {
         display: none;
     }
@@ -484,4 +736,63 @@ header {
     #multiStepForm button:hover {
         background-color: #0056b3;
     }
+    #decisao h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-family: 'Lilita One', sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+        color: #131c6c;
+    }
+    #decisao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: #fff;
+        padding: 70px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 40px); /* Garante que o elemento tenha um espaçamento apropriado nas laterais */
+        max-width: 500px; /* Define um limite máximo para a largura do elemento */
+        margin: 20px auto; /* Adiciona margem automática para centralizar horizontalmente */
+    }
+
+    .card {
+        width: 100%; 
+        max-width: 200px;
+        padding: 3px; 
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: #fff;
+        margin: 5px; 
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 8px;
+    }
+
+    .card button {
+        margin-top: 5px;
+    }
+    
+#resto{
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+#multiStepForm .form-step.step-2 {
+    padding-bottom: 60px;
+    z-index: 100; /* Garante que há espaço para o header fixo */
+}
+
 }
