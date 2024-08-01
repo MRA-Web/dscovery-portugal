@@ -771,8 +771,8 @@ header {
         padding: 3px; 
         box-sizing: border-box;
         border-radius: 10px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
         text-align: center;
+        border: none;
         background-color: #fff;
         margin: 5px; 
         flex-direction: column;
