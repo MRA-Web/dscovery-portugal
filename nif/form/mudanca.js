@@ -2,7 +2,9 @@ let divEscolhida;
 let form;
 let fieldsets;
 let currentStep = 0;
+let circulos = document.querySelectorAll(".circulo");
 
+circulos[0].classList.add("active");
 
 function formAdult(){
   document.getElementById("decisao").classList.add("hidden");
@@ -14,7 +16,15 @@ function formAdult(){
 
 function revertAdult(){
   document.getElementById("div-adult").classList.add("hidden");
-  document.getElementById("decisao").classList.remove("hidden")
+  document.getElementById("decisao").classList.remove("hidden");
+
+  circulos[0].classList.add("active");
+  circulos[1].classList.remove("active");
+
+  divEscolhida = 0;
+  form = 0;
+  fieldsets = 0;
+  currentStep = 0;
 }
 
 function formChild(){
@@ -27,7 +37,15 @@ function formChild(){
 
 function revertChild(){
   document.getElementById("div-child").classList.add("hidden");
-  document.getElementById("decisao").classList.remove("hidden")
+  document.getElementById("decisao").classList.remove("hidden");
+
+  circulos[0].classList.add("active");
+  circulos[1].classList.remove("active");
+
+  divEscolhida = 0;
+  form = 0;
+  fieldsets = 0;
+  currentStep = 0;
 }
 
 function start(choice) {
@@ -36,17 +54,27 @@ function start(choice) {
   fieldsets = form.querySelectorAll('fieldset');
   currentStep = 0;
 
-  for(let i = 0; i < fieldsets.length; i++){
-    console.log(fieldsets[i]);
-  }
+  circulos[0].classList.remove("active");
+  circulos[1].classList.add("active");
 
-
+  // for(let i = 0; i < fieldsets.length; i++){
+  //   console.log(fieldsets[i]);
+  // }
 
   function showStep(step) {
-    console.log("tentando mostrar" + step);
+    console.log("tentando mostrar o passo " + step);
+    console.log(fieldsets[step])
+    console.log("esse é o passo")
+
+    console.log("\n\n\n\n")
     fieldsets.forEach((fieldset, index) => {
       fieldset.classList.toggle('active', index === step);
+    }); 
+
+    circulos.forEach((circulo, index) => {
+      circulo.classList.toggle('active', index === step+1);
     });
+
   }
 
   function validateStep(step) {

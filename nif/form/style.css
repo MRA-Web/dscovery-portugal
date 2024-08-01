@@ -13,14 +13,6 @@
     display: none !important;
 }
 
-fieldset {
-    display: none;
-}
-
-fieldset.active {
-    display: block;
-}
-
 .buttons {
     margin-top: 10px;
 }
@@ -92,6 +84,10 @@ header {
     text-align: center;
     align-content: center;
     transition: all 0.4s;
+}
+
+.circulo.active{
+    background-color: #0056b3 !important;
 }
 
 /* seletor de idiomas */
@@ -518,22 +514,22 @@ box-sizing: border-box;
     min-height: 100vh;
     box-sizing: border-box;
     position: relative; /* Adiciona posição relativa ao body */
-}
-    
-header {
+    }
+        
+    header {
 
-    flex-direction: row;
-    background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
-    box-shadow: 0px 3px 10px rgb(0, 0, 0);
-    height: 10%;
-    width: 100%;
-    position: absolute; /* Adiciona posição absoluta ao header */
-    z-index: 10;
-    bottom: 0%;
-    margin-bottom: 0;
-    display: flex;
-    top: 115%;
-      
+        flex-direction: row;
+        background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
+        box-shadow: 0px 3px 10px rgb(0, 0, 0);
+        height: 10%;
+        width: 100%;
+        position: absolute; /* Adiciona posição absoluta ao header */
+        z-index: 10;
+        bottom: 0%;
+        margin-bottom: 0;
+        display: flex;
+        top: 115%;
+        
     }
 
     #multiStepForm {
