@@ -338,9 +338,10 @@ main {
     cursor: pointer;
     padding: 10px; /* Aumenta o padding */
     background-color: #ffffff;
-    border: 2px solid #170679;
+    border: 2px solid #0b275a;
     transition: background-color 0.3s ease;
     display: flex;
+    font-weight: 600;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
@@ -352,7 +353,7 @@ main {
 .answer {
   overflow: hidden;
   padding: 0 15px;
-  border-left: 3px solid #170679;
+  border-left: 3px solid#0b275a;
   background-color: #ffffff;
   margin-bottom: 10px;
   transition: max-height 0.3s ease, padding 0.3s ease;

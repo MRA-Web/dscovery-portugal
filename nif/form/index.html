@@ -45,18 +45,58 @@
     </header>
       
     <main>
+        <!-- etapa 1 (decidir criança ou adulto)-->
         <section id="decisao" class="etapa">
-            <button onclick="formAdult()">Para um adulto</button>
-            <button onclick="formChild()">Para uma criança</button>
+            <h2>Escolha uma opção</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fas fa-user"></i>
+                    <button onclick="formAdult()"><p>Para um adulto</p></button>
+                </div>
+                <div class="card">
+                    <i class="fas fa-child"></i>
+                    <button onclick="formChild()"><p>Para uma criança</p></button>
+                </div>
+            </div>
         </section>
 
         <section id="resto">
 
             <!-- formulário caso seja adulto -->
+
+            <!-- 
+
+                /////////////////////////////////////////////
+                
+                aqui temos os seguintes names para os campos:
+                
+                /////////////////////////////////////////////
+            
+                nome
+
+                telefone
+
+                email
+
+                passaporteOuId
+
+                comprovanteEndereco
+
+                dataNascimento
+
+                numPassaporteOuId
+
+                validadePassaporteOuId
+
+                endereco
+            
+            -->
+
+
             <div class="holder hidden" id="div-adult">
                 <form id="multiStepForm">
         
-                    <!-- etapa 1 -->
+                    <!-- etapa 2 -->
                     <fieldset class="form-step active">
                         <h2 class="traduzir">Personal Information</h2>
                         <label for="nome" class="traduzir">Full Name:</label>
@@ -91,7 +131,7 @@
                     </fieldset>
                     
                     <!-- etapa 4 adulto -->
-                    <fieldset class="form-step">
+                    <fieldset class="form-step step-2">
                         <h2 class="traduzir">Final details</h2>
                         
                         <label for="dataNascimento" class="traduzir">Date of Birth:</label>
@@ -127,10 +167,47 @@
             </div>
 
             <!-- formulário caso seja criança -->
+
+            <!-- 
+                
+                /////////////////////////////////////////////
+                
+                aqui temos os seguintes names para os campos:
+                
+                /////////////////////////////////////////////
+
+                nome
+
+                telefone
+
+                email
+
+                passaporteOuIdCrianca
+                
+                passaporteOuIdResponsavel
+
+                comprovanteEndereco
+
+                dataNascimentoCrianca
+                
+                numPassaporteOuIdCrianca
+
+                validadePassaporteOuIdCrianca
+
+                dataNascimentoResponsavel
+
+                numPassaporteOuIdResponsavel
+
+                validadePassaporteOuIdResponsavel
+
+                endereco
+            
+            -->
+
             <div class="holder hidden" id="div-child">
                 <form id="multiStepForm">
         
-                    <!-- etapa 1 -->
+                    <!-- etapa 2 -->
                     <fieldset class="form-step active">
                         <h2 class="traduzir">Personal Information</h2>
                         <label for="nome" class="traduzir">Full Name:</label>
@@ -170,7 +247,7 @@
                     </fieldset>
 
                     <!-- etapa 4 criança -->
-                    <fieldset class="form-step">
+                    <fieldset class="form-step step-1">
                         <h2 class="traduzir">Final details</h2>
                         
                         <!-- info sobre a criança -->
@@ -227,23 +304,5 @@
     <script src="mudanca.js"></script>
 </body>
 
-<style>
-    #decisao{
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
 
-
-    #decisao>button{
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 10px;
-        border-radius: 10px;
-        width: 100px;
-        padding: 30px;
-        color: #000;
-        background-color: aliceblue;
-        cursor: pointer;
-    }
-</style>
 </html>

@@ -2,6 +2,8 @@
 
 let currentStep = 0;
 let allForms = [];
+let etapa1 = 0;
+let idiomaAtual;
 const aTraduzir = document.querySelectorAll('.traduzir');
 const formSteps = document.querySelectorAll('.form-step');
 const formNumbers = document.querySelectorAll('.circulo');
@@ -134,7 +136,7 @@ const traducoesItaliano = [
     </ul>
 `,
 "Informazioni personali",
-"Nome completo:",
+"Nome e cognome:",
 "Telefono (con prefisso internazionale):",
 "Email:",
 "Successivo",
@@ -290,6 +292,8 @@ const traducoesPortugues = [
 
 function traduzir(idioma){
 
+    idiomaAtual = idioma;
+
     if(idioma == "en"){
         for (let i = 0; i < aTraduzir.length && i < traducoesIngles.length; i++) {
             aTraduzir[i].innerHTML = traducoesIngles[i];
@@ -328,129 +332,8 @@ function traduzir(idioma){
 
 }
 
-function showStep(step) {
-    console.log("showStep(" + step + ")\n")
-    formSteps.forEach((stepElement, index) => {
-        stepElement.style.display = index === step ? 'block' : 'none';
-    });
-    formNumbers.forEach((stepNumber, index) => {
-        stepNumber.style.backgroundColor = index === step ? 'rgba(9,54,121,1)' : 'aliceblue';
-        stepNumber.style.color = index === step ? 'aliceblue' : 'rgba(9,54,121,1)';
-    });
-}
-
-function nextStep() {
-    console.log("nextStep() \n")
-    if (currentStep < formSteps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
-    }
-}
-
-function prevStep() {
-    console.log("prevStep() \n")
-    if (currentStep > 0) {
-        currentStep--;
-        showStep(currentStep);
-    }
-}
-
-function goStep(number){
-    console.log("goStep() \n")
-    currentStep = number
-    showStep(currentStep)
-}
-
-function handleAge(event) {
-    ageValue = '';
-
-    console.log("handleAge() \n")
-    event.preventDefault();
-    const form = event.target;
-    allForms.push(form)
-
-    var ageValue = form.querySelector('input[name="idade"]:checked').value;
-    
-    if (ageValue === 'adulto') {
-        handleAdult(form);
-    } else if (ageValue === 'crianca') {
-        handleChild(form);
-    }
-
-    ageValue = '';
-}
-
-function handleAdult(form){
-    document.getElementById("adulto-crianca").innerHTML = `
-    <h2 class="traduzir">CASO ADULTO</h2>
-    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
-    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
-    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
-
-    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
-    <button type="submit" class="traduzir">Next</button>
-    `
-
-    if (form.checkValidity()) {
-        nextStep();
-    } else {
-        form.reportValidity();
-    }
-}
-function handleChild(form){
-    console.log("handleChild()")
-    document.getElementById("adulto-crianca").innerHTML = `
-    <h2 class="traduzir">CASO CRIANÇA</h2>
-    <label for="passaporte" class="traduzir">Do you have an identity card?</label>
-    <label class="traduzir"><input type="radio" name="passaporte" value="sim"> Yes</label>
-    <label class="traduzir"><input type="radio" name="passaporte" value="nao"> No</label>
-
-    <button type="button" onclick="prevStep()" class="traduzir">Previous</button>
-    <button type="submit" class="traduzir">Next</button>
-    `
-
-    if (form.checkValidity()) {
-        nextStep();
-    } else {
-        form.reportValidity();
-    }
-}
-
-
-function handleNext(event) {
-    console.log("handleNext() \n")
-    event.preventDefault();
-    const form = event.target;
-    allForms.push(form)
-
-    if (form.checkValidity()) {
-        nextStep();
-    } else {
-        form.reportValidity();
-    }
-}
-
-function handleSubmit(event) {
-    console.log("handleSubmit() \n")
-    event.preventDefault();
-    const form = event.target;
-    allForms.push(form)
-
-    if (form.checkValidity()) {
-        alert('Formulário enviado com sucesso!');
-    } else {
-        form.reportValidity();
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showStep(currentStep);
-});
-
 // window.addEventListener('beforeunload', function (event) {
 //     var mensagem = "Tem certeza que deseja sair desta página? Você perderá o seu progresso.";
 //     event.returnValue = mensagem; // Padrão para a maioria dos navegadores
 //     return mensagem; // Para o Chrome
 // });
-
-showStep(currentStep);

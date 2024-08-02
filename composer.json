@@ -1,0 +1,20 @@
+{
+    "name": "rodri/discovery-portugal",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rodri\\DiscoveryPortugal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RodrigoAlSantos",
+            "email": "rodrigochoradms@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "stripe/stripe-php": "^15.3"
+    }
+}

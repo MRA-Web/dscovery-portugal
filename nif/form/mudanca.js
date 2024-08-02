@@ -3,6 +3,10 @@ let formCrianca;
 let fieldsetsCrianca;
 let currentStep = 0;
 
+let circulos = document.querySelectorAll(".circulo");
+
+circulos[0].classList.add("active");
+
 divCrianca = document.getElementById("div-child");
 formCrianca = divCrianca.querySelector('#multiStepForm');
 fieldsetsCrianca = formCrianca.querySelectorAll('fieldset');
@@ -17,6 +21,10 @@ function showStep(step) {
   globalFieldsets.forEach((fieldset, index) => {
     fieldset.classList.toggle('active', index === step);
   });
+
+  circulos.forEach((circulo, index) => {
+    circulo.classList.toggle('active', index === step+1);
+  });
 }
 
 function formAdult(){
@@ -29,7 +37,10 @@ function formAdult(){
 
 function revertAdult(){
   document.getElementById("div-adult").classList.add("hidden");
-  document.getElementById("decisao").classList.remove("hidden")
+  document.getElementById("decisao").classList.remove("hidden");
+
+  circulos[0].classList.add("active");
+  circulos[1].classList.remove("active");
 }
 
 function formChild(){
@@ -42,7 +53,10 @@ function formChild(){
 
 function revertChild(){
   document.getElementById("div-child").classList.add("hidden");
-  document.getElementById("decisao").classList.remove("hidden")
+  document.getElementById("decisao").classList.remove("hidden");
+
+  circulos[0].classList.add("active");
+  circulos[1].classList.remove("active");
 }
 
 function validateStep(step) {
@@ -141,3 +155,9 @@ formAdulto.addEventListener('submit', function (event) {
     event.preventDefault();
   }
 });
+
+// window.addEventListener('beforeunload', function (event) {
+//     var mensagem = "Tem certeza que deseja sair desta página? Você perderá o seu progresso.";
+//     event.returnValue = mensagem; // Padrão para a maioria dos navegadores
+//     return mensagem; // Para o Chrome
+// });
