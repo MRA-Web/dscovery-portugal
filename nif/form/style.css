@@ -88,6 +88,9 @@ header {
 
 .circulo.active{
     background-color: #0056b3 !important;
+    color: white !important;
+    border: 2px solid #ddd  ;
+    
 }
 
 /* seletor de idiomas */

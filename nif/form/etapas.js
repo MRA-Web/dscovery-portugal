@@ -31,6 +31,9 @@ function formAdult(){
   document.getElementById("decisao").classList.add("hidden");
   document.getElementById("div-adult").classList.remove("hidden")
 
+  circulos[1].classList.add("active");
+  circulos[0].classList.remove("active");
+
   atual = "adult";
   globalFieldsets = fieldsetsAdulto;
 }
@@ -46,6 +49,9 @@ function revertAdult(){
 function formChild(){
   document.getElementById("decisao").classList.add("hidden");
   document.getElementById("div-child").classList.remove("hidden")
+
+  circulos[1].classList.add("active");
+  circulos[0].classList.remove("active");
   
   atual = "child";
   globalFieldsets = fieldsetsCrianca;
