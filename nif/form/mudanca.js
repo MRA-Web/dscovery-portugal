@@ -1,15 +1,30 @@
-let divEscolhida;
-let form;
-let fieldsets;
+let divCrianca;
+let formCrianca;
+let fieldsetsCrianca;
 let currentStep = 0;
 
+divCrianca = document.getElementById("div-child");
+formCrianca = divCrianca.querySelector('#multiStepForm');
+fieldsetsCrianca = formCrianca.querySelectorAll('fieldset');
+
+divAdulto = document.getElementById("div-adult");
+formAdulto = divAdulto.querySelector('#multiStepForm');
+fieldsetsAdulto = formAdulto.querySelectorAll('fieldset');
+
+let globalFieldsets;
+
+function showStep(step) {
+  globalFieldsets.forEach((fieldset, index) => {
+    fieldset.classList.toggle('active', index === step);
+  });
+}
 
 function formAdult(){
   document.getElementById("decisao").classList.add("hidden");
   document.getElementById("div-adult").classList.remove("hidden")
 
   atual = "adult";
-  start("#div-adult");
+  globalFieldsets = fieldsetsAdulto;
 }
 
 function revertAdult(){
@@ -22,7 +37,7 @@ function formChild(){
   document.getElementById("div-child").classList.remove("hidden")
   
   atual = "child";
-  start("#div-child");
+  globalFieldsets = fieldsetsCrianca;
 }
 
 function revertChild(){
@@ -30,26 +45,8 @@ function revertChild(){
   document.getElementById("decisao").classList.remove("hidden")
 }
 
-function start(choice) {
-  divEscolhida = document.querySelector(choice);
-  form = divEscolhida.querySelector('#multiStepForm');
-  fieldsets = form.querySelectorAll('fieldset');
-  currentStep = 0;
-
-  for(let i = 0; i < fieldsets.length; i++){
-    console.log(fieldsets[i]);
-  }
-}
-
-
-function showStep(step) {
-  fieldsets.forEach((fieldset, index) => {
-    fieldset.classList.toggle('active', index === step);
-  });
-}
-
 function validateStep(step) {
-  const inputs = fieldsets[step].querySelectorAll('input');
+  const inputs = globalFieldsets[step].querySelectorAll('input');
   for (const input of inputs) {
     if (!input.checkValidity()) {
       input.reportValidity();
@@ -59,43 +56,87 @@ function validateStep(step) {
   return true;
 }
 
-divEscolhida.querySelector('#next1').addEventListener('click', function () {
+divCrianca.querySelector('#next1').addEventListener('click', function () {
   if (validateStep(currentStep)) {
     currentStep++;
     showStep(currentStep);
   }
 });
 
-divEscolhida.querySelector('#next2').addEventListener('click', function () {
+divCrianca.querySelector('#next2').addEventListener('click', function () {
   if (validateStep(currentStep)) {
     currentStep++;
     showStep(currentStep);
   }
 });
 
-divEscolhida.querySelector('#next3').addEventListener('click', function () {
+divCrianca.querySelector('#next3').addEventListener('click', function () {
   if (validateStep(currentStep)) {
     currentStep++;
     showStep(currentStep);
   }
 });
 
-divEscolhida.querySelector('#prev2').addEventListener('click', function () {
+divCrianca.querySelector('#prev2').addEventListener('click', function () {
   currentStep--;
   showStep(currentStep);
 });
 
-divEscolhida.querySelector('#prev3').addEventListener('click', function () {
+divCrianca.querySelector('#prev3').addEventListener('click', function () {
   currentStep--;
   showStep(currentStep);
 });
 
-divEscolhida.querySelector('#prev4').addEventListener('click', function () {
+divCrianca.querySelector('#prev4').addEventListener('click', function () {
   currentStep--;
   showStep(currentStep);
 });
 
-form.addEventListener('submit', function (event) {
+formCrianca.addEventListener('submit', function (event) {
+  if (!validateStep(currentStep)) {
+    event.preventDefault();
+  }
+});
+
+
+
+divAdulto.querySelector('#next1').addEventListener('click', function () {
+  if (validateStep(currentStep)) {
+    currentStep++;
+    showStep(currentStep);
+  }
+});
+
+divAdulto.querySelector('#next2').addEventListener('click', function () {
+  if (validateStep(currentStep)) {
+    currentStep++;
+    showStep(currentStep);
+  }
+});
+
+divAdulto.querySelector('#next3').addEventListener('click', function () {
+  if (validateStep(currentStep)) {
+    currentStep++;
+    showStep(currentStep);
+  }
+});
+
+divAdulto.querySelector('#prev2').addEventListener('click', function () {
+  currentStep--;
+  showStep(currentStep);
+});
+
+divAdulto.querySelector('#prev3').addEventListener('click', function () {
+  currentStep--;
+  showStep(currentStep);
+});
+
+divAdulto.querySelector('#prev4').addEventListener('click', function () {
+  currentStep--;
+  showStep(currentStep);
+});
+
+formAdulto.addEventListener('submit', function (event) {
   if (!validateStep(currentStep)) {
     event.preventDefault();
   }
