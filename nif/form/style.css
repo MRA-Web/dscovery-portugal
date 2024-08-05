@@ -182,7 +182,7 @@ fieldset {
     max-width: 800px;
     margin: 0 auto;
     box-sizing: border-box; 
-    min-height: 80vh; /* Ajuste de altura mínima */
+  
     overflow-y: auto; /* Scroll interno */
 }
 #multiStepForm .form-step {
