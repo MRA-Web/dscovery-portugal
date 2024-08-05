@@ -365,6 +365,15 @@ main hr {
         margin-bottom: 100px;
         margin-right: 0;
     }
+    .content-main h2{
+        font-size: 35px;
+    }
+    .content-main img{
+        width: 100%;
+    }
+    .content-main p{
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 1050px) {
