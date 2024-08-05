@@ -34,9 +34,6 @@ main {
     font-size: 19px;
 }
 
-.text-main-1{
-    margin-left: 55px;
-}
 .text-main-1 h1 {
     font-family: trattatello, fantasy;
     font-weight: 500;
@@ -362,6 +359,7 @@ main hr {
 @media screen and  (max-width: 1320px) {
     .image-main-1 img{
         zoom: 100%;
+        width: 100%;
         margin-bottom: 100px;
         margin-right: 0;
     }
@@ -487,7 +485,7 @@ main hr {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-right: 55px;
+       
     }
  
     .text-main-2 {
@@ -585,8 +583,8 @@ main hr {
     }
 
     .image-main-1 img {
-        margin-top: 25px;
-        width: 70%;
+        margin-top: 55px;
+        width: 100%;
         justify-self: center;
     }
     
