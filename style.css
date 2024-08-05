@@ -187,7 +187,7 @@ main {
     zoom: 125%;
     display: flex;
     float: right;
-    margin-right: 55px;
+    margin-right: 0;
 }
 
 
@@ -359,7 +359,13 @@ main hr {
 
 
 /* RESPONSIVE BODY */
-
+@media screen and  (max-width: 1320px) {
+    .image-main-1 img{
+        zoom: 100%;
+        margin-bottom: 100px;
+        margin-right: 0;
+    }
+}
 
 @media screen and (max-width: 1050px) {
     
