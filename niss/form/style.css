@@ -13,19 +13,9 @@
 .hidden{
     display: none !important;
 }
-
-fieldset {
-    display: none;
-}
-
-fieldset.active {
-    display: block;
-}
-
 .buttons {
     margin-top: 10px;
 }
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -38,7 +28,6 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
-
 main {
     display: flex;
     justify-content: center;
@@ -65,16 +54,12 @@ header {
     bottom: 0; 
     margin: 0;
 }
-
-
 .logo-home {
     display: block;
 }
-
 .logo-home img {
     width: 100%;
 }
-
 #etapas {
     display: flex;
     flex-direction: column;
@@ -83,7 +68,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
 .circulo {
     color: #000;
     background: aliceblue;
@@ -95,6 +79,12 @@ header {
     align-content: center;
     transition: all 0.4s;
 }
+.circulo.active {
+    background-color: #0056b3 !important;
+    color: white !important;
+    border: 2px solid #ddd  ;
+    
+}
 
 /* seletor de idiomas */
 .language-selector {
@@ -105,7 +95,6 @@ header {
     border-radius: 20px;
     height: min-content;
 }
-
 .idioma-atual-desktop {
     background-color: #012E40;
     color: white;
@@ -120,7 +109,6 @@ header {
     justify-content: space-evenly;
     transition: all 0.4s;
 }
-
 .language-selector-content {
     align-items: center;
     display: flex;
@@ -136,27 +124,23 @@ header {
     overflow: hidden;
     transition: all 0.4s;
 }
-
 .language-selector-content:hover {
     max-width: 400px !important;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     transition: all 0.4s;
 }
-
 .language-selector:hover .idioma-atual-desktop {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     transition: all 0.4s;
 }
-
 .idioma-atual-desktop:hover + .language-selector-content {
     max-width: 400px !important;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     transition: all 0.4s;
 }
-
 .opcao-idioma {
     color: black;
     text-decoration: none;
@@ -165,46 +149,24 @@ header {
     padding: 6px 6px;
     border-radius: 6px;
 }
-
 .opcao-idioma .icons-language {
     margin-right: 2px;
 }
-
 .opcao-idioma:hover {
     background-color: #ddd;
 }
-
 .opcao-idioma:hover .language-selector-content {
     max-height: 400px;
 }
-
 .icons-language {
     width: 20px;
     height: 20px;
 }
 
 /* parte do formulário em si na main */
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0; /* Cor de fundo para visualização */
-}
-
-.holder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
 .hidden {
     display: none;
 }
-
 fieldset {
     text-align: center;
     display: flex;
@@ -224,15 +186,12 @@ fieldset {
 
     overflow-y: auto; /* Scroll interno */
 }
-
 #multiStepForm .form-step {
     display: none;
 }
-
 #multiStepForm .form-step.active {
     display: block;
 }
-
 fieldset h2 {
     margin-top: 0; /* Remove o espaço superior */
     margin-bottom: 20px; /* Ajuste de margem inferior do título */
@@ -241,14 +200,12 @@ fieldset h2 {
     color: #131c6c;
     font-weight: 400;
 }
-
 fieldset label {
     display: block;
     margin-bottom: 10px;
     font-size: 14px; /* Aumenta o tamanho da fonte */
     text-align: left;
 }
-
 fieldset input[type="text"], 
 fieldset input[type="tel"], 
 fieldset input[type="email"], 
@@ -262,7 +219,6 @@ fieldset input[type="date"] {
     outline: none;
     background-color: #eee;
 }
-
 #multiStepForm button {
     padding: 10px 40px;
     background-color: rgba(9,54,121,1);
@@ -278,11 +234,9 @@ fieldset input[type="date"] {
     margin-bottom: 10px;
     margin-left: 10px; /* Adiciona o gap entre botões */
 }
-
 #multiStepForm button:hover {
     background-color: #0056b3;
 }
-
 #decisao {
     display: flex;
     flex-direction: column;
@@ -298,14 +252,15 @@ fieldset input[type="date"] {
     transform: translate(-50%, -50%);
     margin-left: 30px;
     text-align: center;
+    width: auto;
 }
-
 #decisao h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #004080;
+    font-family: Tratattello, fantasy;
+    font-weight: 500;
 }
-
 .card {
     display: flex;
     flex-direction: column;
@@ -317,7 +272,6 @@ fieldset input[type="date"] {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card i {
     font-size: 50px;
     color: #004080;
@@ -329,55 +283,10 @@ fieldset input[type="date"] {
     transform: translateY(-10px);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-
-#decisao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-left: 30px;
-    text-align: center;
-    width: auto;
-}
-
-#decisao h2 {
-    font-size: 34px;
-    margin-bottom: 20px;
-    color: #131c6c;
-    font-family: Tratattello, fantasy;
-    font-weight: 500;
-}
-
 .cards-container {
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card i {
-    font-size: 50px;
-    color: #004080;
-    margin-bottom: 10px;
 }
 
 /* Adicionando animação ao card */
@@ -406,29 +315,24 @@ fieldset input[type="date"] {
     align-items: center;
     text-align: center;
 }
-
 /* Efeito hover */
 #decisao button:hover {
     background-color: #003366;
     transform: scale(1.05);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
-
 /* Efeito ativo */
 #decisao button:active {
     background-color: #002050;
     transform: scale(1);
 }
-
 #resto {
  margin-top: 30px;
  margin-bottom: 20px;
- 
-
 }
-
 .step-2 {
-    margin-top: 50px; /* Ajuste a margem superior para que fique na mesma altura do step-1 */
+    margin-top: 270px !important; 
+    margin-bottom: 20px; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -436,16 +340,14 @@ fieldset input[type="date"] {
     padding: 60px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ajuste a largura para que seja igual ao step-1 */
-    max-width: 500px; /* Ajuste a largura máxima para que seja igual ao step-1 */
+    width: 100%; 
+    max-width: 500px;
 }
-
 .step-2 input{
     width: 100%;
 }
-
 .step-1 {
-    margin-top: 50px; /* Ajuste a margem superior para que fique na mesma altura do step-1 */
+    margin-top: 550px !important;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -453,179 +355,19 @@ fieldset input[type="date"] {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ajuste a largura para que seja igual ao step-1 */
-    max-width: 500px; /* Ajuste a largura máxima para que seja igual ao step-1 */
+    width: 100%;
+    max-width: 500px;
 }
-
-
-
-.step-1{
-margin-top: 550px !important;
-box-sizing: border-box;
-}
-
-
-.step-2{
-    margin-top: 270px !important; 
-    margin-bottom: 20px; 
-    box-sizing: border-box;
-}
-
-
-
 .form-step input[type="file"] {
     display: block;
     margin-bottom: 5px;
 }
-
-
-
-
-.modal {
-    width: fit-content;
-    height: fit-content;
-    background: #FFFFFF;
-    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 26px;
-    max-width: 450px;
-  }
-  
-  .form {
+.form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    
-  }
-
-  .payment--options {
-    width: calc(100% - 40px);
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
-    gap: 20px;
-    padding: 10px;
-  }
-  
-  .payment--options button {
-    height: 55px;
-    background: #F2F2F2;
-    border-radius: 11px;
-    padding: 0;
-    border: 0;
-    outline: none;
-  }
-  
-  .payment--options button svg {
-    height: 18px;
-  }
-  
-  .payment--options button:last-child svg {
-    height: 22px;
-  }
-  
-  .separator {
-    width: calc(100% - 20px);
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 10px;
-    color: #8B8E98;
-    margin: 0 10px;
-  }
-  
-  .separator > p {
-    word-break: keep-all;
-    display: block;
-    text-align: center;
-    font-weight: 600;
-    font-size: 11px;
-    margin: auto;
-  }
-  
-  .separator .line {
-    display: inline-block;
-    width: 100%;
-    height: 1px;
-    border: 0;
-    background-color: #e8e8e8;
-    margin: auto;
-  }
-  
-  .credit-card-info--form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .input_container {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .split {
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-    gap: 15px;
-  }
-  
-  .split input {
-    width: 100%;
-  }
-  
-  .input_label {
-    font-size: 10px;
-    color: #8B8E98;
-    font-weight: 600;
-  }
-  
-  .input_field {
-    width: auto;
-    height: 40px;
-    padding: 0 0 0 16px;
-    border-radius: 9px;
-    outline: none;
-    background-color: #F2F2F2;
-    border: 1px solid #e5e5e500;
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
-  }
-  
-  .input_field:focus {
-    border: 1px solid transparent;
-    box-shadow: 0px 0px 0px 2px #242424;
-    background-color: transparent;
-  }
-  
-  .purchase--btn {
-    height: 55px;
-    background: #F2F2F2;
-    border-radius: 11px;
-    border: 0;
-    outline: none;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 700;
-    background: linear-gradient(180deg, #363636 0%, #1B1B1B 50%, #000000 100%);
-    box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #000000;
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
-  }
-  
-  .purchase--btn:hover {
-    box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
-  }
-  
-  /* Reset input number styles */
-  .input_field::-webkit-outer-spin-button,
-  .input_field::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
-  .input_field[type=number] {
-    -moz-appearance: textfield;
-  }
-
+}
 /* responsividade */
 @media screen and (max-width: 1050px) {
     
@@ -644,44 +386,27 @@ box-sizing: border-box;
     min-height: 100vh;
     box-sizing: border-box;
     position: relative; /* Adiciona posição relativa ao body */
-
     }
-
     header {
-
         flex-direction: row;
         background: linear-gradient(90deg, rgba(0,5,36,1) 0%, rgba(9,54,121,1) 50%, rgba(0,180,255,1) 100%);
         box-shadow: 0px 3px 10px rgb(0, 0, 0);
         height: 10%;
         width: 100%;
-        position: absolute; /* Adiciona posição absoluta ao header */
+        position: absolute;
         z-index: 10;
         bottom: 0%;
         margin-bottom: 0;
         display: flex;
         top: 115%;
-        
-        
     }
     #multiStepForm {
-        min-height: 500px; /* Ajuste a altura conforme necessário */
+        min-height: 500px; 
     }
     #resto {
-        min-height: 300px; /* Ajuste a altura conforme necessário */
+        height: 300px; 
     }
-    #resto {
-        height: 300px; /* Ajuste a altura conforme necessário */
-    }
-    header {
-        min-height: 100px; /* Ajuste a altura conforme necessário */
-    }
-    header {
-        height: 100px; /* Ajuste a altura conforme necessário */
-    }
-    
-
     main {
-    
     flex-wrap: unset;
     margin: 0;
     width: 100%;
@@ -691,34 +416,26 @@ box-sizing: border-box;
     display: flex;
     flex: 1;
     padding-bottom: 60px;
-    height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
-    padding: 20px; /* Adiciona um espaçamento interno ao main */
-    overflow-y: auto; /* Habilita a rolagem vertical */
+    height: 100vh;
+    padding: 20px; 
+    overflow-y: auto;
 }
-
-
     .logo-home {
         height: 100%;
     }
-
     .logo-home>a, .logo-home>a>img {
         display: flex;
         width: 100%;
         height: 100%;
     }
-
     #etapas {
         flex-direction: row;
         width: 50%;
     }
-
     .circulo {
         width: 40px;
         height: 40px;
     }
-
-
-
     /* parte do menu de idiomas */
     .language-selector {
         position: relative;
@@ -728,7 +445,6 @@ box-sizing: border-box;
         border-radius: 20px;
         height: min-content;
     }
-
     .idioma-atual-desktop {
         background-color: #012E40;
         color: white;
@@ -743,7 +459,6 @@ box-sizing: border-box;
         justify-content: space-evenly;
         transition: all 0.4s;
     }
-
     .language-selector-content {
         align-items: center;
         display: flex;
@@ -759,27 +474,23 @@ box-sizing: border-box;
         overflow: hidden;
         transition: all 0.4s;
     }
-
     .language-selector-content:hover {
         max-width: 400px !important;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         transition: all 0.4s;
     }
-
     .language-selector:hover .idioma-atual-desktop {
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
         transition: all 0.4s;
     }
-
     .idioma-atual-desktop:hover + .language-selector-content {
         max-width: 400px !important;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         transition: all 0.4s;
     }
-
     .opcao-idioma {
         color: black;
         text-decoration: none;
@@ -788,41 +499,33 @@ box-sizing: border-box;
         padding: 6px 6px;
         border-radius: 6px;
     }
-
     .opcao-idioma .icons-language {
         margin-right: 2px;
     }
-
     .opcao-idioma:hover {
         background-color: #ddd;
     }
-
     .opcao-idioma:hover .language-selector-content {
         max-height: 400px;
     }
-
     .icons-language {
         width: 20px;
         height: 20px;
     }
 
     /* formulário */
-
     .step-1{
         margin-top: 520px !important;
     }
     .step-2{
         margin-top: 120px !important; 
     }
-    
     #multiStepForm .form-step {
         display: none;
     }
-
     #multiStepForm .form-step.active {
         display: block;
     }
-
     #multiStepForm h2 {
         margin-top: 0;
         margin-bottom: 20px;
@@ -831,14 +534,12 @@ box-sizing: border-box;
         font-weight: 100;
         color: #131c6c;
     }
-
     #multiStepForm label {
         display: block;
         margin-bottom: 8px;
         font-size: 14px; /* aumenta o tamanho da fonte */
         text-align: left;
     }
-
     #multiStepForm input[type="text"], input[type="tel"], input[type="email"], input[type="date"] {
         width: calc(100% - 20px);
         padding: 12px 15px; /* aumenta o padding */
@@ -849,7 +550,6 @@ box-sizing: border-box;
         outline: none;
         background-color: #eee;
     }
-
     #multiStepForm button {
         padding: 12px 50px; /* aumenta o padding */
         background-color: rgba(9,54,121,1);
@@ -863,7 +563,6 @@ box-sizing: border-box;
         cursor: pointer;
         font-size: 14px; /* aumenta o tamanho da fonte */
     }
-
     #multiStepForm button:hover {
         background-color: #0056b3;
     }
@@ -876,24 +575,13 @@ box-sizing: border-box;
         color: #131c6c;
     }
     #decisao {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        background-color: #fff;
-        padding: 70px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: calc(100% - 40px); /* Garante que o elemento tenha um espaçamento apropriado nas laterais */
-        max-width: 500px; /* Define um limite máximo para a largura do elemento */
-        margin: 20px auto; /* Adiciona margem automática para centralizar horizontalmente */
+        width: calc(100% - 40px);
+        max-width: 500px; 
+        margin: 20px auto;
     }
-
     .card {
         width: 100%; 
         max-width: 200px;
@@ -906,17 +594,14 @@ box-sizing: border-box;
         margin: 5px; 
         flex-direction: column;
     }
-
     .card img {
         width: 100%;
         height: auto; /* Mantém a proporção da imagem */
         border-radius: 8px;
     }
-
     .card button {
         margin-top: 5px;
     }
-    
 #resto{
     margin-top: 150px;
     margin-bottom: 30px;
@@ -925,5 +610,4 @@ box-sizing: border-box;
     padding-bottom: 60px;
     z-index: 100; /* Garante que há espaço para o header fixo */
 }
-    
 }
