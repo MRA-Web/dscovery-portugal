@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script src="https://www.paypal.com/sdk/js?client-id=ARwHasmUKngy78skjhfxBdhDN1l1tUdtPw34tMkjfSvlMsjHXC7u8WEFaGaJPzqpGrmUOIY1fOwKdjQj&currency=EUR"></script>
+      <script src="https://www.paypal.com/sdk/js?client-id=BAAW1t6D7Sh4ntooFXgT-qq7bUt1tV4S1VAklBIcPNZO-sqjxOXy-s5BWVtrfENDVGJQ-vI1Chu2dDuIMg&components=hosted-buttons&disable-funding=venmo&currency=BRL"></script>
 
 </head>
 <body>
@@ -161,7 +161,7 @@
         
                         <div class="buttons">
                             <button type="button" id="prev4">Voltar</button>
-                            <div id="paypal-button-container"></div>
+                            <div id="paypal-container-55FL57M4YV63Y"></div>
                             <button type="submit">Enviar</button>
                         </div>
                     </fieldset>
@@ -306,23 +306,16 @@
 
     <script src="etapas.js"></script>
     <script>
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '10.00' // Substitua com o valor correto
-                        }
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name);
-                });
-            }
-        }).render('#paypal-button-container');
-    </script>
+        paypal.HostedButtons({
+          hostedButtonId: "55FL57M4YV63Y",
+        }).render("#paypal-container-55FL57M4YV63Y");
+      </script>
+
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "55FL57M4YV63Y",
+  }).render("#paypal-container-55FL57M4YV63Y")
+</script>
 </body>
 
 
