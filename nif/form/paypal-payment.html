@@ -2,9 +2,8 @@
 <html>
 <head>
     <title>Pagamento com PayPal</title>
-    <!-- Inclua o SDK do PayPal com o client-id e a moeda correta -->
     <script src="https://www.paypal.com/sdk/js?client-id=ARwHasmUKngy78skjhfxBdhDN1l1tUdtPw34tMkjfSvlMsjHXC7u8WEFaGaJPzqpGrmUOIY1fOwKdjQj&currency=EUR"></script>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <h1>Pagamento com PayPal</h1>
@@ -25,14 +24,14 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     alert('Transação concluída por ' + details.payer.name.given_name);
-                    // Redirecionar ou executar ações adicionais
+                    // Redirecionar ou executar ações adicionais após o pagamento
                 });
             },
             onError: function(err) {
                 console.error('Erro na transação', err);
                 alert('Ocorreu um erro durante o pagamento. Tente novamente.');
             }
-        }).render('#paypal-button-container');
+        }).render('#paypal-button-container'); // Renderiza o botão PayPal
     </script>
 </body>
 </html>
