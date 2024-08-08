@@ -386,11 +386,8 @@ fieldset input[type="date"] {
     grid-template-areas: 'main' 'header';
     flex-direction: column;
     width: fit-content;
-    height: 100vh;
     margin: 0;
-    min-height: 100vh;
-    box-sizing: border-box;
-    position: relative; 
+   
     } 
     header {
         flex-direction: row;
@@ -586,6 +583,8 @@ fieldset input[type="date"] {
         width: calc(100% - 40px);
         max-width: 500px; 
         margin: 20px auto;
+        margin-top: 100px;
+
     }
     .card {
         width: 100%; 
@@ -598,6 +597,7 @@ fieldset input[type="date"] {
         background-color: #fff;
         margin: 5px; 
         flex-direction: column;
+       padding: 20px 0;
     }
     .card img {
         width: 100%;
