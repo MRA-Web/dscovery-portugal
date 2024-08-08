@@ -537,7 +537,7 @@ fieldset input[type="date"] {
         font-family: 'Lilita One', sans-serif;
         font-size: 36px;
         font-weight: 100;
-        color: #131c6c;
+        color: #004080;
     }
     #multiStepForm label {
         display: block;
@@ -577,7 +577,7 @@ fieldset input[type="date"] {
         font-family: 'Lilita One', sans-serif;
         font-size: 40px;
         font-weight: 100;
-        color: #131c6c;
+        color: #004080;
     }
     #decisao {
         top: 50%;
