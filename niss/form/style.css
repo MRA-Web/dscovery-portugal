@@ -197,7 +197,7 @@ fieldset h2 {
     margin-bottom: 20px; /* Ajuste de margem inferior do título */
     font-family: Trattatello, fantasy;
     font-size: 36px; 
-    color: #131c6c;
+    color: #184f86;
     font-weight: 400;
 }
 fieldset label {
@@ -255,7 +255,7 @@ fieldset input[type="date"] {
     width: auto;
 }
 #decisao h2 {
-    font-size: 24px;
+    font-size: 34px;
     margin-bottom: 20px;
     color: #004080;
     font-family: Tratattello, fantasy;

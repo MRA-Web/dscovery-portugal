@@ -195,7 +195,7 @@ fieldset h2 {
     margin-bottom: 20px; 
     font-family: Trattatello, fantasy;
     font-size: 36px; 
-    color: #131c6c;
+    color: #184f86;
     font-weight: 400;
 }
 fieldset label {
@@ -261,7 +261,7 @@ fieldset input[type="date"] {
 #decisao h2 {
     font-size: 34px;
     margin-bottom: 20px;
-    color: #131c6c;
+    color: #004080;
     font-family: Tratattello, fantasy;
     font-weight: 500;
 }
