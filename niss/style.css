@@ -304,6 +304,82 @@ main {
   transition: all 0.4s;
 }
 
+/* From Uiverse.io by vinodjangid07 */ 
+.walletBalanceCard {
+  width: fit-content;
+  height: 75px;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0px 12px;
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.svgwrapper {
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svgwrapper svg {
+  width: 100%;
+}
+.balancewrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 120px;
+  gap: 0px;
+}
+.balanceHeading {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+.balance {
+  font-size: 15.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  
+}
+.balance1{
+  text-decoration: line-through !important;
+  margin-right: 10px;
+  color: #00000092;
+}
+.values-niss{
+  display: flex;
+}
+.addmoney {
+  padding: 1px 15px;
+  border-radius: 20px;
+  background-color: #184896;
+  color: white;
+  border: none;
+  font-size: 12px;
+  
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.addmoney:hover {
+  background-color: whitesmoke;
+  color: #14335a;
+}
+.plussign {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 @media screen and (max-width: 1050px) {
   .first-container{
